@@ -10,6 +10,33 @@
   		{
 		  	 $this->view->renderView('home');
   		}
+
+      public function getCities()
+      {
+          $state = null;
+
+          if(isset($_POST['state']))
+          {
+            $state = $_POST['state'];
+          }
+
+          $json_data = file_get_contents('stations.json');
+
+          $decoded = json_decode($json_data);
+
+          $targeted_state = null;
+
+          for($i=0;$i<count($decoded);$i++)
+          {
+              if($decoded[$i]->state==$state)
+              {
+                  $targeted_state = $decoded[$i];
+                  break;
+              }
+          }
+ 
+          echo json_encode($targeted_state);
+      }
  
       public function getEachStationJSON()
       {

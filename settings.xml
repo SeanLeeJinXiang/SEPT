@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data>
+
+<mapSettings 
+
+mapWidth = "980"
+mapHeight = "720"
+
+offColor = "222222"
+strokeColor = "24221f"
+strokeWidth = ".5"
+
+useSideText = "false"
+textAreaWidth = "300"
+textAreaHeight = "300"
+textAreaPadding = "10"
+
+/>
+ 
+
+<stateData stateName="Western Australia" url = "http://localhost/WA" stateMode = "ON" initialStateColor= "e6e6e6" stateOverColor = "e6e6e6" stateSelectedColor = "feb41c">
+</stateData>
+
+<stateData stateName="South Australia" url = "http://localhost/SA" stateMode = "ON" initialStateColor= "e6e6e6" stateOverColor = "e6e6e6" stateSelectedColor = "feb41c">
+</stateData>
+
+<stateData stateName="Victoria" url = "http://localhost/VIC" stateMode = "ON" initialStateColor= "e6e6e6" stateOverColor = "e6e6e6" stateSelectedColor = "feb41c">
+</stateData>
+
+<stateData stateName="New South Wales" url = "http://localhost/NSW" stateMode = "ON" initialStateColor= "e6e6e6" stateOverColor = "e6e6e6" stateSelectedColor = "feb41c">
+</stateData>
+
+<stateData stateName="Queensland" url = "http://localhost/QLD" stateMode = "ON" initialStateColor= "e6e6e6" stateOverColor = "e6e6e6" stateSelectedColor = "feb41c">
+</stateData>
+
+<stateData stateName="Northern Territory" url = "http://localhost/NT" stateMode = "ON" initialStateColor= "e6e6e6" stateOverColor = "e6e6e6" stateSelectedColor = "feb41c">
+</stateData>
+
+<stateData stateName="Tasmania" url = "http://localhost/TM" stateMode = "ON" initialStateColor= "e6e6e6" stateOverColor = "e6e6e6" stateSelectedColor = "feb41c">
+</stateData>
+
+<stateData stateName="Australian Capitol Territory" url = "http://localhost/VIC" stateMode = "ON" initialStateColor= "e6e6e6" stateOverColor = "e6e6e6" stateSelectedColor = "feb41c">
+</stateData>
+
+
+
+
+</data>

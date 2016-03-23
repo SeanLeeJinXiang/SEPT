@@ -2,7 +2,7 @@
 
 /*  
 *   Basic MVC pattern initialization
-*	This class parse url and 
+*	 This class parse url and 
 *   find a controller and method from it
 *
 */
@@ -35,13 +35,12 @@
  		  {
  		  	 $this->method = $this->DEFAULT_METHOD;
  		  }  
- 		  
 
    	   	  $this->params = $this->params!=null ? array_slice($this->url,2) :array();
  
-   	     call_user_func(array($controller,$this->method),$this->params);
+   	        call_user_func(array($controller,$this->method),$this->params);
  
-   	   	 unset($this->url); // URL must be unset
+   	   	  unset($this->url); // URL must be unset
 
    	   }
 
