@@ -37,6 +37,95 @@
  
           echo json_encode($targeted_state);
       }
+
+      public function addToFavourite()
+      {
+        // Session::destroy();
+          if(isset($_POST["city"]) && isset($_POST["url"]))
+          {
+              $my_favourite = array();
+              $temp = Session::get("my_favourite");
+              $new_favourite = array("city"=>$_POST["city"],"url"=>$_POST["url"]);
+
+              if(!empty($temp))
+              {
+                  $my_favourite = Session::get("my_favourite");
+              }
+        
+              $my_favourite_exist = false; 
+             for($i=0;$i<count($my_favourite);$i++)
+             {
+                 if($my_favourite[$i]["city"]==$_POST["city"])
+                 {
+                    $my_favourite_exist = true;
+                    break;
+                 }
+             } 
+
+             if(!$my_favourite_exist)
+             {
+                 array_push($my_favourite,$new_favourite);   
+                 Session::set("my_favourite",$my_favourite);
+                  
+                 echo true; 
+             }
+           else
+             {
+                 echo false;
+             }  
+
+          }
+
+ 
+
+      }
+
+      public function removeFavorite()
+      {
+
+          $city = $_POST["city"];
+          $my_favourite = Session::get("my_favourite");
+ 
+          for($i=0;$i<count($my_favourite);$i++)
+          {
+                 if($my_favourite[$i]["city"]==$city)
+                 {
+                    unset($my_favourite[$i]);
+                    break;
+                 }
+          }
+
+          if(count($my_favourite)>0)
+          {
+            $my_favourite = array_values($my_favourite);
+          }
+ 
+          Session::set("my_favourite",$my_favourite);
+
+          echo "true";
+
+      }
+
+      public function getFavourites()
+      {
+
+              $my_favourite = array();
+              $temp = Session::get("my_favourite");
+
+              if(!empty($temp))
+              {
+                  $my_favourite = Session::get("my_favourite");
+              }
+
+              if(count($my_favourite)>0)
+              {
+                  $json = json_encode($my_favourite);
+
+                  echo $json;
+              }
+
+
+      }
  
       public function getEachStationJSON()
       {

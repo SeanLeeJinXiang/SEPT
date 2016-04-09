@@ -2,7 +2,7 @@
 
 /*  
 *   Basic MVC pattern initialization
-*	 This class parse url and 
+*	 This class parses url and 
 *   find a controller and method from it
 *
 */
@@ -23,18 +23,18 @@
    	   	  $this->url = $this->getURL();
    	   	  $this->controller = $this->checkController($this->url[0]) == true ? $this->url[0] : $this->DEFAULT_CONTROLLER;
  		  	
- 		  require_once("controllers/".$this->controller.".php");
- 		  
- 		  $controller = new $this->controller();	
+       		  require_once("controllers/".$this->controller.".php");
+       		  
+       		  $controller = new $this->controller();	
 
- 		  if(isset($this->url[1]))
- 		  {
- 		  	 $this->method = $this->checkMethod($controller,$this->url[1]) == true ? $this->url[1] : $this->DEFAULT_METHOD;		
- 		  }
- 		else
- 		  {
- 		  	 $this->method = $this->DEFAULT_METHOD;
- 		  }  
+       		  if(isset($this->url[1]))
+       		  {
+       		  	 $this->method = $this->checkMethod($controller,$this->url[1]) == true ? $this->url[1] : $this->DEFAULT_METHOD;		
+       		  }
+       		else
+       		  {
+       		  	 $this->method = $this->DEFAULT_METHOD;
+       		  }  
 
    	   	  $this->params = $this->params!=null ? array_slice($this->url,2) :array();
  

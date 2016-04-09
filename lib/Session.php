@@ -26,15 +26,7 @@
         return $_SESSION[$key];
       }
     }
-
-    public static function remove($id)
-    {
-        foreach($_SESSION as $key => $value)
-        {
  
-        }
-    }
-
     public static function destroy()
     {
       session_destroy();

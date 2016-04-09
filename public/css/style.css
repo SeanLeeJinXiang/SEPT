@@ -3,15 +3,13 @@
 
 body {
 font-family: Helvetica, Arial , sans-serif;
-background:#e6f7ff !important;
 font-size:12px;
 line-height:16px;
+position: relative;
 }
 
 #container {
 margin:100px auto;
-width: 960px;
-
 }
 
 a img {
@@ -22,6 +20,52 @@ h1, h2, h3, h4, h5, h6{ margin-bottom:10px; font-weight:normal; }
 	h1{ font-size:26px; line-height:32px; font-family: 'DroidSansRegular', Helvetica, Arial , sans-serif; }
 	p, ul{margin-bottom:10px;}
 
+.animated {
+  animation-fill-mode: both;
+  animation-duration: 1s;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.fadeOut {
+  animation-name: fadeOut;
+}
 
 .modal-dialog
 {
@@ -33,4 +77,116 @@ h1, h2, h3, h4, h5, h6{ margin-bottom:10px; font-weight:normal; }
 .modal-header
 {
 	border-bottom: none !important;
+}
+
+#city_view_detail
+{
+	display: none;
+	padding:20px;
+}
+
+.loadingbarWrapper
+{
+	float:none !important;
+}
+
+.loading_bar
+{
+	position: fixed;
+	top:200px;
+	width:200px;
+	display: none;
+}
+
+.cityInfoWrapper{
+
+	padding:20px;	
+
+}
+
+.cityInfoWrapper .city
+{
+	font-size: 40px;
+	color:#878787;
+	margin-bottom:0px !important;
+}
+
+.cityInfoWrapper .date{
+
+	font-size: 20px;
+	color:#878787;	
+
+}
+
+.cityInfoWrapper .cloudy,.humidity,.temp,.wind{
+
+	font-size: 16px;
+	color:#878787;	
+	margin-top:0;
+	margin-bottom:0;
+}
+
+.cityInfoWrapper .add_to_favourite
+{
+	margin-left:20px;
+}
+
+.MapContainer
+{
+	position: relative;
+}
+
+.myFavouritesWrapper
+{
+	margin-top:30%;
+	display:none;
+}
+
+.AusMap
+{
+	position: relative;
+}
+
+.bear
+{
+	position: absolute;
+	top:55%;
+	left:80%;
+}
+
+.bear_img
+{
+	width:200px;
+}
+
+#CityChartWrapper
+{
+	display: none;
+	position: absolute;
+	top:0px;
+	left:0px;
+	background: white;
+	z-index: 100;
+	border-radius: 5px;
+	margin-left:20px;
+	margin-top:20px; 
+
+}
+
+.cityInfoWrapper .min_temp, .max_temp
+{
+    font-size: 16px;
+    color: #878787;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.cityInfoWrapper .closeButton
+{
+	float:right;
+}
+
+.favouritebuttons
+{
+	float:right;
 }
