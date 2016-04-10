@@ -5,7 +5,7 @@
   	  /*
 	    *  Land page rendering, As a single page app, we have only one php file for client side
   	  */
-
+ 
   		public function render()
   		{
 		  	 $this->view->renderView('home');
@@ -126,6 +126,16 @@
 
 
       }
+
+      public function register_account()
+      {
+          echo $_POST["value"];
+      }
+
+      public function login()
+      {
+          echo $_POST["value"];
+      }      
  
       public function getEachStationJSON()
       {

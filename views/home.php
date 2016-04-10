@@ -4,7 +4,7 @@
   <meta charset="utf-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Weather App</title>
+  <title>Australia Weather</title>
   
 <meta name="description" content="SVG/VML Interactive Australia map">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900"/>
@@ -25,10 +25,15 @@
 <script src="public/js/lib/lib.js" type="text/javascript"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js" type="text/javascript"></script>
 
-<script src="public/js/raphael.min.js" type="text/javascript"></script>
-<script src="public/js/scale.raphael.js" type="text/javascript"></script>
-<script src="public/js/paths.js" type="text/javascript"></script>
-<script src="public/js/init.js" type="text/javascript"></script>
+<!--
+
+  @author: Jihun Nam
+  Date:27th March
+  Real time weather application using react.js , chart.js and bootstrap
+  Use babel to compile jsx to javascript in development,
+
+-->
+ 
 <script type="text/babel">
 
   var StateArray = {
@@ -126,7 +131,7 @@
               /*
               *  @param self is referencing current react component
               *  Using chart.js , use received data from BOM site make
-              *  an interval if the data objects are more than abound 10
+              *  an interval if the data objects are more than 10
               *  last digit is for how many data objects to be shown
               *  Make a graph and render it
               */
@@ -165,16 +170,57 @@
   });
 
   var MainWrapper = React.createClass({
+
+    getInitialState()
+    {
+        return {
+
+          buttonClicked:""
+
+        }
+    },
  
     componentDidMount()
     {
-       
-       var url = window.location.pathname.substring(1);
-       var state = StateArray[url];
+      // close window for city detail when modal is closed
 
+      $("#stateModal").on('hidden.bs.modal', function () {
+  
+         $("#city_view_detail").hide();
+
+      });
+
+      var stateLinks = document.getElementsByClassName("stateLink");
+      var self = this;
+
+      for(var i=0;i<stateLinks.length;i++)
+      {
+          (function(i){
+
+          stateLinks[i].addEventListener("click",function(e){
+
+            e.preventDefault();
+
+            var href = e.target.href.substring(e.target.href.lastIndexOf("/")+1);
+
+            self.getStateInfo(href);
+
+          })
+
+          })(i);
+      }
+
+       
+       
+     
+    },
+
+    getStateInfo(state)
+    {
+ 
        if(state!=undefined)
        {
-
+        state = StateArray[state];
          var self = this;
 
           $.ajax({
@@ -185,7 +231,6 @@
             dataType:"json",
             success:function(data)
             {
-
               /*  Simple pagination for rendering cities more than 10 
               *    
               */
@@ -255,7 +300,7 @@
                {
                   $(".stateRendering").empty();
 
-                  var table = $("<table id='data_table' class='table table-responsive'></table>");
+                  var table = $("<table id='data_table' class='table table-responsive table-striped'></table>");
 
                   for(var i=0;i<tableObj[pageNum-1].length;i++)
                   {
@@ -370,12 +415,73 @@
           });
 
       }
-     
-    },
+    },    
 
     CallFavouriteComponent(dataObj)
     {
         this.refs["FavouriteComponent"].addToFavourite(dataObj);
+    },
+
+    register_clicked(e)
+    {
+        e.preventDefault();
+        $(".register_input").attr("placeholder","Register an account to save your favourites");
+
+        this.setState({
+          buttonClicked:"register"
+        })
+    },
+
+    login_clicked(e)
+    {
+        e.preventDefault();
+        $(".register_input").attr("placeholder","Enter your login ID");
+        this.setState({
+          buttonClicked:"login"
+        })
+    },
+
+    common_submit_clicked(e)
+    {
+       e.preventDefault();
+       var buttonStatus = this.state.buttonClicked;
+       var url;
+       var value = $(".register_input").val();
+
+       if(value=="")
+       {
+          $(".register_input_div").addClass("has-error");
+       }
+
+       if(buttonStatus != "" && value!="")
+       {
+            if(buttonStatus=="register")
+            { 
+              url = "/HomeController/register_account"
+            }
+
+            if(buttonStatus=="login")
+            {
+              url = "/HomeController/login"
+            }
+
+
+            $.ajax({
+              url:url,
+              type:"POST",
+              data:{
+                value:value
+              },
+              success:function(data)
+              {
+                 console.log(data);
+              }
+            })
+
+
+
+       }
+
     },
  
   	render()
@@ -383,8 +489,58 @@
   		return(
 
   			<div>
+<nav className="navbar navbar-default navbar-static-top">
+  <div className="container">
+  <FavouriteComponent ref="FavouriteComponent"/>
+    <form className="navbar-form navbar-right" role="search">
+       <div className="register_inputWrapper">
+        <div className="input-group register_input_div">
+           <input type="text" className="form-control register_input" placeholder=""/>
+        </div>
+      </div>
 
-        <FavouriteComponent ref="FavouriteComponent"/>
+<div className="btn-group">
+  <button type="button" onClick={this.common_submit_clicked} className="btn btn-info common_submit_button">Submit</button>
+  <button type="button" className="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span className="caret"></span>
+    <span className="sr-only">Toggle Dropdown</span>
+  </button>
+  <ul className="dropdown-menu">
+    <li><a onClick={this.register_clicked} href="#">Register</a></li>
+    <li><a onClick={this.login_clicked} href="#">Log In</a></li>
+  </ul>
+</div>
+    </form>
+  </div>
+</nav>
+       <div className="container">   
+       <h1 className='title_h1'>Australia Weather</h1>
+       <h3 className='title_h3'>View in real time </h3>
+          <div className="statesWrapper row">
+             <div className="col-md-12">
+                <ul className="stateWrapperUL clearfix">
+                 <div className="statesUp clearfix col-md-4">
+                <li className="large"><a className="stateLink WA" href="WA">Western Australia</a></li>
+                <li className="small left"><a className="stateLink VIC" href="VIC">Victoria</a></li>
+                <li className="small"><a className="stateLink ACT" href="ACT">Canberra</a></li>
+                <li className="large"><a className="stateLink SA" href="SA">South Australia</a></li>
+                  </div>
+                  <div className="statesDown clearfix col-md-4">
+                <li className="large"><a className="stateLink QLD" href="QLD">Queensland</a></li>
+                <li className="large"><a className="stateLink NSW" href="NSW">New South Wales</a></li>
+                <li className="small left"><a className="stateLink TM" href="TM">Tasmania</a></li>
+                <li className="small"><a className="stateLink NT" href="NT">NT</a></li> 
+                  </div>
+                  <div className="stateBottom clearfix col-md-4"> 
+                <li className="ex_large"><a className="stateLink Antarctica" href="Antarctica">Antarctica</a></li>
+                  </div>
+                </ul>
+             </div>
+          </div>
+                  
+        </div>
+ 
+
 
           <div id="stateModal" className="modal fade" role="dialog">
             <div className="modal-dialog">
@@ -513,48 +669,6 @@
 
               module().getSimpleGragh(data,self,null,50,"CityDetailChart");
  
-               if(self.state.city)
-               {
-                   $(".cityInfoWrapper .city").html(self.state.city + " " + self.state.state);
-               }    
-
-               if(self.state.date)
-               {
-                   $(".cityInfoWrapper .date").html(self.state.date + "  " + self.state.time);
-               }
-
-               if(self.state.cloudy!="-")
-               {
-                   $(".cityInfoWrapper .cloudy").html(self.state.cloudy);
-               }
-
-               if(self.state.humidity)
-               {
-                   $(".cityInfoWrapper .humidity").html("Humidity " + self.state.humidity);
-               }
-
-               if(self.state.temp)
-               {
-                   $(".cityInfoWrapper .temp").html("Temp " + self.state.temp + " C");
-               }
-
-               if(self.state.wind)
-               {
-                   $(".cityInfoWrapper .wind").html("Wind " + self.state.wind);
-               }
-    
-               if(self.state.min_temp)
-               {
-                   $(".cityInfoWrapper .min_temp").html("Low Temp " + self.state.min_temp + " C");
-               }
-
-               if(self.state.max_temp)
-               {
-                   $(".cityInfoWrapper .max_temp").html("High Temp " + self.state.max_temp + " C");
-               }
- 
-              $(document.body).append($("#CityChartWrapper"));
-
               $(".cityInfoWrapper .closeButton").on("click",closeBackGround);
 
               $('#cityDetailsWrapper').on("click",closeBackGround);
@@ -610,6 +724,11 @@
                 }
 
                 myFavourites.splice(i,1);
+ 
+                if(myFavourites.length==0)
+                {
+                    $(".myFavouritesWrapper").fadeOut();
+                }
 
                 self.setState({
                   myFavourites:myFavourites
@@ -620,6 +739,13 @@
           }
 
         });
+    },
+
+    toggleMenu(e)
+    {
+        e.preventDefault();
+
+        $(".myFavouritesUL").slideToggle();
     },
 
     render()
@@ -642,18 +768,18 @@
         return (
 
         <div>  
-        <div className="myFavouritesWrapper"><ul className="list-group"><li className="list-group-item">My Favourites</li>{myFavourites}</ul></div>
+        <div className="myFavouritesWrapper"><button onClick={this.toggleMenu} className="btn btn-default btn-sm">My Favourites <span className="favouritesCounter">{this.state.myFavourites.length}</span></button><ul className="myFavouritesUL list-group">{myFavourites}</ul></div>
               
               <div className="animated fadeIn" id="CityChartWrapper">
                 <div className="cityInfoWrapper">
-                 <p className="city"></p><span className='closeButton'><button className='btn btn-default btn-sm'>Close</button></span>
-                 <p className="date"><span className="time"></span></p> 
-                 <p className="cloudy"></p> 
-                 <p className="humidity"></p> 
-                 <p className="temp"></p> 
-                 <p className="wind"></p> 
-                 <p className="min_temp"></p> 
-                 <p className="max_temp"></p> 
+                 <p className="city">{this.state.city}</p><span className='closeButton'><button className='btn btn-default btn-sm'>Close</button></span>
+                 <p className="date">{this.state.date} <span className="time">{this.state.time}</span></p> 
+                 <p className="cloudy">{ this.state.cloudy=="-"?"": this.state.cloudy }</p> 
+                 <p className="humidity">{this.state.humidity==null?"":"Humidity " + this.state.humidity +"%"}</p> 
+                 <p className="temp">{this.state.temp==null?"":"Temp " + this.state.temp +" C"}</p> 
+                 <p className="wind">{this.state.wind==0?"":"Wind " + this.state.wind}</p> 
+                 <p className="min_temp">{this.state.min_temp!=0?"Min Temp " + this.state.min_temp : "Min Temp Unknown"}</p> 
+                 <p className="max_temp">{this.state.max_temp!=0?"Max Temp " + this.state.max_temp : "Max Temp Unknown"}</p> 
                  <canvas id="CityDetailChart" width="1250" height="600"></canvas>
               </div>
               </div>
@@ -701,20 +827,14 @@ ReactDOM.render(<MainWrapper/>,document.getElementById('App'));
 <body>
  
    <div class="container-fluid">
-    <div class="AusMap col-md-9" id="container">
+ 
+    <div id="App"></div>
 
-        <div class="mapWrapper">
-                <div id="map"></div>
-                <div id="text"></div>
-        </div>
-            
-      <div class="bear"><a href="/Antarctica"><img class="bear_img" src="/public/images/bear.png"></a></div>
-
-    </div>
-
-    <div class="col-md-3" id="App">
-
-    </div>
+<footer class="footer">
+   <div class="container">
+       <p>Copyright</p>
+   </div> 
+</footer>
   </div>
 
 
