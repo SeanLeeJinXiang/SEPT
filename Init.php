@@ -2,7 +2,7 @@
 
 /*  
 *   Basic MVC pattern initialization
-*	 This class parses url and 
+*	 This class gets url and 
 *   find a controller and method from it
 *
 */

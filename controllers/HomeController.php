@@ -5,7 +5,7 @@
   	  /*
 	    *  Land page rendering, As a single page app, we have only one php file for client side
   	  */
- 
+      
   		public function render()
   		{
 		  	 $this->view->renderView('home');
@@ -40,12 +40,16 @@
 
       public function addToFavourite()
       {
-        // Session::destroy();
-          if(isset($_POST["city"]) && isset($_POST["url"]))
+ 
+        $user_id = Session::get("user_id");
+        $city = $_POST["city"];
+        $url = $_POST["url"];  
+
+          if(isset($_POST["city"]) && isset($_POST["url"]) && isset($user_id))
           {
               $my_favourite = array();
               $temp = Session::get("my_favourite");
-              $new_favourite = array("city"=>$_POST["city"],"url"=>$_POST["url"]);
+              $new_favourite = array("city"=>$city,"url"=>$url);
 
               if(!empty($temp))
               {
@@ -64,6 +68,14 @@
 
              if(!$my_favourite_exist)
              {
+
+                $stmt = $this->db->prepare("INSERT INTO favourites (user_id,city,url) 
+                VALUES (:user_id,:city,:url)");
+                $stmt->bindParam(':user_id', $user_id);
+                $stmt->bindParam(':city', $city);
+                $stmt->bindParam(':url', $url);
+                $stmt->execute();        
+
                  array_push($my_favourite,$new_favourite);   
                  Session::set("my_favourite",$my_favourite);
                   
@@ -74,16 +86,27 @@
                  echo false;
              }  
 
+             return;
           }
 
+          echo -1;
  
 
       }
 
       public function removeFavorite()
       {
-
+ 
+          $user_id = Session::get("user_id");
           $city = $_POST["city"];
+
+          $sql = "DELETE FROM favourites WHERE user_id =  :user_id AND city = :city";
+          $stmt = $this->db->prepare($sql);
+          $stmt->bindParam(':user_id', $user_id);   
+          $stmt->bindParam(':city', $city); 
+          $stmt->execute();
+
+
           $my_favourite = Session::get("my_favourite");
  
           for($i=0;$i<count($my_favourite);$i++)
@@ -127,16 +150,72 @@
 
       }
 
+ 
       public function register_account()
       {
-          echo $_POST["value"];
+  
+        $user_id = $_POST['value'];
+
+        $stmt = $this->db->prepare("INSERT INTO users (user_id) 
+        VALUES (:user_id)");
+        $stmt->bindParam(':user_id', $user_id);
+        $stmt->execute();
+        
+        echo "true";
+
       }
 
+ 
       public function login()
       {
-          echo $_POST["value"];
+         $user_id = $_POST['value'];
+         $stmt = $this->db->prepare("SELECT user_id FROM users WHERE user_id = :user_id"); 
+         $stmt->bindParam(':user_id', $user_id);
+         $stmt->execute();
+         $total = $stmt->rowCount();
+
+
+          if($total>0)
+          {
+              Session::set("user_id",$user_id);
+
+             $stmt2 = $this->db->prepare("SELECT * FROM favourites WHERE user_id = :user_id"); 
+             $stmt2->bindParam(':user_id', $user_id);
+             $stmt2->execute();
+             $result = $stmt2->fetchAll();
+
+              $my_favourite = array();
+              $i = 0;
+             foreach($result as $row){
+
+                $new_favourite = array("city"=>$row['city'],"url"=>$row['url']);
+                array_push($my_favourite,$new_favourite); 
+
+              }
+
+              Session::set("my_favourite",$my_favourite);
+
+
+              echo "true";
+          }
+         else
+          {
+              echo "false";
+          } 
+
       }      
  
+      public function loginChecked()
+      {
+          echo Session::get("user_id");
+      }
+
+ 
+      public function logout()
+      {
+         Session::destroy();
+      }
+
       public function getEachStationJSON()
       {
           /* due to xmlrequestorigin,

@@ -5,13 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Australia Weather</title>
-  
-<meta name="description" content="SVG/VML Interactive Australia map">
+
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900"/>
-<link href="public/css/reset.css" rel="stylesheet" type="text/css" />
-<link href="public/css/fonts.css" rel="stylesheet" type="text/css" />
 <link href="public/css/style.css" rel="stylesheet" type="text/css" />
-<link href="public/css/map.css" rel="stylesheet" type="text/css" />
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet" type="text/css" />
  
@@ -29,8 +25,7 @@
 
   @author: Jihun Nam
   Date:27th March
-  Real time weather application using react.js , chart.js and bootstrap
-  Use babel to compile jsx to javascript in development,
+  Use babel to compile jsx to javascript in only development mode
 
 -->
  
@@ -102,10 +97,14 @@
 
                    });
                 }
-               else
+               else if(data==false)
                 {
                    toastr.error(self.state.city + " is already in your favourites");
                 } 
+               else
+               {
+                   toastr.error("Log in required");
+               } 
             }
 
           });
@@ -175,9 +174,31 @@
     {
         return {
 
-          buttonClicked:""
+          buttonClicked:"",
+          is_logged_in:false
 
         }
+    },
+
+
+    componentWillMount()
+    {
+        var self = this;
+
+        $.ajax({
+
+          url:"/HomeController/loginChecked",
+          success:function(data)
+          {
+             if(data!="")
+             {
+                self.setState({
+                  is_logged_in:true
+                })
+             }
+          }
+
+        })
     },
  
     componentDidMount()
@@ -426,7 +447,7 @@
     {
         e.preventDefault();
         $(".register_input").attr("placeholder","Register an account to save your favourites");
-
+        $(".common_submit_button").html("Register");
         this.setState({
           buttonClicked:"register"
         })
@@ -436,8 +457,18 @@
     {
         e.preventDefault();
         $(".register_input").attr("placeholder","Enter your login ID");
+        $(".common_submit_button").html("Log In");
         this.setState({
           buttonClicked:"login"
+        })
+    },
+
+    logout_clicked(e)
+    {
+        e.preventDefault();
+        $(".common_submit_button").html("Log out");
+        this.setState({
+          buttonClicked:"logout"
         })
     },
 
@@ -446,6 +477,7 @@
        e.preventDefault();
        var buttonStatus = this.state.buttonClicked;
        var url;
+       var self = this;
        var value = $(".register_input").val();
 
        if(value=="")
@@ -453,18 +485,22 @@
           $(".register_input_div").addClass("has-error");
        }
 
-       if(buttonStatus != "" && value!="")
+       if(buttonStatus != "")
        {
-            if(buttonStatus=="register")
+            if(buttonStatus=="register" && value!="")
             { 
               url = "/HomeController/register_account"
             }
 
-            if(buttonStatus=="login")
+            if(buttonStatus=="login"  && value!="")
             {
               url = "/HomeController/login"
             }
 
+            if(buttonStatus=="logout")
+            {
+              url = "/HomeController/logout"
+            }
 
             $.ajax({
               url:url,
@@ -474,7 +510,41 @@
               },
               success:function(data)
               {
-                 console.log(data);
+
+                  if(buttonStatus=="login" && data=="true")
+                  {
+                      self.refs["FavouriteComponent"].updateFavourites();
+
+                   self.setState({
+
+                    is_logged_in:true
+
+                  });
+
+                   $(".common_submit_button").html("Select");
+                   $(".register_input").hide();
+                  }
+
+                  if(buttonStatus=="register")
+                  {
+                     toastr.success("Your account has been created. You can log in now.");
+                  }
+
+                  if(buttonStatus=="logout")
+                  {
+                      self.refs["FavouriteComponent"].resetFavourites();
+
+                  self.setState({
+
+                    is_logged_in:false
+
+                  });
+                   
+                   $(".common_submit_button").html("Select");
+                   $(".register_input").show();
+                  }
+
+
               }
             })
 
@@ -486,6 +556,26 @@
  
   	render()
   	{
+
+   var dropMenu;
+
+   if(!this.state.is_logged_in)
+   {
+      dropMenu = <ul className="dropdown-menu"> 
+    <li><a onClick={this.register_clicked} href="#">Register</a></li>
+    <li><a onClick={this.login_clicked} href="#">Log In</a></li>
+      </ul>
+   }
+  else
+   {
+      $(".register_input").hide();
+      dropMenu = <ul className="dropdown-menu">
+    <li><a onClick={this.logout_clicked} href="#">Log out</a></li>
+      </ul>
+   } 
+ 
+
+
   		return(
 
   			<div>
@@ -495,20 +585,17 @@
     <form className="navbar-form navbar-right" role="search">
        <div className="register_inputWrapper">
         <div className="input-group register_input_div">
-           <input type="text" className="form-control register_input" placeholder=""/>
+           <input type="text" className="form-control register_input" placeholder="Register or Login"/>
         </div>
       </div>
 
 <div className="btn-group">
-  <button type="button" onClick={this.common_submit_clicked} className="btn btn-info common_submit_button">Submit</button>
+  <button type="button" onClick={this.common_submit_clicked} className="btn btn-info common_submit_button">Select</button>
   <button type="button" className="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <span className="caret"></span>
     <span className="sr-only">Toggle Dropdown</span>
   </button>
-  <ul className="dropdown-menu">
-    <li><a onClick={this.register_clicked} href="#">Register</a></li>
-    <li><a onClick={this.login_clicked} href="#">Log In</a></li>
-  </ul>
+  {dropMenu}
 </div>
     </form>
   </div>
@@ -587,9 +674,19 @@
         });
     },
 
-    componentWillMount()
+    resetFavourites()
     {
-       var self = this;
+        this.setState({
+          myFavourites:[]
+        });
+
+        $(".myFavouritesWrapper").css("display","none");
+
+    },  
+
+    updateFavourites()
+    {
+        var self = this;
         $.ajax({
 
           url:"/HomeController/getFavourites",
@@ -610,6 +707,11 @@
           }
 
         });
+    },
+
+    componentWillMount()
+    {
+       this.updateFavourites();
     },
 
     getInitialState()
@@ -780,7 +882,7 @@
                  <p className="wind">{this.state.wind==0?"":"Wind " + this.state.wind}</p> 
                  <p className="min_temp">{this.state.min_temp!=0?"Min Temp " + this.state.min_temp : "Min Temp Unknown"}</p> 
                  <p className="max_temp">{this.state.max_temp!=0?"Max Temp " + this.state.max_temp : "Max Temp Unknown"}</p> 
-                 <canvas id="CityDetailChart" width="1250" height="600"></canvas>
+                 <canvas id="CityDetailChart" width="1000" height="450"></canvas>
               </div>
               </div>
         </div>

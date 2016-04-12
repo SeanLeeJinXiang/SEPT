@@ -280,6 +280,10 @@ border-color:#060d13 !important;
 {
 	float:right;
 }
+.statesWrapper
+{
+	margin-bottom:150px;
+}
 
 .statesWrapper ul
 {
