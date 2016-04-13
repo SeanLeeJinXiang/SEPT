@@ -1,0 +1,3211 @@
+[
+    {
+        "state": "Antarctica",
+        "stations": [
+            {
+                "city": "Casey Cape Poinsett",
+                "url": "http://www.bom.gov.au/fwo/IDT60803/IDT60803.89610.json"
+            },
+            {
+                "city": "Casey Haupt Nunatak",
+                "url": "http://www.bom.gov.au/fwo/IDT60803/IDT60803.89815.json"
+            },
+            {
+                "city": "Casey Law Dome",
+                "url": "http://www.bom.gov.au/fwo/IDT60803/IDT60803.89811.json"
+            },
+            {
+                "city": "Casey Skiway South",
+                "url": "http://www.bom.gov.au/fwo/IDT60803/IDT60803.89809.json"
+            },
+            {
+                "city": "Casey Snyder Rocks",
+                "url": "http://www.bom.gov.au/fwo/IDT60803/IDT60803.89807.json"
+            },
+            {
+                "city": "Casey Wilkins Runway",
+                "url": "http://www.bom.gov.au/fwo/IDT60803/IDT60803.89615.json"
+            },
+            {
+                "city": "Casey",
+                "url": "http://www.bom.gov.au/fwo/IDT60803/IDT60803.89611.json"
+            },
+            {
+                "city": "Davis Amery",
+                "url": "http://www.bom.gov.au/fwo/IDT60803/IDT60803.89767.json"
+            },
+            {
+                "city": "Davis",
+                "url": "http://www.bom.gov.au/fwo/IDT60803/IDT60803.89571.json"
+            },
+            {
+                "city": "Dumont D'urville",
+                "url": "http://www.bom.gov.au/fwo/IDT60803/IDT60803.89642.json"
+            },
+            {
+                "city": "Macquarie Island",
+                "url": "http://www.bom.gov.au/fwo/IDT60803/IDT60803.94998.json"
+            },
+            {
+                "city": "Mawson",
+                "url": "http://www.bom.gov.au/fwo/IDT60803/IDT60803.89564.json"
+            },
+            {
+                "city": "McMurdo",
+                "url": "http://www.bom.gov.au/fwo/IDT60803/IDT60803.89664.json"
+            },
+            {
+                "city": "Mirnyj",
+                "url": "http://www.bom.gov.au/fwo/IDT60803/IDT60803.89592.json"
+            },
+            {
+                "city": "Novolazarevskaja",
+                "url": "http://www.bom.gov.au/fwo/IDT60803/IDT60803.89512.json"
+            },
+            {
+                "city": "Syowa",
+                "url": "http://www.bom.gov.au/fwo/IDT60803/IDT60803.89532.json"
+            }
+        ]
+    },
+    {
+        "state": "Canberra",
+        "stations": [
+            {
+                "city": "Batemans Bay",
+                "url": "http://www.bom.gov.au/fwo/IDN60903/IDN60903.94941.json"
+            },
+            {
+                "city": "Braidwood",
+                "url": "http://www.bom.gov.au/fwo/IDN60903/IDN60903.94927.json"
+            },
+            {
+                "city": "Cabramurra",
+                "url": "http://www.bom.gov.au/fwo/IDN60903/IDN60903.95916.json"
+            },
+            {
+                "city": "Canberra",
+                "url": "http://www.bom.gov.au/fwo/IDN60903/IDN60903.94926.json"
+            },
+            {
+                "city": "Cooma Airport",
+                "url": "http://www.bom.gov.au/fwo/IDN60903/IDN60903.94921.json"
+            },
+            {
+                "city": "Goulburn Airport",
+                "url": "http://www.bom.gov.au/fwo/IDN60903/IDN60903.95716.json"
+            },
+            {
+                "city": "Montague Island",
+                "url": "http://www.bom.gov.au/fwo/IDN60903/IDN60903.94939.json"
+            },
+            {
+                "city": "Moruya Airport",
+                "url": "http://www.bom.gov.au/fwo/IDN60903/IDN60903.95937.json"
+            },
+            {
+                "city": "Mount Ginini",
+                "url": "http://www.bom.gov.au/fwo/IDN60903/IDN60903.95925.json"
+            },
+            {
+                "city": "Narooma",
+                "url": "http://www.bom.gov.au/fwo/IDN60903/IDN60903.95935.json"
+            },
+            {
+                "city": "Nowra",
+                "url": "http://www.bom.gov.au/fwo/IDN60903/IDN60903.94750.json"
+            },
+            {
+                "city": "Perisher Valley",
+                "url": "http://www.bom.gov.au/fwo/IDN60903/IDN60903.94915.json"
+            },
+            {
+                "city": "Thredbo Top Station",
+                "url": "http://www.bom.gov.au/fwo/IDN60903/IDN60903.95909.json"
+            },
+            {
+                "city": "Tuggeranong",
+                "url": "http://www.bom.gov.au/fwo/IDN60903/IDN60903.94925.json"
+            },
+            {
+                "city": "Ulladulla",
+                "url": "http://www.bom.gov.au/fwo/IDN60903/IDN60903.94938.json"
+            },
+            {
+                "city": "Yass",
+                "url": "http://www.bom.gov.au/fwo/IDN60903/IDN60903.95723.json"
+            }
+        ]
+    },
+    {
+        "state": "New South Wales",
+        "stations": [
+            {
+                "city": "Albion Park",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95748.json"
+            },
+            {
+                "city": "Albury",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95896.json"
+            },
+            {
+                "city": "Applethorpe",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94553.json"
+            },
+            {
+                "city": "Armidale Airport",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95773.json"
+            },
+            {
+                "city": "Armidale",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94773.json"
+            },
+            {
+                "city": "Badgerys Creek",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94752.json"
+            },
+            {
+                "city": "Ballina",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94596.json"
+            },
+            {
+                "city": "Balranald",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94696.json"
+            },
+            {
+                "city": "Bankstown",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94765.json"
+            },
+            {
+                "city": "Barraba",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94761.json"
+            },
+            {
+                "city": "Batemans Bay",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94941.json"
+            },
+            {
+                "city": "Bathurst Airport",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94729.json"
+            },
+            {
+                "city": "Bathurst",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94730.json"
+            },
+            {
+                "city": "Bega",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95931.json"
+            },
+            {
+                "city": "Bellambi",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94749.json"
+            },
+            {
+                "city": "Bombala AWS",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94929.json"
+            },
+            {
+                "city": "Bombala",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94928.json"
+            },
+            {
+                "city": "Bourke",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94703.json"
+            },
+            {
+                "city": "Braidwood",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94927.json"
+            },
+            {
+                "city": "Brewarrina",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95512.json"
+            },
+            {
+                "city": "Broken Hill Airport",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94691.json"
+            },
+            {
+                "city": "Burrinjuck Dam",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94909.json"
+            },
+            {
+                "city": "Cabramurra",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95916.json"
+            },
+            {
+                "city": "Campbelltown",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94757.json"
+            },
+            {
+                "city": "Canterbury",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94766.json"
+            },
+            {
+                "city": "Cape Byron",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94599.json"
+            },
+            {
+                "city": "Casino",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94573.json"
+            },
+            {
+                "city": "Cessnock Airport",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95771.json"
+            },
+            {
+                "city": "Cobar Airport",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94710.json"
+            },
+            {
+                "city": "Cobar",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94711.json"
+            },
+            {
+                "city": "Coffs Harbour Airport",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95729.json"
+            },
+            {
+                "city": "Collarenebri",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95520.json"
+            },
+            {
+                "city": "Condobolin Airport",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95708.json"
+            },
+            {
+                "city": "Coolangatta",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94592.json"
+            },
+            {
+                "city": "Cooma Airport",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94921.json"
+            },
+            {
+                "city": "Cooma",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94923.json"
+            },
+            {
+                "city": "Coonabarabran Airport",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95728.json"
+            },
+            {
+                "city": "Coonamble",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95718.json"
+            },
+            {
+                "city": "Cootamundra",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94714.json"
+            },
+            {
+                "city": "Corowa",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95895.json"
+            },
+            {
+                "city": "Cowra",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95721.json"
+            },
+            {
+                "city": "Deniliquin",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95869.json"
+            },
+            {
+                "city": "Dorrigo",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94789.json"
+            },
+            {
+                "city": "Dubbo",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95719.json"
+            },
+            {
+                "city": "Dunedoo",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95727.json"
+            },
+            {
+                "city": "Evans Head",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94598.json"
+            },
+            {
+                "city": "Forbes",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94715.json"
+            },
+            {
+                "city": "Forster",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95778.json"
+            },
+            {
+                "city": "Fort Denison",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94769.json"
+            },
+            {
+                "city": "Fowlers Gap",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94686.json"
+            },
+            {
+                "city": "Gabo Island",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94933.json"
+            },
+            {
+                "city": "Glen Innes Airport",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94588.json"
+            },
+            {
+                "city": "Gosford",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94782.json"
+            },
+            {
+                "city": "Goulburn Airport",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95716.json"
+            },
+            {
+                "city": "Goulburn",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94716.json"
+            },
+            {
+                "city": "Grafton AgRS",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95571.json"
+            },
+            {
+                "city": "Grafton Airport",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95570.json"
+            },
+            {
+                "city": "Green Cape",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94934.json"
+            },
+            {
+                "city": "Grenfell",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94725.json"
+            },
+            {
+                "city": "Griffith",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95704.json"
+            },
+            {
+                "city": "Gulgong",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94732.json"
+            },
+            {
+                "city": "Gundagai",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94890.json"
+            },
+            {
+                "city": "Gunnedah Airport",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95740.json"
+            },
+            {
+                "city": "Guyra",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94772.json"
+            },
+            {
+                "city": "Hay Airport",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94702.json"
+            },
+            {
+                "city": "High Range Wanganderry",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.99742.json"
+            },
+            {
+                "city": "Hillston",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94700.json"
+            },
+            {
+                "city": "Holsworthy",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95761.json"
+            },
+            {
+                "city": "Horsley Park",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94760.json"
+            },
+            {
+                "city": "Hume Reservoir",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94901.json"
+            },
+            {
+                "city": "Inverell RS",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94541.json"
+            },
+            {
+                "city": "Inverell",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95541.json"
+            },
+            {
+                "city": "Ivanhoe Airport",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95697.json"
+            },
+            {
+                "city": "Katoomba",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94744.json"
+            },
+            {
+                "city": "Kempsey Airport",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94785.json"
+            },
+            {
+                "city": "Khancoban",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94919.json"
+            },
+            {
+                "city": "Kiama",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95749.json"
+            },
+            {
+                "city": "Kurnell",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95756.json"
+            },
+            {
+                "city": "Lake Cargelligo",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95707.json"
+            },
+            {
+                "city": "Lake Macquarie - Cooranbong",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95767.json"
+            },
+            {
+                "city": "Lake Victoria",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94692.json"
+            },
+            {
+                "city": "Lightning Ridge",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94498.json"
+            },
+            {
+                "city": "Lismore Airport",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94572.json"
+            },
+            {
+                "city": "Lithgow",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94741.json"
+            },
+            {
+                "city": "Little Bay",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94780.json"
+            },
+            {
+                "city": "Lord Howe Island Windy Point",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95995.json"
+            },
+            {
+                "city": "Lord Howe Island",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94995.json"
+            },
+            {
+                "city": "Lostock",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95772.json"
+            },
+            {
+                "city": "Lucas Heights",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95757.json"
+            },
+            {
+                "city": "Maitland",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95775.json"
+            },
+            {
+                "city": "Mangrove Mountain",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95774.json"
+            },
+            {
+                "city": "Menindee",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94694.json"
+            },
+            {
+                "city": "Merimbula",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95929.json"
+            },
+            {
+                "city": "Merriwa",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95754.json"
+            },
+            {
+                "city": "Mildura",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94693.json"
+            },
+            {
+                "city": "Montague Island",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94939.json"
+            },
+            {
+                "city": "Moree",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95527.json"
+            },
+            {
+                "city": "Moruya Airport",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95937.json"
+            },
+            {
+                "city": "Moruya Heads",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94937.json"
+            },
+            {
+                "city": "Moss Vale",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94746.json"
+            },
+            {
+                "city": "Mount Boyce",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94743.json"
+            },
+            {
+                "city": "Mount Ginini",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95925.json"
+            },
+            {
+                "city": "Mount Seaview",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94783.json"
+            },
+            {
+                "city": "Mudgee",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94727.json"
+            },
+            {
+                "city": "Mungindi",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94520.json"
+            },
+            {
+                "city": "Murrurundi Gap",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95747.json"
+            },
+            {
+                "city": "Murrurundi",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94756.json"
+            },
+            {
+                "city": "Murwillumbah",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94582.json"
+            },
+            {
+                "city": "Narooma",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95935.json"
+            },
+            {
+                "city": "Narrabri",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95734.json"
+            },
+            {
+                "city": "Narrandera Airport",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95706.json"
+            },
+            {
+                "city": "Nelson Bay",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95779.json"
+            },
+            {
+                "city": "Nerriga",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94943.json"
+            },
+            {
+                "city": "Newcastle Nobbys",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94774.json"
+            },
+            {
+                "city": "Newcastle University",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94781.json"
+            },
+            {
+                "city": "Norah Head",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95770.json"
+            },
+            {
+                "city": "Norfolk Island",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94996.json"
+            },
+            {
+                "city": "North Head",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95768.json"
+            },
+            {
+                "city": "Nowra",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94750.json"
+            },
+            {
+                "city": "Nullo Mountain",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94754.json"
+            },
+            {
+                "city": "Nyngan",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94708.json"
+            },
+            {
+                "city": "Oberon",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95735.json"
+            },
+            {
+                "city": "Orange AgIn",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95725.json"
+            },
+            {
+                "city": "Orange Airport",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95726.json"
+            },
+            {
+                "city": "Parkes Airport",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95717.json"
+            },
+            {
+                "city": "Parramatta",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94764.json"
+            },
+            {
+                "city": "Peak Hill",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94721.json"
+            },
+            {
+                "city": "Penrith",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94763.json"
+            },
+            {
+                "city": "Perisher Valley",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94915.json"
+            },
+            {
+                "city": "Pindari Dam",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94544.json"
+            },
+            {
+                "city": "Point Perpendicular",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95940.json"
+            },
+            {
+                "city": "Pooncarie",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95692.json"
+            },
+            {
+                "city": "Port Kembla Harbour",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95745.json"
+            },
+            {
+                "city": "Port Macquarie Airport",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94786.json"
+            },
+            {
+                "city": "Prospect",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94736.json"
+            },
+            {
+                "city": "Quirindi",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95746.json"
+            },
+            {
+                "city": "Richmond",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95753.json"
+            },
+            {
+                "city": "Scone Airport",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95758.json"
+            },
+            {
+                "city": "Scone",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94738.json"
+            },
+            {
+                "city": "Singleton",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94733.json"
+            },
+            {
+                "city": "Smoky Cape",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94790.json"
+            },
+            {
+                "city": "Springwood",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95744.json"
+            },
+            {
+                "city": "Swan Hill",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94843.json"
+            },
+            {
+                "city": "Sydney - Observatory Hill",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94768.json"
+            },
+            {
+                "city": "Sydney Airport",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94767.json"
+            },
+            {
+                "city": "Sydney Harbour",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95766.json"
+            },
+            {
+                "city": "Sydney Olympic Park",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95765.json"
+            },
+            {
+                "city": "Tamworth Airport",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95762.json"
+            },
+            {
+                "city": "Taralga",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94735.json"
+            },
+            {
+                "city": "Taree Airport",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95784.json"
+            },
+            {
+                "city": "Temora",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95722.json"
+            },
+            {
+                "city": "Tenterfield",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94556.json"
+            },
+            {
+                "city": "Terrey Hills",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94759.json"
+            },
+            {
+                "city": "Thredbo Top Station",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95909.json"
+            },
+            {
+                "city": "Thredbo Village",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95908.json"
+            },
+            {
+                "city": "Tibooburra Airport",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95485.json"
+            },
+            {
+                "city": "Tocal",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94775.json"
+            },
+            {
+                "city": "Tocumwal",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94877.json"
+            },
+            {
+                "city": "Trangie",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95710.json"
+            },
+            {
+                "city": "Tuggeranong",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94925.json"
+            },
+            {
+                "city": "Tumbarumba",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94918.json"
+            },
+            {
+                "city": "Ulladulla",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94938.json"
+            },
+            {
+                "city": "Wagga Wagga",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94910.json"
+            },
+            {
+                "city": "Walgett",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95715.json"
+            },
+            {
+                "city": "Wanaaring",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94497.json"
+            },
+            {
+                "city": "Wattamolla",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95752.json"
+            },
+            {
+                "city": "Wellington",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94723.json"
+            },
+            {
+                "city": "West Wyalong",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95709.json"
+            },
+            {
+                "city": "White Cliffs AWS",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95699.json"
+            },
+            {
+                "city": "Wilcannia Airport",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95695.json"
+            },
+            {
+                "city": "Williamtown",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94776.json"
+            },
+            {
+                "city": "Woolbrook",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94792.json"
+            },
+            {
+                "city": "Yamba",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94589.json"
+            },
+            {
+                "city": "Yanco",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95705.json"
+            },
+            {
+                "city": "Yarrawonga",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94862.json"
+            },
+            {
+                "city": "Yass",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.95723.json"
+            },
+            {
+                "city": "Young",
+                "url": "http://www.bom.gov.au/fwo/IDN60801/IDN60801.94712.json"
+            }
+        ]
+    },
+    {
+        "state": "Northern Territory",
+        "stations": [
+            {
+                "city": "Alice Springs Airport",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.94326.json"
+            },
+            {
+                "city": "Argyle",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.94217.json"
+            },
+            {
+                "city": "Arltunga",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.95323.json"
+            },
+            {
+                "city": "Batchelor",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.94125.json"
+            },
+            {
+                "city": "Black Point",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.94134.json"
+            },
+            {
+                "city": "Borroloola",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.94152.json"
+            },
+            {
+                "city": "Bradshaw",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.94130.json"
+            },
+            {
+                "city": "Brunette Downs",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.94242.json"
+            },
+            {
+                "city": "Bulman",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.94143.json"
+            },
+            {
+                "city": "Camooweal",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.94255.json"
+            },
+            {
+                "city": "Cape Wessel",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.94147.json"
+            },
+            {
+                "city": "Central Arnhem Plateau",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.94141.json"
+            },
+            {
+                "city": "Centre Island",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.94248.json"
+            },
+            {
+                "city": "Charles Point",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.99510.json"
+            },
+            {
+                "city": "Croker Island Airport",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.94108.json"
+            },
+            {
+                "city": "Curtin Springs",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.94463.json"
+            },
+            {
+                "city": "Daly Waters",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.94234.json"
+            },
+            {
+                "city": "Darwin Airport",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.94120.json"
+            },
+            {
+                "city": "Darwin Harbour",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.95122.json"
+            },
+            {
+                "city": "Delamere",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.94225.json"
+            },
+            {
+                "city": "Douglas River",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.94128.json"
+            },
+            {
+                "city": "Dum In Mirrie",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.94116.json"
+            },
+            {
+                "city": "Elliott",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.94236.json"
+            },
+            {
+                "city": "ErnabellaPukatja",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.94474.json"
+            },
+            {
+                "city": "Giles",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.94461.json"
+            },
+            {
+                "city": "Gove Airport",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.94150.json"
+            },
+            {
+                "city": "Groote Eylandt Airport",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.94153.json"
+            },
+            {
+                "city": "Halls Creek",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.94212.json"
+            },
+            {
+                "city": "Jabiru",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.94137.json"
+            },
+            {
+                "city": "Jervois",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.94327.json"
+            },
+            {
+                "city": "Kalumburu",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.94100.json"
+            },
+            {
+                "city": "Katherine",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.94132.json"
+            },
+            {
+                "city": "Kulgera",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.94466.json"
+            },
+            {
+                "city": "Kununurra Airport",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.94216.json"
+            },
+            {
+                "city": "Lajamanu",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.94231.json"
+            },
+            {
+                "city": "McArthur River Mine",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.94239.json"
+            },
+            {
+                "city": "McCluer Island",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.94135.json"
+            },
+            {
+                "city": "Middle Point",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.95121.json"
+            },
+            {
+                "city": "Milingimbi",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.94140.json"
+            },
+            {
+                "city": "Murganella Airstrip",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.94109.json"
+            },
+            {
+                "city": "Ngayawili Elcho Island",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.95146.json"
+            },
+            {
+                "city": "Ngukurr AWS",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.94106.json"
+            },
+            {
+                "city": "Noonamah",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.94105.json"
+            },
+            {
+                "city": "Oenpelli Airport",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.94110.json"
+            },
+            {
+                "city": "Pirlangimpi",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.94119.json"
+            },
+            {
+                "city": "Point Fawcett",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.94122.json"
+            },
+            {
+                "city": "Point Stuart",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.94127.json"
+            },
+            {
+                "city": "Rabbit Flat",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.95322.json"
+            },
+            {
+                "city": "Tennant Creek",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.94238.json"
+            },
+            {
+                "city": "Territory Grape Farm",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.94328.json"
+            },
+            {
+                "city": "Tindal",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.94131.json"
+            },
+            {
+                "city": "Troughton Island",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.94102.json"
+            },
+            {
+                "city": "Truscott",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.95101.json"
+            },
+            {
+                "city": "Victoria River Downs",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.94232.json"
+            },
+            {
+                "city": "Wadeye Port Keats",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.95111.json"
+            },
+            {
+                "city": "Warburton",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.94457.json"
+            },
+            {
+                "city": "Warruwi",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.94139.json"
+            },
+            {
+                "city": "Watarrka",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.94323.json"
+            },
+            {
+                "city": "Wave Hill Kalkarindji",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.94229.json"
+            },
+            {
+                "city": "Wulungurru Kintore",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.94321.json"
+            },
+            {
+                "city": "Wyndham Airport",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.95214.json"
+            },
+            {
+                "city": "Yulara",
+                "url": "http://www.bom.gov.au/fwo/IDD60801/IDD60801.94462.json"
+            }
+        ]
+    },
+    {
+        "state": "Queensland",
+        "stations": [
+            {
+                "city": "Alva Beach",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.95296.json"
+            },
+            {
+                "city": "Amberley",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94568.json"
+            },
+            {
+                "city": "Applethorpe",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94553.json"
+            },
+            {
+                "city": "Archerfield",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94575.json"
+            },
+            {
+                "city": "Arlington Reef",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94284.json"
+            },
+            {
+                "city": "Ayr",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.95295.json"
+            },
+            {
+                "city": "Ballera",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.95487.json"
+            },
+            {
+                "city": "Banana Bank",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94591.json"
+            },
+            {
+                "city": "Barcaldine",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94350.json"
+            },
+            {
+                "city": "Beaudesert AWS",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.95575.json"
+            },
+            {
+                "city": "Bedourie",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94334.json"
+            },
+            {
+                "city": "Beerburrum",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.95566.json"
+            },
+            {
+                "city": "Biloela",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94376.json"
+            },
+            {
+                "city": "Birdsville",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.95482.json"
+            },
+            {
+                "city": "Blackall",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.95351.json"
+            },
+            {
+                "city": "Blackwater Airport",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94398.json"
+            },
+            {
+                "city": "Bollon",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94513.json"
+            },
+            {
+                "city": "Bougainville Reef",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.95288.json"
+            },
+            {
+                "city": "Boulia",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94333.json"
+            },
+            {
+                "city": "Bowen Airport AWS",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94383.json"
+            },
+            {
+                "city": "Brisbane Airport",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94578.json"
+            },
+            {
+                "city": "Brisbane",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94576.json"
+            },
+            {
+                "city": "Bundaberg",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94387.json"
+            },
+            {
+                "city": "Burketown Airport",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94260.json"
+            },
+            {
+                "city": "Cairns Racecourse",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94288.json"
+            },
+            {
+                "city": "Cairns",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94287.json"
+            },
+            {
+                "city": "Camooweal",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94255.json"
+            },
+            {
+                "city": "Cape Ferguson",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94297.json"
+            },
+            {
+                "city": "Cape Flattery",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94188.json"
+            },
+            {
+                "city": "Cape Moreton",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94594.json"
+            },
+            {
+                "city": "Cardwell",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94292.json"
+            },
+            {
+                "city": "Carters Bore",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94347.json"
+            },
+            {
+                "city": "Cato Island",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94394.json"
+            },
+            {
+                "city": "Century Mine",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94261.json"
+            },
+            {
+                "city": "Charleville",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94510.json"
+            },
+            {
+                "city": "Charters Towers",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94356.json"
+            },
+            {
+                "city": "Cloncurry",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94335.json"
+            },
+            {
+                "city": "Coconut Island",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94182.json"
+            },
+            {
+                "city": "Coen Airport",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94183.json"
+            },
+            {
+                "city": "Collinsville",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94360.json"
+            },
+            {
+                "city": "Cooktown",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.95283.json"
+            },
+            {
+                "city": "Coolangatta",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94592.json"
+            },
+            {
+                "city": "Creal Reef",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94371.json"
+            },
+            {
+                "city": "Cunnamulla",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94500.json"
+            },
+            {
+                "city": "Dalby",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94542.json"
+            },
+            {
+                "city": "Double Island Point",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94584.json"
+            },
+            {
+                "city": "Emerald",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94363.json"
+            },
+            {
+                "city": "Flinders Reef",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94290.json"
+            },
+            {
+                "city": "Frederick Reef",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94393.json"
+            },
+            {
+                "city": "Gannett Cay",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94379.json"
+            },
+            {
+                "city": "Gatton",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94562.json"
+            },
+            {
+                "city": "Gayndah",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.95543.json"
+            },
+            {
+                "city": "Georgetown Airport",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94274.json"
+            },
+            {
+                "city": "Gladstone Airport",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94381.json"
+            },
+            {
+                "city": "Gladstone",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94380.json"
+            },
+            {
+                "city": "Gold Coast Seaway",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94580.json"
+            },
+            {
+                "city": "Gympie",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94566.json"
+            },
+            {
+                "city": "Hamilton Island",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94368.json"
+            },
+            {
+                "city": "Hay Point",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.99367.json"
+            },
+            {
+                "city": "Heron Island",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94386.json"
+            },
+            {
+                "city": "Hervey Bay",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.95565.json"
+            },
+            {
+                "city": "Holmes Reef",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94289.json"
+            },
+            {
+                "city": "Horn Island",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94174.json"
+            },
+            {
+                "city": "Hughenden",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94343.json"
+            },
+            {
+                "city": "Ingham",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.95291.json"
+            },
+            {
+                "city": "Inner Beacon",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94590.json"
+            },
+            {
+                "city": "Innisfail",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94291.json"
+            },
+            {
+                "city": "Isisford",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94345.json"
+            },
+            {
+                "city": "Jimna",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94557.json"
+            },
+            {
+                "city": "Julia Creek",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94337.json"
+            },
+            {
+                "city": "Kingaroy",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94549.json"
+            },
+            {
+                "city": "Kowanyama",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94268.json"
+            },
+            {
+                "city": "Lady Elliot Island",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94388.json"
+            },
+            {
+                "city": "Lake Julius",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94348.json"
+            },
+            {
+                "city": "Lihou Reef Lighthouse",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94293.json"
+            },
+            {
+                "city": "Lochington",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94399.json"
+            },
+            {
+                "city": "Lockhart River",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94186.json"
+            },
+            {
+                "city": "Logan City",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.95581.json"
+            },
+            {
+                "city": "Longreach",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94346.json"
+            },
+            {
+                "city": "Low Isles",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94285.json"
+            },
+            {
+                "city": "Lucinda",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94295.json"
+            },
+            {
+                "city": "Mackay Airport",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.95367.json"
+            },
+            {
+                "city": "Mackay",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94367.json"
+            },
+            {
+                "city": "Maleny",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94547.json"
+            },
+            {
+                "city": "Mareeba",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.95286.json"
+            },
+            {
+                "city": "Marion Reef",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94298.json"
+            },
+            {
+                "city": "Maroochydore",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94569.json"
+            },
+            {
+                "city": "Maryborough",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94567.json"
+            },
+            {
+                "city": "Middle Percy Island",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94372.json"
+            },
+            {
+                "city": "Miles",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.95529.json"
+            },
+            {
+                "city": "Mitchell",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94514.json"
+            },
+            {
+                "city": "Monto Township",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94377.json"
+            },
+            {
+                "city": "Moranbah Airport",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94397.json"
+            },
+            {
+                "city": "Mornington Island Airport",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94254.json"
+            },
+            {
+                "city": "Mount Isa",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94332.json"
+            },
+            {
+                "city": "Nambour",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.95572.json"
+            },
+            {
+                "city": "New May Downs",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94349.json"
+            },
+            {
+                "city": "Normanton",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94266.json"
+            },
+            {
+                "city": "Oakey",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94552.json"
+            },
+            {
+                "city": "Palmerville",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94276.json"
+            },
+            {
+                "city": "Point Lookout",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94593.json"
+            },
+            {
+                "city": "PORTABLE QFRH",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.99117.json"
+            },
+            {
+                "city": "Proserpine",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94365.json"
+            },
+            {
+                "city": "Rainbow Beach",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94564.json"
+            },
+            {
+                "city": "Redcliffe",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.95591.json"
+            },
+            {
+                "city": "Redland Alexandra Hills",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94561.json"
+            },
+            {
+                "city": "Richmond",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94341.json"
+            },
+            {
+                "city": "Rockhampton",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94374.json"
+            },
+            {
+                "city": "Roma",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94515.json"
+            },
+            {
+                "city": "Rosslyn Bay Harbour",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.95298.json"
+            },
+            {
+                "city": "Rundle Island",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94378.json"
+            },
+            {
+                "city": "Samuel Hill",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94370.json"
+            },
+            {
+                "city": "Sandy Cape",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94390.json"
+            },
+            {
+                "city": "Scherger",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94171.json"
+            },
+            {
+                "city": "Seventeen Seventy",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94384.json"
+            },
+            {
+                "city": "South Johnstone",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.95292.json"
+            },
+            {
+                "city": "Spitfire Channel",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94581.json"
+            },
+            {
+                "city": "Springsure",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.95362.json"
+            },
+            {
+                "city": "St George",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94517.json"
+            },
+            {
+                "city": "St Lawrence",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.95369.json"
+            },
+            {
+                "city": "Stanthorpe",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94550.json"
+            },
+            {
+                "city": "Surat",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94521.json"
+            },
+            {
+                "city": "Sweers Island",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94257.json"
+            },
+            {
+                "city": "Tambo",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94355.json"
+            },
+            {
+                "city": "Taroom",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94525.json"
+            },
+            {
+                "city": "Tewantin",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94570.json"
+            },
+            {
+                "city": "Texas",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.95533.json"
+            },
+            {
+                "city": "Thargomindah",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.95492.json"
+            },
+            {
+                "city": "The Monument",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94336.json"
+            },
+            {
+                "city": "Toowoomba",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.95551.json"
+            },
+            {
+                "city": "Townsville",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94294.json"
+            },
+            {
+                "city": "Trepell",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94338.json"
+            },
+            {
+                "city": "Urandangi",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94344.json"
+            },
+            {
+                "city": "Warwick",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94555.json"
+            },
+            {
+                "city": "Weipa",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94170.json"
+            },
+            {
+                "city": "Williamson",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.95370.json"
+            },
+            {
+                "city": "Willis Island",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94299.json"
+            },
+            {
+                "city": "Winton",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94342.json"
+            },
+            {
+                "city": "Woolshed",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.95293.json"
+            },
+            {
+                "city": "Yeppoon",
+                "url": "http://www.bom.gov.au/fwo/IDQ60801/IDQ60801.94373.json"
+            }
+        ]
+    },
+    {
+        "state": "South Australia",
+        "stations": [
+            {
+                "city": "Adelaide Airport",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.94672.json"
+            },
+            {
+                "city": "Adelaide",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.94675.json"
+            },
+            {
+                "city": "Andamooka",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.95660.json"
+            },
+            {
+                "city": "Arkaroola",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.94676.json"
+            },
+            {
+                "city": "Cape Borda",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.95805.json"
+            },
+            {
+                "city": "Cape Jaffa",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.94813.json"
+            },
+            {
+                "city": "Cape Willoughby",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.94822.json"
+            },
+            {
+                "city": "Ceduna",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.94653.json"
+            },
+            {
+                "city": "Clare",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.95667.json"
+            },
+            {
+                "city": "Cleve Airport",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.94662.json"
+            },
+            {
+                "city": "Cleve",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.94661.json"
+            },
+            {
+                "city": "Coles Point",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.94658.json"
+            },
+            {
+                "city": "Coober Pedy Airport",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.95458.json"
+            },
+            {
+                "city": "Coonawarra",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.94817.json"
+            },
+            {
+                "city": "Cummins Airport",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.95663.json"
+            },
+            {
+                "city": "Edinburgh",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.95676.json"
+            },
+            {
+                "city": "Edithburgh",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.94809.json"
+            },
+            {
+                "city": "Elliston",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.94656.json"
+            },
+            {
+                "city": "ErnabellaPukatja",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.94474.json"
+            },
+            {
+                "city": "Eudunda",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.94680.json"
+            },
+            {
+                "city": "Gluepot",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.95668.json"
+            },
+            {
+                "city": "Hawker",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.94673.json"
+            },
+            {
+                "city": "Hindmarsh Island",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.94677.json"
+            },
+            {
+                "city": "Kadina",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.94685.json"
+            },
+            {
+                "city": "Karoonda",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.95813.json"
+            },
+            {
+                "city": "Keith West",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.95815.json"
+            },
+            {
+                "city": "Keith",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.94816.json"
+            },
+            {
+                "city": "Kimba",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.94668.json"
+            },
+            {
+                "city": "Kingscote",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.95807.json"
+            },
+            {
+                "city": "Kuitpo",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.94683.json"
+            },
+            {
+                "city": "Kyancutta",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.94657.json"
+            },
+            {
+                "city": "Lameroo AWS",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.94690.json"
+            },
+            {
+                "city": "Leigh Creek",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.94674.json"
+            },
+            {
+                "city": "Loxton",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.94682.json"
+            },
+            {
+                "city": "Maitland",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.94665.json"
+            },
+            {
+                "city": "Marree Airport",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.95480.json"
+            },
+            {
+                "city": "Meningie",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.95814.json"
+            },
+            {
+                "city": "Minlaton Airport",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.95659.json"
+            },
+            {
+                "city": "Minnipa RS",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.95662.json"
+            },
+            {
+                "city": "Moomba Airport",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.95481.json"
+            },
+            {
+                "city": "Mount Barker",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.94806.json"
+            },
+            {
+                "city": "Mount Crawford",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.94678.json"
+            },
+            {
+                "city": "Mount Gambier",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.94821.json"
+            },
+            {
+                "city": "Mount Lofty",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.95678.json"
+            },
+            {
+                "city": "Murray Bridge",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.95812.json"
+            },
+            {
+                "city": "Naracoorte",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.94820.json"
+            },
+            {
+                "city": "Neptune Island",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.94804.json"
+            },
+            {
+                "city": "Noarlunga",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.94808.json"
+            },
+            {
+                "city": "Nullarbor",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.94651.json"
+            },
+            {
+                "city": "Nuriootpa",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.94681.json"
+            },
+            {
+                "city": "Oodnadatta",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.94476.json"
+            },
+            {
+                "city": "Outer Harbor Black Pole",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.95675.json"
+            },
+            {
+                "city": "Padthaway",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.95823.json"
+            },
+            {
+                "city": "Pallamana",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.95818.json"
+            },
+            {
+                "city": "Parafield",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.95677.json"
+            },
+            {
+                "city": "Parawa West",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.94811.json"
+            },
+            {
+                "city": "Parndana",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.94807.json"
+            },
+            {
+                "city": "Port Augusta",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.95666.json"
+            },
+            {
+                "city": "Port Lincoln Airport",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.95661.json"
+            },
+            {
+                "city": "Port Pirie Airport AWS",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.99749.json"
+            },
+            {
+                "city": "Renmark Airport",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.95687.json"
+            },
+            {
+                "city": "Robe Airport",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.95816.json"
+            },
+            {
+                "city": "Roseworthy",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.95671.json"
+            },
+            {
+                "city": "Roxby Downs",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.95658.json"
+            },
+            {
+                "city": "Sellicks Hill",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.95679.json"
+            },
+            {
+                "city": "Snowtown",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.95670.json"
+            },
+            {
+                "city": "Stenhouse Bay",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.95806.json"
+            },
+            {
+                "city": "Strathalbyn",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.94814.json"
+            },
+            {
+                "city": "Streaky Bay",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.94654.json"
+            },
+            {
+                "city": "Tarcoola",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.94655.json"
+            },
+            {
+                "city": "Thevenard",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.95653.json"
+            },
+            {
+                "city": "Turretfield",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.95674.json"
+            },
+            {
+                "city": "Victor Harbor",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.95811.json"
+            },
+            {
+                "city": "Warburto Point",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.94666.json"
+            },
+            {
+                "city": "Warooka",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.94663.json"
+            },
+            {
+                "city": "Whyalla",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.95664.json"
+            },
+            {
+                "city": "Woomera",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.94659.json"
+            },
+            {
+                "city": "Wudinna Airport",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.95654.json"
+            },
+            {
+                "city": "Yongala",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.94679.json"
+            },
+            {
+                "city": "Yunta",
+                "url": "http://www.bom.gov.au/fwo/IDS60801/IDS60801.94684.json"
+            }
+        ]
+    },
+    {
+        "state": "Tasmania",
+        "stations": [
+            {
+                "city": "Bicheno",
+                "url": "http://www.bom.gov.au/fwo/IDT60801/IDT60801.95989.json"
+            },
+            {
+                "city": "Bridport",
+                "url": "http://www.bom.gov.au/fwo/IDT60801/IDT60801.95973.json"
+            },
+            {
+                "city": "Burnie Port",
+                "url": "http://www.bom.gov.au/fwo/IDT60801/IDT60801.95963.json"
+            },
+            {
+                "city": "Burnie",
+                "url": "http://www.bom.gov.au/fwo/IDT60801/IDT60801.94958.json"
+            },
+            {
+                "city": "Bushy Park",
+                "url": "http://www.bom.gov.au/fwo/IDT60801/IDT60801.94964.json"
+            },
+            {
+                "city": "Butlers Gorge",
+                "url": "http://www.bom.gov.au/fwo/IDT60801/IDT60801.94959.json"
+            },
+            {
+                "city": "Campania",
+                "url": "http://www.bom.gov.au/fwo/IDT60801/IDT60801.95972.json"
+            },
+            {
+                "city": "Cape Bruny AWS",
+                "url": "http://www.bom.gov.au/fwo/IDT60801/IDT60801.95967.json"
+            },
+            {
+                "city": "Cape Bruny",
+                "url": "http://www.bom.gov.au/fwo/IDT60801/IDT60801.94967.json"
+            },
+            {
+                "city": "Cape Grim",
+                "url": "http://www.bom.gov.au/fwo/IDT60801/IDT60801.95954.json"
+            },
+            {
+                "city": "Cape Sorell",
+                "url": "http://www.bom.gov.au/fwo/IDT60801/IDT60801.94974.json"
+            },
+            {
+                "city": "Cressy",
+                "url": "http://www.bom.gov.au/fwo/IDT60801/IDT60801.95969.json"
+            },
+            {
+                "city": "Dennes Point",
+                "url": "http://www.bom.gov.au/fwo/IDT60801/IDT60801.94988.json"
+            },
+            {
+                "city": "Dover",
+                "url": "http://www.bom.gov.au/fwo/IDT60801/IDT60801.94961.json"
+            },
+            {
+                "city": "Dunalley",
+                "url": "http://www.bom.gov.au/fwo/IDT60801/IDT60801.94951.json"
+            },
+            {
+                "city": "Fingal",
+                "url": "http://www.bom.gov.au/fwo/IDT60801/IDT60801.95974.json"
+            },
+            {
+                "city": "Flinders Island Airport",
+                "url": "http://www.bom.gov.au/fwo/IDT60801/IDT60801.94980.json"
+            },
+            {
+                "city": "Friendly Beaches",
+                "url": "http://www.bom.gov.au/fwo/IDT60801/IDT60801.94987.json"
+            },
+            {
+                "city": "Grove",
+                "url": "http://www.bom.gov.au/fwo/IDT60801/IDT60801.95977.json"
+            },
+            {
+                "city": "Hartz Mountains",
+                "url": "http://www.bom.gov.au/fwo/IDT60801/IDT60801.94977.json"
+            },
+            {
+                "city": "Hobart Airport",
+                "url": "http://www.bom.gov.au/fwo/IDT60801/IDT60801.94975.json"
+            },
+            {
+                "city": "Hobart",
+                "url": "http://www.bom.gov.au/fwo/IDT60801/IDT60801.94970.json"
+            },
+            {
+                "city": "Hogan Island",
+                "url": "http://www.bom.gov.au/fwo/IDT60801/IDT60801.94949.json"
+            },
+            {
+                "city": "King Island Airport",
+                "url": "http://www.bom.gov.au/fwo/IDT60801/IDT60801.94850.json"
+            },
+            {
+                "city": "kunanyi  Mount Wellington",
+                "url": "http://www.bom.gov.au/fwo/IDT60801/IDT60801.95979.json"
+            },
+            {
+                "city": "Lake Leake",
+                "url": "http://www.bom.gov.au/fwo/IDT60801/IDT60801.94979.json"
+            },
+            {
+                "city": "Lake St Clair",
+                "url": "http://www.bom.gov.au/fwo/IDT60801/IDT60801.94976.json"
+            },
+            {
+                "city": "Larapuna Eddystone Point",
+                "url": "http://www.bom.gov.au/fwo/IDT60801/IDT60801.94983.json"
+            },
+            {
+                "city": "Launceston Airport",
+                "url": "http://www.bom.gov.au/fwo/IDT60801/IDT60801.95966.json"
+            },
+            {
+                "city": "Launceston",
+                "url": "http://www.bom.gov.au/fwo/IDT60801/IDT60801.94969.json"
+            },
+            {
+                "city": "Liawenee",
+                "url": "http://www.bom.gov.au/fwo/IDT60801/IDT60801.95959.json"
+            },
+            {
+                "city": "Low Head",
+                "url": "http://www.bom.gov.au/fwo/IDT60801/IDT60801.95964.json"
+            },
+            {
+                "city": "Low Rocky Point",
+                "url": "http://www.bom.gov.au/fwo/IDT60801/IDT60801.95961.json"
+            },
+            {
+                "city": "Luncheon Hill",
+                "url": "http://www.bom.gov.au/fwo/IDT60801/IDT60801.95956.json"
+            },
+            {
+                "city": "Maatsuyker Island",
+                "url": "http://www.bom.gov.au/fwo/IDT60801/IDT60801.94962.json"
+            },
+            {
+                "city": "Macquarie Island",
+                "url": "http://www.bom.gov.au/fwo/IDT60801/IDT60801.94998.json"
+            },
+            {
+                "city": "Maria Island",
+                "url": "http://www.bom.gov.au/fwo/IDT60801/IDT60801.95988.json"
+            },
+            {
+                "city": "Marrawah",
+                "url": "http://www.bom.gov.au/fwo/IDT60801/IDT60801.94950.json"
+            },
+            {
+                "city": "Maydena",
+                "url": "http://www.bom.gov.au/fwo/IDT60801/IDT60801.94963.json"
+            },
+            {
+                "city": "Melton Mowbray",
+                "url": "http://www.bom.gov.au/fwo/IDT60801/IDT60801.94971.json"
+            },
+            {
+                "city": "Mount Read",
+                "url": "http://www.bom.gov.au/fwo/IDT60801/IDT60801.95952.json"
+            },
+            {
+                "city": "Orford",
+                "url": "http://www.bom.gov.au/fwo/IDT60801/IDT60801.95984.json"
+            },
+            {
+                "city": "Ouse",
+                "url": "http://www.bom.gov.au/fwo/IDT60801/IDT60801.94957.json"
+            },
+            {
+                "city": "Ross",
+                "url": "http://www.bom.gov.au/fwo/IDT60801/IDT60801.94985.json"
+            },
+            {
+                "city": "Scotts Peak",
+                "url": "http://www.bom.gov.au/fwo/IDT60801/IDT60801.95958.json"
+            },
+            {
+                "city": "Scottsdale",
+                "url": "http://www.bom.gov.au/fwo/IDT60801/IDT60801.94972.json"
+            },
+            {
+                "city": "Sheffield",
+                "url": "http://www.bom.gov.au/fwo/IDT60801/IDT60801.94955.json"
+            },
+            {
+                "city": "Smithton",
+                "url": "http://www.bom.gov.au/fwo/IDT60801/IDT60801.94953.json"
+            },
+            {
+                "city": "Spring Bay",
+                "url": "http://www.bom.gov.au/fwo/IDT60801/IDT60801.95987.json"
+            },
+            {
+                "city": "St Helens",
+                "url": "http://www.bom.gov.au/fwo/IDT60801/IDT60801.95981.json"
+            },
+            {
+                "city": "Strahan",
+                "url": "http://www.bom.gov.au/fwo/IDT60801/IDT60801.94956.json"
+            },
+            {
+                "city": "Swan Island",
+                "url": "http://www.bom.gov.au/fwo/IDT60801/IDT60801.95985.json"
+            },
+            {
+                "city": "Swansea",
+                "url": "http://www.bom.gov.au/fwo/IDT60801/IDT60801.94981.json"
+            },
+            {
+                "city": "Tasman Island",
+                "url": "http://www.bom.gov.au/fwo/IDT60801/IDT60801.95986.json"
+            },
+            {
+                "city": "Tunnack",
+                "url": "http://www.bom.gov.au/fwo/IDT60801/IDT60801.94960.json"
+            },
+            {
+                "city": "Warra",
+                "url": "http://www.bom.gov.au/fwo/IDT60801/IDT60801.95962.json"
+            },
+            {
+                "city": "Wynyard",
+                "url": "http://www.bom.gov.au/fwo/IDT60801/IDT60801.95957.json"
+            }
+        ]
+    },
+    {
+        "state": "Victoria",
+        "stations": [
+            {
+                "city": "Aireys Inlet",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94846.json"
+            },
+            {
+                "city": "Albury",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.95896.json"
+            },
+            {
+                "city": "Ararat",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94834.json"
+            },
+            {
+                "city": "Avalon",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94854.json"
+            },
+            {
+                "city": "Bairnsdale",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94912.json"
+            },
+            {
+                "city": "Ballarat",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94852.json"
+            },
+            {
+                "city": "Benalla",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94884.json"
+            },
+            {
+                "city": "Bendigo",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94855.json"
+            },
+            {
+                "city": "Bundoora",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.95873.json"
+            },
+            {
+                "city": "Cape Nelson",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94826.json"
+            },
+            {
+                "city": "Cape Otway",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94842.json"
+            },
+            {
+                "city": "Casterton",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.95825.json"
+            },
+            {
+                "city": "Castlemaine",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.95853.json"
+            },
+            {
+                "city": "Cerberus",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94898.json"
+            },
+            {
+                "city": "Charlton",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94839.json"
+            },
+            {
+                "city": "Coldstream",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94864.json"
+            },
+            {
+                "city": "Cranbourne",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94879.json"
+            },
+            {
+                "city": "Dartmoor",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.95822.json"
+            },
+            {
+                "city": "East Sale",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94907.json"
+            },
+            {
+                "city": "Echuca",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94861.json"
+            },
+            {
+                "city": "Ecklin South",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.99054.json"
+            },
+            {
+                "city": "Edenhope",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.95832.json"
+            },
+            {
+                "city": "Edi Upper",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.95838.json"
+            },
+            {
+                "city": "Eildon Fire Tower",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94881.json"
+            },
+            {
+                "city": "Essendon Airport",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.95866.json"
+            },
+            {
+                "city": "Falls Creek",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94903.json"
+            },
+            {
+                "city": "Fawkner Beacon",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.95872.json"
+            },
+            {
+                "city": "Ferny Creek",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94872.json"
+            },
+            {
+                "city": "Frankston",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94871.json"
+            },
+            {
+                "city": "Gabo Island",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94933.json"
+            },
+            {
+                "city": "Geelong Racecourse",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94857.json"
+            },
+            {
+                "city": "Hamilton",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94829.json"
+            },
+            {
+                "city": "Hogan Island",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94949.json"
+            },
+            {
+                "city": "Hopetoun Airport",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94838.json"
+            },
+            {
+                "city": "Horsham",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.95839.json"
+            },
+            {
+                "city": "Hunters Hill",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94878.json"
+            },
+            {
+                "city": "Kanagulk",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.95827.json"
+            },
+            {
+                "city": "Kerang",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94844.json"
+            },
+            {
+                "city": "Kilmore Gap",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94860.json"
+            },
+            {
+                "city": "Kingfish B",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.55039.json"
+            },
+            {
+                "city": "Kyabram",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.95833.json"
+            },
+            {
+                "city": "Lake Dartmouth",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94888.json"
+            },
+            {
+                "city": "Lake Eildon",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94882.json"
+            },
+            {
+                "city": "Lakes Entrance",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.95904.json"
+            },
+            {
+                "city": "Latrobe Valley",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94891.json"
+            },
+            {
+                "city": "Laverton",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94865.json"
+            },
+            {
+                "city": "Longerenong",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.95835.json"
+            },
+            {
+                "city": "Mallacoota",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94935.json"
+            },
+            {
+                "city": "Mangalore",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94874.json"
+            },
+            {
+                "city": "Maryborough",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94849.json"
+            },
+            {
+                "city": "Melbourne Airport",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94866.json"
+            },
+            {
+                "city": "Melbourne Olympic Park",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.95936.json"
+            },
+            {
+                "city": "Mildura",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94693.json"
+            },
+            {
+                "city": "Moorabbin Airport",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94870.json"
+            },
+            {
+                "city": "Mortlake",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94840.json"
+            },
+            {
+                "city": "Mount Buller",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94894.json"
+            },
+            {
+                "city": "Mount Gellibrand",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.95845.json"
+            },
+            {
+                "city": "Mount Hotham Airport",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94905.json"
+            },
+            {
+                "city": "Mount Hotham",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94906.json"
+            },
+            {
+                "city": "Mount Moornapa",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.95913.json"
+            },
+            {
+                "city": "Mount Nowa Nowa",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94930.json"
+            },
+            {
+                "city": "Mount William",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94833.json"
+            },
+            {
+                "city": "Mt Misery",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.99052.json"
+            },
+            {
+                "city": "Nhill Aerodrome",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94827.json"
+            },
+            {
+                "city": "Omeo",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94908.json"
+            },
+            {
+                "city": "Orbost",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.95918.json"
+            },
+            {
+                "city": "Ouyen",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94831.json"
+            },
+            {
+                "city": "Point Hicks",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94932.json"
+            },
+            {
+                "city": "Point Wilson",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94847.json"
+            },
+            {
+                "city": "Port Fairy",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94830.json"
+            },
+            {
+                "city": "Portland Airport",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94828.json"
+            },
+            {
+                "city": "Portland Harbour",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.95826.json"
+            },
+            {
+                "city": "Pound Creek",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94886.json"
+            },
+            {
+                "city": "Redesdale",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94859.json"
+            },
+            {
+                "city": "Rhyll",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94892.json"
+            },
+            {
+                "city": "Rutherglen",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.95837.json"
+            },
+            {
+                "city": "Scoresby",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.95867.json"
+            },
+            {
+                "city": "Sheoaks",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94863.json"
+            },
+            {
+                "city": "Shepparton",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94875.json"
+            },
+            {
+                "city": "South Channel Island",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94853.json"
+            },
+            {
+                "city": "St Kilda Harbour RMYS",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.95864.json"
+            },
+            {
+                "city": "Stawell",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94836.json"
+            },
+            {
+                "city": "Strathbogie",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.95843.json"
+            },
+            {
+                "city": "Swan Hill",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94843.json"
+            },
+            {
+                "city": "Tatura",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.95836.json"
+            },
+            {
+                "city": "Viewbank",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.95874.json"
+            },
+            {
+                "city": "Walpeup",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.95831.json"
+            },
+            {
+                "city": "Wangaratta",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94889.json"
+            },
+            {
+                "city": "Warracknabeal",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94841.json"
+            },
+            {
+                "city": "Warragul Nilma North",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.99806.json"
+            },
+            {
+                "city": "Warrnambool",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94837.json"
+            },
+            {
+                "city": "Westmere",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.95840.json"
+            },
+            {
+                "city": "Willow Grove",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94900.json"
+            },
+            {
+                "city": "Wilsons Promontory",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94893.json"
+            },
+            {
+                "city": "Wonthaggi",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.95881.json"
+            },
+            {
+                "city": "Yanakie",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94911.json"
+            },
+            {
+                "city": "Yarram Airport",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.95890.json"
+            },
+            {
+                "city": "Yarrawonga",
+                "url": "http://www.bom.gov.au/fwo/IDV60801/IDV60801.94862.json"
+            }
+        ]
+    },
+    {
+        "state": "Western Australia",
+        "stations": [
+            {
+                "city": "Adele Island",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94210.json"
+            },
+            {
+                "city": "Albany Airport",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94802.json"
+            },
+            {
+                "city": "Albany",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94801.json"
+            },
+            {
+                "city": "Argyle",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94217.json"
+            },
+            {
+                "city": "Badgingarra",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94603.json"
+            },
+            {
+                "city": "Balladonia",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94642.json"
+            },
+            {
+                "city": "Barimunya",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.99313.json"
+            },
+            {
+                "city": "Barrow Island",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.95304.json"
+            },
+            {
+                "city": "Bedout Island",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94310.json"
+            },
+            {
+                "city": "Bencubbin",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94632.json"
+            },
+            {
+                "city": "Beverley",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.95615.json"
+            },
+            {
+                "city": "Bickley",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.95610.json"
+            },
+            {
+                "city": "Bidyadanga",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94202.json"
+            },
+            {
+                "city": "Bridgetown",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.95632.json"
+            },
+            {
+                "city": "Brookton",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94625.json"
+            },
+            {
+                "city": "Broome Port",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.95202.json"
+            },
+            {
+                "city": "Broome",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94203.json"
+            },
+            {
+                "city": "Browse Island",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94103.json"
+            },
+            {
+                "city": "Bulga Downs",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94444.json"
+            },
+            {
+                "city": "Bunbury",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94604.json"
+            },
+            {
+                "city": "Busselton Airport",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.95611.json"
+            },
+            {
+                "city": "Busselton Jetty",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.95602.json"
+            },
+            {
+                "city": "Cape Leeuwin",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94601.json"
+            },
+            {
+                "city": "Cape Naturaliste",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94600.json"
+            },
+            {
+                "city": "Carnamah",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94415.json"
+            },
+            {
+                "city": "Carnarvon",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94300.json"
+            },
+            {
+                "city": "Carnegie",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94451.json"
+            },
+            {
+                "city": "Christmas Creek",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.99737.json"
+            },
+            {
+                "city": "Christmas Island",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.96995.json"
+            },
+            {
+                "city": "Cocos Island",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.96996.json"
+            },
+            {
+                "city": "Collie East",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.95621.json"
+            },
+            {
+                "city": "Coondewanna",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.99312.json"
+            },
+            {
+                "city": "Corrigin",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94633.json"
+            },
+            {
+                "city": "Cunderdin Airport",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.95625.json"
+            },
+            {
+                "city": "Curtin",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94204.json"
+            },
+            {
+                "city": "Cygnet Bay",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94201.json"
+            },
+            {
+                "city": "Dalwallinu",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.95629.json"
+            },
+            {
+                "city": "Degrussa Aerodrome",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.99400.json"
+            },
+            {
+                "city": "Denham",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94402.json"
+            },
+            {
+                "city": "Derby",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.95205.json"
+            },
+            {
+                "city": "Donnybrook",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.95622.json"
+            },
+            {
+                "city": "Doongan",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94215.json"
+            },
+            {
+                "city": "Dwellingup",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94620.json"
+            },
+            {
+                "city": "Emu Creek",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94318.json"
+            },
+            {
+                "city": "Eneabba",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94414.json"
+            },
+            {
+                "city": "Esperance Airport",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.95638.json"
+            },
+            {
+                "city": "Esperance Harbour",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.95648.json"
+            },
+            {
+                "city": "Esperance",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94638.json"
+            },
+            {
+                "city": "Eucla",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94647.json"
+            },
+            {
+                "city": "Eyre",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94645.json"
+            },
+            {
+                "city": "Fitzroy Crossing",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94206.json"
+            },
+            {
+                "city": "Forrest",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.95646.json"
+            },
+            {
+                "city": "Fortescue Dave Forrest",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.99736.json"
+            },
+            {
+                "city": "Garden Island",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.95607.json"
+            },
+            {
+                "city": "Gascoyne Junction",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94410.json"
+            },
+            {
+                "city": "Geraldton Airport",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94403.json"
+            },
+            {
+                "city": "Giles",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94461.json"
+            },
+            {
+                "city": "Gingin Airport",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.95612.json"
+            },
+            {
+                "city": "Goomalling",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.95631.json"
+            },
+            {
+                "city": "Gooseberry Hill",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94615.json"
+            },
+            {
+                "city": "Gosnells",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.95604.json"
+            },
+            {
+                "city": "Halls Creek",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94212.json"
+            },
+            {
+                "city": "Hillarys Point Boat Harbour",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.95605.json"
+            },
+            {
+                "city": "Hopetoun North",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.95635.json"
+            },
+            {
+                "city": "Hyden",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.95627.json"
+            },
+            {
+                "city": "Jacup",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.95636.json"
+            },
+            {
+                "city": "Jandakot",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94609.json"
+            },
+            {
+                "city": "Jarrahwood",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.95623.json"
+            },
+            {
+                "city": "Jurien Bay",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.95600.json"
+            },
+            {
+                "city": "Kalbarri",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94401.json"
+            },
+            {
+                "city": "Kalgoorlie-Boulder",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94637.json"
+            },
+            {
+                "city": "Kalumburu",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94100.json"
+            },
+            {
+                "city": "Karnet",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.95614.json"
+            },
+            {
+                "city": "Karratha",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.95307.json"
+            },
+            {
+                "city": "Katanning RS",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94641.json"
+            },
+            {
+                "city": "Kununurra Airport",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94216.json"
+            },
+            {
+                "city": "Lake Grace",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.95637.json"
+            },
+            {
+                "city": "Lancelin",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.95606.json"
+            },
+            {
+                "city": "Laverton",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94449.json"
+            },
+            {
+                "city": "Learmonth",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94302.json"
+            },
+            {
+                "city": "Legendre Island",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94307.json"
+            },
+            {
+                "city": "Leinster",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.95448.json"
+            },
+            {
+                "city": "Lombadina",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.99206.json"
+            },
+            {
+                "city": "Mandora",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94200.json"
+            },
+            {
+                "city": "Mandurah",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94605.json"
+            },
+            {
+                "city": "Manjimup",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94617.json"
+            },
+            {
+                "city": "Marble Bar",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.95317.json"
+            },
+            {
+                "city": "Mardie",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94306.json"
+            },
+            {
+                "city": "Medina",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.95608.json"
+            },
+            {
+                "city": "Meekatharra",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94430.json"
+            },
+            {
+                "city": "Melville Water",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.95620.json"
+            },
+            {
+                "city": "Merredin",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.95624.json"
+            },
+            {
+                "city": "Morawa Airport",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94417.json"
+            },
+            {
+                "city": "Mount Barker",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94630.json"
+            },
+            {
+                "city": "Mount Elizabeth",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94211.json"
+            },
+            {
+                "city": "Mount Keith",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.99434.json"
+            },
+            {
+                "city": "Mount Magnet Airport",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94429.json"
+            },
+            {
+                "city": "Mullewa",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94411.json"
+            },
+            {
+                "city": "Munglinup West",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.95644.json"
+            },
+            {
+                "city": "Murchison",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94422.json"
+            },
+            {
+                "city": "Narembeen",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.95626.json"
+            },
+            {
+                "city": "Narrogin",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94627.json"
+            },
+            {
+                "city": "Newdegate",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94628.json"
+            },
+            {
+                "city": "Newman Airport",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94317.json"
+            },
+            {
+                "city": "Norseman Airport",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.95642.json"
+            },
+            {
+                "city": "North Island",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94405.json"
+            },
+            {
+                "city": "Northam",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94621.json"
+            },
+            {
+                "city": "Ocean Reef",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94607.json"
+            },
+            {
+                "city": "Ongerup",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.95628.json"
+            },
+            {
+                "city": "Onslow Airport",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.95305.json"
+            },
+            {
+                "city": "Paraburdoo",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94316.json"
+            },
+            {
+                "city": "Pardoo",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94311.json"
+            },
+            {
+                "city": "Paynes Find",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94404.json"
+            },
+            {
+                "city": "Pearce",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94612.json"
+            },
+            {
+                "city": "Pemberton",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.95613.json"
+            },
+            {
+                "city": "Perth Airport",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94610.json"
+            },
+            {
+                "city": "Perth",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94608.json"
+            },
+            {
+                "city": "Port Hedland",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94312.json"
+            },
+            {
+                "city": "Ravensthorpe",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94636.json"
+            },
+            {
+                "city": "Red Rocks Point",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94644.json"
+            },
+            {
+                "city": "Rocky Gully South",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94631.json"
+            },
+            {
+                "city": "Roebourne Airport",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94308.json"
+            },
+            {
+                "city": "Rottnest Island",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94602.json"
+            },
+            {
+                "city": "Rowley Shoals",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94207.json"
+            },
+            {
+                "city": "Salmon Gums RS",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.95639.json"
+            },
+            {
+                "city": "Shannon",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.95617.json"
+            },
+            {
+                "city": "Shark Bay Airport",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.95402.json"
+            },
+            {
+                "city": "Shay Gap",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.99311.json"
+            },
+            {
+                "city": "Southern Cross Airport",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.95634.json"
+            },
+            {
+                "city": "Swanbourne",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94614.json"
+            },
+            {
+                "city": "Telfer",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94319.json"
+            },
+            {
+                "city": "Troughton Island",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94102.json"
+            },
+            {
+                "city": "Truscott",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.95101.json"
+            },
+            {
+                "city": "Wagin",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.95618.json"
+            },
+            {
+                "city": "Walpole North",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.95647.json"
+            },
+            {
+                "city": "Wandering",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.95640.json"
+            },
+            {
+                "city": "Warburton",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94457.json"
+            },
+            {
+                "city": "Warmun",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94213.json"
+            },
+            {
+                "city": "West Roebuck",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.95204.json"
+            },
+            {
+                "city": "Wiluna",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94439.json"
+            },
+            {
+                "city": "Windy Harbour",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94640.json"
+            },
+            {
+                "city": "Witchcliffe",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.95641.json"
+            },
+            {
+                "city": "Wongan Hills",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94622.json"
+            },
+            {
+                "city": "Wyndham Airport",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.95214.json"
+            },
+            {
+                "city": "York",
+                "url": "http://www.bom.gov.au/fwo/IDW60801/IDW60801.94623.json"
+            }
+        ]
+    }
+]
