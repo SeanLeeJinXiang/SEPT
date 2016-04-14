@@ -24,7 +24,9 @@ font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif !impo
 {
 	padding:0 !important;
 }
-
+#loginUser{
+color:white;
+}
 #container {
 margin:100px auto;
 }
