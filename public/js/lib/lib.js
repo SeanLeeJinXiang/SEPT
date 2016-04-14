@@ -1,4 +1,10 @@
 
+/*
+*  @author Jihun Nam
+*  @param weather data in json format 
+*  @return render chart using chart.js
+*/
+
   var module = function()
   {
 
@@ -16,19 +22,18 @@
                 var date = header.refresh_message.substr(header.refresh_message.indexOf("m")+6).trim();
                 var city = header.name;
                 var state = header.state;
-
                 var cloudy = data.observations.data[0].cloud==undefined?"":data.observations.data[0].cloud;
                 var humidity = data.observations.data[0].rel_hum;
                 var temp = data.observations.data[0].air_temp;
                 var wind = data.observations.data[0].wind_spd_kmh;
                 var min_temp = data.observations.data[0].air_temp || 0;
                 var max_temp = data.observations.data[0].air_temp || 0;
-               var dataInterval = 0;
-               var totalNumberOfData = numberofData;
-               var dataLabels = [];
-               var airTemp = [];
-               var apparentTemp = [];
-               var totalDataLength = data.observations.data.length;
+                var dataInterval = 0;
+                var totalNumberOfData = numberofData;
+                var dataLabels = [];
+                var airTemp = [];
+                var apparentTemp = [];
+                var totalDataLength = data.observations.data.length;
 
                dataInterval = Math.ceil(data.observations.data.length/totalNumberOfData);
  
@@ -114,7 +119,7 @@
                 var canvas = document.getElementById(chartHolerName);
                 var context = canvas.getContext("2d");
                 window.myLineChart; 
- 				window.myLineChart && window.myLineChart.destroy();
+ 				        window.myLineChart && window.myLineChart.destroy();
                 window.myLineChart = new Chart(context).Line(weatherData, null);
 
                if(loadingBar!=null)

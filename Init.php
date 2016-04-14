@@ -21,10 +21,11 @@
    	   	  Session::init();
  
    	   	  $this->url = $this->getURL();
+
    	   	  $this->controller = $this->checkController($this->url[0]) == true ? $this->url[0] : $this->DEFAULT_CONTROLLER;
- 		  	
+
        		  require_once("controllers/".$this->controller.".php");
-       		  
+
        		  $controller = new $this->controller();	
 
        		  if(isset($this->url[1]))

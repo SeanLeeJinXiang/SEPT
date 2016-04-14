@@ -10,12 +10,14 @@
 		public function checkController($controller)
 		{
 
-			if(file_exists('Server/Controllers/'.$controller.".php"))
+			if(file_exists('controllers/'.$controller.".php"))
 			{
+
 				  return true;	
 			}
 		 else
 		   {
+
 		      return false;
 		   }	
 		}
@@ -40,6 +42,11 @@
 
    	   public function getURL()
    	   {
+          if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+             return $url = explode("/",substr($_SERVER['REQUEST_URI'],1)); 
+          }
+
    	   	  if(isset($_GET['url'])) // the reason that we use super global $_GET[] is because the param url
    	   	  {						  // is coming through our htaccess rewrite rule			
    	   	  	  
