@@ -24,9 +24,12 @@ font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif !impo
 {
 	padding:0 !important;
 }
+
 #loginUser{
 color:white;
+font-weight : bold;
 }
+
 #container {
 margin:100px auto;
 }
