@@ -4,9 +4,7 @@
  {
  	  protected $view;
       protected $db;
-
-      // victor code 
-
+ 
       public function __construct()
       {
           $this->view = new BaseView();

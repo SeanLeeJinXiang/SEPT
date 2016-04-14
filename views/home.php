@@ -7,10 +7,9 @@
   <title>Australia Weather</title>
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900"/>
-<link href="public/css/style.css" rel="stylesheet" type="text/css" />
+<link href="/public/css/style.css" rel="stylesheet" type="text/css" /> 
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet" type="text/css" />
- 
 <script src="https://code.jquery.com/jquery-2.2.2.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <script src="https://fb.me/react-0.14.2.js"></script>
@@ -18,7 +17,7 @@
 <script src="https://npmcdn.com/react-router/umd/ReactRouter.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js" type="text/javascript"></script>
-<script src="public/js/lib/lib.js" type="text/javascript"></script>
+<script src="/public/js/lib/lib.js" type="text/javascript"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js" type="text/javascript"></script>
 
 <!--
@@ -79,7 +78,7 @@
           var self = this;
           $.ajax({
             
-            url:"/HomeController/addToFavourite",
+            url:"/CartController/addToFavourite",
             type:"POST",
             data:{
               city:self.state.city,
@@ -120,7 +119,7 @@
 
           $.ajax({
 
-            url:"/HomeController/getEachStationJSON",
+            url:"/WeatherController/getEachStationJSON",
             type:"POST",
             data:{url:url},
             dataType:"json",
@@ -187,7 +186,7 @@
 
         $.ajax({
 
-          url:"/HomeController/loginChecked",
+          url:"/LoginController/loginChecked",
           success:function(data)
           {
              if(data!="")
@@ -246,7 +245,7 @@
 
           $.ajax({
 
-            url:"/HomeController/getCities",
+            url:"/WeatherController/getCities",
             type:"POST",
             data:{state:state},
             dataType:"json",
@@ -489,17 +488,17 @@
        {
             if(buttonStatus=="register" && value!="")
             { 
-              url = "/HomeController/register_account"
+              url = "/LoginController/register_account"
             }
 
             if(buttonStatus=="login"  && value!="")
             {
-              url = "/HomeController/login"
+              url = "/LoginController/login"
             }
 
             if(buttonStatus=="logout")
             {
-              url = "/HomeController/logout"
+              url = "/LoginController/logout"
             }
 
             $.ajax({
@@ -689,7 +688,8 @@
         var self = this;
         $.ajax({
 
-          url:"/HomeController/getFavourites",
+          url:"/WeatherController/getFavourites",
+          type:"POST",
           dataType:"json",
           success:function(data)
           {
@@ -743,7 +743,7 @@
  
           $.ajax({
 
-            url:"/HomeController/getEachStationJSON",
+            url:"/WeatherController/getEachStationJSON",
             type:"POST",
             data:{url:url},
             dataType:"json",
@@ -802,7 +802,7 @@
         var self = this;
         $.ajax({
 
-          url:"/HomeController/removeFavorite",
+          url:"/CartController/removeFavorite",
           type:"POST",
           data:{
             city:city
