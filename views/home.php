@@ -483,6 +483,7 @@
        {
           $(".register_input_div").addClass("has-error");
        }
+	 
 
        if(buttonStatus != "")
        {
@@ -510,23 +511,36 @@
               success:function(data)
               {
 
-                  if(buttonStatus=="login" && data=="true")
+                  if(buttonStatus=="login" && data==value)
                   {
                       self.refs["FavouriteComponent"].updateFavourites();
+						toastr.success("Login Successful");
+						self.setState({
 
-                   self.setState({
+							is_logged_in:true
 
-                    is_logged_in:true
-
-                  });
-
+						});
+				     
                    $(".common_submit_button").html("Select");
                    $(".register_input").hide();
+				    $('#loginUser').html('Successfully Logged in as ' + data);
                   }
+				  else{
+					$('#loginUser').html(data);
+					
+				  }
+				  if(buttonStatus=="login" && data!=value)
+                  {
+				  
+				  toastr.error("Login Unsuccessful. Please Register First.");
+				  }
+				  
+				  			  
 
                   if(buttonStatus=="register")
                   {
                      toastr.success("Your account has been created. You can log in now.");
+					   $('#loginUser').html(data);
                   }
 
                   if(buttonStatus=="logout")
@@ -541,6 +555,7 @@
                    
                    $(".common_submit_button").html("Select");
                    $(".register_input").show();
+				    $('#loginUser').html(data);
                   }
 
 
@@ -580,6 +595,7 @@
   			<div>
 <nav className="navbar navbar-default navbar-static-top">
   <div className="container">
+  <div id="loginUser"></div>
   <FavouriteComponent ref="FavouriteComponent"/>
     <form className="navbar-form navbar-right" role="search">
        <div className="register_inputWrapper">
@@ -923,7 +939,13 @@
 
 ReactDOM.render(<MainWrapper/>,document.getElementById('App'));
  
- 
+$(document).ready(function(){
+$.ajax({ url: "/LoginController/getLogin",
+        context: document.body,
+        success: function(data){
+             $('#loginUser').html(data);
+        }});
+});
 
 </script>
 <body>
