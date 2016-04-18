@@ -95,6 +95,7 @@
                     url:self.state.url
 
                    });
+                  
                 }
                else if(data==false)
                 {
@@ -109,14 +110,36 @@
           });
       },
 
-      getCityData(url)
+      refresh(e)
       {
-          var self = this;
+          e.preventDefault();          
+          var self = this; 
+          var url = self.state.url;                
+          $.ajax({
+            
+            url:"/WeatherController/getEachStationJSON",
+            type:"POST",
+            data:{             
+              url:url
+            },
+            dataType:"json",
+            success:function(data)
+            {
+              self.refs['loadingBar'].show();
+              module().getSimpleGragh(data,self,self.refs["loadingBar"],7,"myChart"); 
+              self.refs["loadingBar"].hide();               
+            }
 
+          });
+      },
+
+      getCityData(url)
+      {	
+          var self = this;
           this.setState({
             url:url
           })
-
+         
           $.ajax({
 
             url:"/WeatherController/getEachStationJSON",
@@ -136,22 +159,34 @@
 
               module().getSimpleGragh(data,self,self.refs["loadingBar"],7,"myChart");
  
-              self.refs["loadingBar"].hide(); 
- 
-            }
-
+              self.refs["loadingBar"].hide();                 
+            }   
           });
-
       },
 
-      render()
+     
+     
+ 
+	      render()
       {
         return (
-
+                
           <div className='animated fadeIn'>
-             <RenderLoading ref='loadingBar'/>
+              <RenderLoading ref='loadingBar'/>
+
+            
+          
                <div className="cityInfoWrapper">
-                 <p className="city">{this.state.city}<button onClick={this.addToFavourite} className='add_to_favourite btn btn-default btn-sm'>Add to Favourite</button></p>
+                 <p className="city">{this.state.city}<button onClick={this.addToFavourite} className='add_to_favourite btn btn-default btn-sm'>Add to Favourite</button>
+        				 &nbsp;
+				        <button onClick={this.refresh} className='add_to_favourite btn btn-default btn-sm'>Refresh</button>
+
+
+               </p>
+               <p className = "next">
+                 <button onClick={this.refresh} className='add_to_favourite btn btn-default btn-sm'>Previous days</button>&nbsp;
+                 <button onClick={this.refresh} className='add_to_favourite btn btn-default btn-sm'>Upcoming days </button>
+               </p>
                  <p className="date">{this.state.date} <span className="time">{this.state.time}</span></p> 
                  <p className="cloudy">{ this.state.cloudy=="-"?"": this.state.cloudy }</p> 
                  <p className="humidity">{this.state.humidity==null?"":"Humidity " + this.state.humidity +"%"}</p> 
@@ -162,7 +197,7 @@
           </div>
 
           );
-      }
+      },
 
 
   });
@@ -170,70 +205,68 @@
   var MainWrapper = React.createClass({
 
     getInitialState()
-    {
-        return {
+      {
+          return {
 
-          buttonClicked:"",
-          is_logged_in:false
+            buttonClicked:"",
+            is_logged_in:false
 
-        }
-    },
+          }
+      },
 
 
     componentWillMount()
-    {
-        var self = this;
-
-        $.ajax({
-
-          url:"/LoginController/loginChecked",
-          success:function(data)
-          {
-             if(data!="")
-             {
-                self.setState({
-                  is_logged_in:true
-                })
-             }
-          }
-
-        })
-    },
- 
-    componentDidMount()
-    {
-      // close window for city detail when modal is closed
-
-      $("#stateModal").on('hidden.bs.modal', function () {
-  
-         $("#city_view_detail").hide();
-
-      });
-
-      var stateLinks = document.getElementsByClassName("stateLink");
-      var self = this;
-
-      for(var i=0;i<stateLinks.length;i++)
       {
-          (function(i){
+          var self = this;
 
-          stateLinks[i].addEventListener("click",function(e){
+          $.ajax({
 
-            e.preventDefault();
-
-            var href = e.target.href.substring(e.target.href.lastIndexOf("/")+1);
-
-            self.getStateInfo(href);
+            url:"/LoginController/loginChecked",
+            success:function(data)
+            {
+               if(data!="")
+               {
+                  self.setState({
+                    is_logged_in:true
+                  })
+               }
+            }
 
           })
+      },
+ 
+    componentDidMount()
+      {
+        // close window for city detail when modal is closed
 
-          })(i);
-      }
+        $("#stateModal").on('hidden.bs.modal', function () {
+    
+           $("#city_view_detail").hide();
 
-       
-       
+        });
+
+          var stateLinks = document.getElementsByClassName("stateLink");
+          var self = this;
+
+          for(var i=0;i<stateLinks.length;i++)
+          {
+              (function(i){
+
+              stateLinks[i].addEventListener("click",function(e){
+
+                e.preventDefault();
+
+                var href = e.target.href.substring(e.target.href.lastIndexOf("/")+1);
+
+                self.getStateInfo(href);
+
+              })
+
+              })(i);
+          }            
+         
+      },
      
-    },
 
     getStateInfo(state)
     {
@@ -241,7 +274,7 @@
        if(state!=undefined)
        {
         state = StateArray[state];
-         var self = this;
+        var self = this;
 
           $.ajax({
 
@@ -275,6 +308,7 @@
                     for(var j=0;j<pageSeparateNum;j++)
                     {
                         var tr = $("<tr><td class='col-md-9'>"+data.stations[i+j].city+"</td><td class='col-md-3'><button id="+data.stations[i+j].url+" class='each_city btn btn-info btn-sm'>View Detail</button></td></tr>");
+						
                         tr_array.push(tr);
 
                         if(data.stations.length-1==(i+j))
@@ -356,9 +390,18 @@
 
                         self.refs["CityComponent"].showLoading();
  
-                        self.refs["CityComponent"].getCityData(url);
- 
+                        self.refs["CityComponent"].getCityData(url);				            
+                        		 
                    }  
+
+                   function getUrl(e){
+
+                   e.preventDefault();
+                   var url = this.id;
+
+                   return url;
+
+                   }
 
 
                function makeNewWindow(width,height)
@@ -442,6 +485,8 @@
         this.refs["FavouriteComponent"].addToFavourite(dataObj);
     },
 
+   
+
     register_clicked(e)
     {
         e.preventDefault();
@@ -523,10 +568,10 @@
 				     
                    $(".common_submit_button").html("Select");
                    $(".register_input").hide();
-				    $('#loginUser').html('Successfully Logged in as ' + data);
+				           $('#loginUser').html('Successfully Logged in as ' + data);
                   }
 				  else{
-					$('#loginUser').html(data);
+					         $('#loginUser').html(data);
 					
 				  }
 				  if(buttonStatus=="login" && data!=value)
@@ -540,7 +585,7 @@
                   if(buttonStatus=="register")
                   {
                      toastr.success("Your account has been created. You can log in now.");
-					   $('#loginUser').html(data);
+					            $('#loginUser').html(data);
                   }
 
                   if(buttonStatus=="logout")
@@ -555,7 +600,7 @@
                    
                    $(".common_submit_button").html("Select");
                    $(".register_input").show();
-				    $('#loginUser').html(data);
+				           $('#loginUser').html(data);
                   }
 
 
@@ -803,11 +848,6 @@
             }
 
           });
-
-
-
-
-
     },
 
     removeFavor(e)
@@ -851,8 +891,6 @@
                 self.setState({
                   myFavourites:myFavourites
                 })
-
-
              }
           }
 
@@ -865,7 +903,7 @@
 
         $(".myFavouritesUL").slideToggle();
     },
-
+    
     render()
     {
        var myFavourites;
@@ -890,6 +928,7 @@
               
               <div className="animated fadeIn" id="CityChartWrapper">
                 <div className="cityInfoWrapper">
+                <p>asdasd</p>
                  <p className="city">{this.state.city}</p><span className='closeButton'><button className='btn btn-default btn-sm'>Close</button></span>
                  <p className="date">{this.state.date} <span className="time">{this.state.time}</span></p> 
                  <p className="cloudy">{ this.state.cloudy=="-"?"": this.state.cloudy }</p> 
@@ -936,7 +975,6 @@
 
   });
 
-
 ReactDOM.render(<MainWrapper/>,document.getElementById('App'));
  
 $(document).ready(function(){
@@ -964,4 +1002,4 @@ $.ajax({ url: "/LoginController/getLogin",
 
 </body>
 
- 
+ </html>
