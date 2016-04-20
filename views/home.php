@@ -178,7 +178,9 @@
 				        <br/>
 				  {this.state.city}
 				  
-                 </p>    
+                 </p>
+
+               
 
                  <p className="date">{this.state.date} <span className="time">{this.state.time}</span></p> 
                  <p className="cloudy">{ this.state.cloudy=="-"?"": this.state.cloudy }</p> 
@@ -878,8 +880,7 @@
         <div className="myFavouritesWrapper"><button onClick={this.toggleMenu} className="btn btn-default btn-sm">My Favourites <span className="favouritesCounter">{this.state.myFavourites.length}</span></button><ul className="myFavouritesUL list-group">{myFavourites}</ul></div>
               
               <div className="animated fadeIn" id="CityChartWrapper">
-                <div className="cityInfoWrapper">
-                <p>asdasd</p>
+                <div className="cityInfoWrapper">               
                  <p className="city">{this.state.city}</p><span className='closeButton'><button className='btn btn-default btn-sm'>Close</button></span>
                  <p className="date">{this.state.date} <span className="time">{this.state.time}</span></p> 
                  <p className="cloudy">{ this.state.cloudy=="-"?"": this.state.cloudy }</p> 
