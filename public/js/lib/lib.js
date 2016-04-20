@@ -10,12 +10,11 @@
 
   	  return {
 
-  	getSimpleGragh:function(data,reactObj,loadingBar,numberofData,chartHolerName)
+  	getSimpleGragh:function(data,reactObj,loadingBar,numberofData,chartHolerName,currentCity)
   	{
-
-			 if(data.observations.data.length>0)
+ 
+			        if(data.observations.data.length>0)
               {
-
  
                 var header = data.observations.header[0];
                 var time = header.refresh_message.substr(header.refresh_message.indexOf("Issued at")+10,9).trim();
@@ -34,9 +33,10 @@
                 var airTemp = [];
                 var apparentTemp = [];
                 var totalDataLength = data.observations.data.length;
+                var localTime = "0";
 
                dataInterval = Math.ceil(data.observations.data.length/totalNumberOfData);
- 
+
                for(var i=0;i<data.observations.data.length;i++)
                {
                	   if(data.observations.data[i].air_temp<min_temp)
@@ -49,9 +49,8 @@
                	   	  max_temp = data.observations.data[i].air_temp;
                	   }
 
-                    if(totalDataLength>totalNumberOfData)
+                    if(totalDataLength>totalNumberOfData && chartHolerName == "myChart")
                     {
-
                       if(i%dataInterval==0)
                       {
                           dataLabels.push(data.observations.data[i].local_date_time);
@@ -59,12 +58,32 @@
                           apparentTemp.push(data.observations.data[i].apparent_t);
                       }
                     }
-                   else
-                    { 
-                          dataLabels.push(data.observations.data[i].local_date_time);
-                          airTemp.push(data.observations.data[i].air_temp);
-                          apparentTemp.push(data.observations.data[i].apparent_t);
-                    } 
+                  else{
+
+                    var DATE = data.observations.data[i].local_date_time.substring(0,data.observations.data[i].local_date_time.indexOf("/"));
+
+                   if((localTime == DATE) || (localTime=="0"))
+                   {
+                       localTime = data.observations.data[i].local_date_time.substring(0,data.observations.data[i].local_date_time.indexOf("/"));
+
+                    dataLabels.push(data.observations.data[i].local_date_time);
+                    airTemp.push(data.observations.data[i].air_temp);
+                    apparentTemp.push(data.observations.data[i].apparent_t);
+
+                   }
+                 else
+                   {
+                      break;
+                   }  
+
+                  }
+               }
+
+               if(currentCity!=undefined)
+               {
+                   state = currentCity.state;
+                   city = currentCity.city;
+                   date = null;
                }
 
  
@@ -110,11 +129,16 @@
                     weatherData.labels = dataLabels;
                     weatherData.datasets[0].data = airTemp;
                     weatherData.datasets[1].data = apparentTemp;
+   
+
+               
+           
+
 
                 var canvas = document.getElementById(chartHolerName);
                 var context = canvas.getContext("2d");
                 window.myLineChart; 
- 				window.myLineChart && window.myLineChart.destroy();
+ 				        window.myLineChart && window.myLineChart.destroy();
                 window.myLineChart = new Chart(context).Line(weatherData, null);
 
                if(loadingBar!=null)

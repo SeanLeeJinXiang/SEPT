@@ -18,6 +18,8 @@ font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif !impo
 
 }
 
+
+
 .container-fluid
 {
 	padding:0 !important;
@@ -246,7 +248,6 @@ border-color:#060d13 !important;
 	z-index: 100;
 	border-radius: 5px;
 	margin-left:20px;
-	margin-top:20px; 
 
 }
 
@@ -314,6 +315,10 @@ border-color:#060d13 !important;
      transform:scale(1.03);
 }
 
+.favouriteRightButton
+{
+	float:right;
+}
 
 .small
 {
@@ -455,4 +460,37 @@ border-color:#060d13 !important;
 .footer p
 {
 	color:white;
+}
+
+.ui-datepicker-inline
+{
+	width:15em !important;
+}
+
+#hiddenField
+{
+	position: absolute;
+	left:-220px;
+	display: none;
+}
+
+#hiddenField2
+{
+	position: absolute;
+	right:-220px;
+	display: none;
+}
+
+#hiddenField3
+{
+	position: absolute;
+	left:80px;
+	display: none;
+}
+
+#hiddenField4
+{
+	position: absolute;
+	right:-220px;
+	display: none;
 }

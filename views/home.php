@@ -7,11 +7,12 @@
   <title>Australia Weather</title>
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900"/>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 <link href="/public/css/style.css" rel="stylesheet" type="text/css" /> 
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet" type="text/css" />
-
 <script src="https://code.jquery.com/jquery-2.2.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <script src="https://fb.me/react-0.14.2.js"></script>
 <script src="https://fb.me/react-dom-0.14.2.js"></script>
@@ -20,7 +21,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js" type="text/javascript"></script>
 <script src="/public/js/lib/lib.js" type="text/javascript"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js" type="text/javascript"></script>
-
 
 <!--
 
@@ -62,7 +62,18 @@
             time:"",
             url:"",
             min_temp:0,
-            max_temp:0
+            max_temp:0,
+            dummyDATAURL:[
+                 "http://www.bom.gov.au/fwo/IDN60903/IDN60903.94939.json",
+                 "http://www.bom.gov.au/fwo/IDN60903/IDN60903.95937.json",
+                 "http://www.bom.gov.au/fwo/IDN60903/IDN60903.95925.json",
+                 "http://www.bom.gov.au/fwo/IDN60903/IDN60903.95935.json",
+                 "http://www.bom.gov.au/fwo/IDN60903/IDN60903.94750.json",
+                 "http://www.bom.gov.au/fwo/IDN60903/IDN60903.94915.json",
+                 "http://www.bom.gov.au/fwo/IDN60903/IDN60903.95909.json",
+                 "http://www.bom.gov.au/fwo/IDN60903/IDN60903.94925.json",
+                 "http://www.bom.gov.au/fwo/IDN60903/IDN60903.94938.json"
+            ]
           }
       },
 
@@ -106,29 +117,7 @@
                } 
             }
           });
-      },
-
-      refresh(e)
-      {
-          e.preventDefault();          
-          var self = this; 
-          var url = self.state.url;                
-          $.ajax({
-            
-            url:"/WeatherController/getEachStationJSON",
-            type:"POST",
-            data:{             
-              url:url
-            },
-            dataType:"json",
-            success:function(data)
-            {
-              self.refs['loadingBar'].show();
-              module().getSimpleGragh(data,self,self.refs["loadingBar"],7,"myChart"); 
-              self.refs["loadingBar"].hide();               
-            }
-          });
-      },
+      },      
 
       getCityData(url)
       {	
@@ -160,6 +149,137 @@
           });
       }, 
 
+      refresh(e)
+      {
+          e.preventDefault();          
+          var self = this; 
+          var url = self.state.url;                
+          $.ajax({
+            
+            url:"/WeatherController/getEachStationJSON",
+            type:"POST",
+            data:{             
+              url:url
+            },
+            dataType:"json",
+            success:function(data)
+            {
+              self.refs['loadingBar'].show();
+              module().getSimpleGragh(data,self,self.refs["loadingBar"],7,"myChart"); 
+              self.refs["loadingBar"].hide();               
+            }
+          });
+      },
+
+      renderCityByUrl(url,currentCity)
+    {
+
+        var self = this;
+
+            $.ajax({
+
+            url:"/WeatherController/getEachStationJSON",
+            type:"POST",
+            data:{url:url},
+            dataType:"json",
+            success:function(data)
+            {
+              module().getSimpleGragh(data,self,null,50,"myChart",currentCity);
+
+            }
+
+          });
+
+    },
+
+      showPrevCalendar(e)
+    {
+
+        var self = this;
+        var todayDate = new Date().getDate();
+
+        if($("#hiddenField").css("display")=="none")
+        {
+            $("#hiddenField").css("display","block");
+            $( "#hiddenField" ).datepicker({
+                changeMonth: false,
+                changeYear: false,
+                  dateFormat: 'dd/mm/yy',
+                  duration: 'fast',
+                  stepMonths: 0,
+                  showOn: "button",
+                  buttonText: "day",
+                  minDate : "-9",
+                  maxDate:"0",
+                  onSelect:function(date)
+                  {
+                      self.refreshChart(date,todayDate);
+                  }
+            });
+         }
+       else
+         {
+            $("#hiddenField").css("display","none");
+            $('#hiddenField').datepicker('setDate', null);
+         }  
+
+
+    },
+
+    showNextCalendar(e)
+    {
+        var self = this;
+        var todayDate = new Date().getDate();
+
+        if($("#hiddenField2").css("display")=="none")
+        {
+            $("#hiddenField2").css("display","block");
+            $( "#hiddenField2" ).datepicker({
+                changeMonth: false,
+                changeYear: false,
+                  dateFormat: 'dd/mm/yy',
+                  duration: 'fast',
+                  stepMonths: 0,
+                  showOn: "button",
+                  buttonText: "day",
+                  minDate : "0",
+                  maxDate:"9",
+                  onSelect:function(date)
+                  {
+                      self.refreshChart(date,todayDate);
+                  }
+            });
+         }
+       else
+         {
+            $("#hiddenField2").css("display","none");
+            $('#hiddenField2').datepicker('setDate', null);
+         }  
+    },
+
+    refreshChart(date,todayDate)
+    {
+         var parsedDate = parseInt(date.substring(0,date.indexOf("/")));
+         var currentCity = {
+
+             city:this.state.city,
+             state:this.state.state,
+             date:this.state.date
+
+          };
+
+        if(todayDate==parsedDate)
+        {
+            this.renderCityByUrl(this.state.url);
+        }
+       else
+        {  
+            var ran = parsedDate % 9;
+            this.renderCityByUrl(this.state.dummyDATAURL[ran],currentCity);
+        } 
+    },
+
+    
    
 
 	      render()
@@ -172,14 +292,19 @@
                  <p className="city">                 		
                 		 <button onClick={this.addToFavourite} className='add_to_favourite btn btn-default btn-sm'>Add to Favourite</button>
         				 &nbsp;
-				        <button onClick={this.refresh} className='add_to_favourite btn btn-default btn-sm'>Refresh</button>
-				        <button id="prevv" onClick={this.refresh} className='add_to_favourite btn btn-default btn-sm'>Previous days</button>&nbsp;
-                		<button id="nextt" onClick={this.refresh} className='add_to_favourite btn btn-default btn-sm'>Upcoming days</button>
+				        <button onClick={this.refresh} className='add_to_favourite btn btn-default btn-sm'>Refresh</button>				        
 				        <br/>
-				  {this.state.city}
-				  
+				        {this.state.city}				  
                  </p>
+                    <div id="hiddenField"></div>
+                  <div id="hiddenField2"></div>
 
+                <button type="button" onClick={this.showPrevCalendar} className="btn btn-default favouriteLeftButton" aria-label="Left Align">
+                  <span className="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+               </button>
+               <button type="button" onClick={this.showNextCalendar} className="btn btn-default favouriteRightButton" aria-label="Left Align">
+                  <span className="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+               </button>
                
 
                  <p className="date">{this.state.date} <span className="time">{this.state.time}</span></p> 
@@ -757,7 +882,18 @@
             time:"",
             url:"",
             min_temp:0,
-            max_temp:0
+            max_temp:0,   
+            dummyDATAURL:[
+                 "http://www.bom.gov.au/fwo/IDN60903/IDN60903.94939.json",
+                 "http://www.bom.gov.au/fwo/IDN60903/IDN60903.95937.json",
+                 "http://www.bom.gov.au/fwo/IDN60903/IDN60903.95925.json",
+                 "http://www.bom.gov.au/fwo/IDN60903/IDN60903.95935.json",
+                 "http://www.bom.gov.au/fwo/IDN60903/IDN60903.94750.json",
+                 "http://www.bom.gov.au/fwo/IDN60903/IDN60903.94915.json",
+                 "http://www.bom.gov.au/fwo/IDN60903/IDN60903.95909.json",
+                 "http://www.bom.gov.au/fwo/IDN60903/IDN60903.94925.json",
+                 "http://www.bom.gov.au/fwo/IDN60903/IDN60903.94938.json"
+            ]
         }
     },
 
@@ -768,7 +904,26 @@
           var url = e.target.id
           var self = this;
  
-          $.ajax({
+          this.setState({
+            url:url
+          });
+
+          this.renderCityByUrl(url);
+
+          setTimeout(function(){
+
+            $('.myFavouritesUL').slideUp();
+
+          },1500);
+ 
+    },
+
+    renderCityByUrl(url,currentCity)
+    {
+
+        var self = this;
+
+            $.ajax({
 
             url:"/WeatherController/getEachStationJSON",
             type:"POST",
@@ -776,27 +931,29 @@
             dataType:"json",
             success:function(data)
             {
- 
-              var wrapper = $("<div id='cityDetailsWrapper'></div>");
-              wrapper.css({
+              if($("#cityDetailsWrapper").css("opacity")!="0.3")
+              {    
+                var wrapper = $("<div id='cityDetailsWrapper'></div>");
+                wrapper.css({
 
-                 width:$(document.body).width(),
-                 height:$(document.body).height(),
-                 position:"absolute",
-                 background:"#9C9C9C",
-                 top:0,
-                 left:0,
-                 opacity:"0.3",
+                   width:$(window).width(),
+                   height:$(window).height(),
+                   position:"absolute",
+                   background:"#9C9C9C",
+                   top:0,
+                   left:0,
+                   opacity:"0.3",
 
-              });
+                });
 
-              wrapper.css("z-index",10);
+                wrapper.css("z-index",10);
 
               $(document.body).append(wrapper.fadeIn());
 
+               }
               $("#CityChartWrapper").show();
 
-              module().getSimpleGragh(data,self,null,50,"CityDetailChart");
+              module().getSimpleGragh(data,self,null,50,"CityDetailChart",currentCity);
  
               $(".cityInfoWrapper .closeButton").on("click",closeBackGround);
 
@@ -805,11 +962,16 @@
               function closeBackGround(e)
               {
                   e.preventDefault();
+
                   $("#CityChartWrapper").hide();
                   $("#cityDetailsWrapper").remove();  
+
               }
+
             }
+
           });
+
     },
 
     removeFavor(e)
@@ -863,6 +1025,93 @@
         e.preventDefault();
         $(".myFavouritesUL").slideToggle();
     },
+
+    showPrevCalendar(e)
+    {
+
+        var self = this;
+        var todayDate = new Date().getDate();
+
+        if($("#hiddenField3").css("display")=="none")
+        {
+            $("#hiddenField3").css("display","block");
+            $( "#hiddenField3" ).datepicker({
+                changeMonth: false,
+                changeYear: false,
+                  dateFormat: 'dd/mm/yy',
+                  duration: 'fast',
+                  stepMonths: 0,
+                  showOn: "button",
+                  buttonText: "day",
+                  minDate : "-9",
+                  maxDate:"0",
+                  onSelect:function(date)
+                  {
+                      self.refreshChart(date,todayDate);
+                  }
+            });
+         }
+       else
+         {
+            $("#hiddenField3").css("display","none");
+            $('#hiddenField3').datepicker('setDate', null);
+         }  
+
+
+    },
+
+    showNextCalendar(e)
+    {
+        var self = this;
+        var todayDate = new Date().getDate();
+
+        if($("#hiddenField4").css("display")=="none")
+        {
+            $("#hiddenField4").css("display","block");
+            $( "#hiddenField4" ).datepicker({
+                changeMonth: false,
+                changeYear: false,
+                  dateFormat: 'dd/mm/yy',
+                  duration: 'fast',
+                  stepMonths: 0,
+                  showOn: "button",
+                  buttonText: "day",
+                  minDate : "0",
+                  maxDate:"9",
+                  onSelect:function(date)
+                  {
+                      self.refreshChart(date,todayDate);
+                  }
+            });
+         }
+       else
+         {
+            $("#hiddenField4").css("display","none");
+            $('#hiddenField4').datepicker('setDate', null);
+         }  
+    },
+
+    refreshChart(date,todayDate)
+    {
+         var parsedDate = parseInt(date.substring(0,date.indexOf("/")));
+         var currentCity = {
+
+             city:this.state.city,
+             state:this.state.state,
+             date:this.state.date
+
+          };
+
+        if(todayDate==parsedDate)
+        {
+            this.renderCityByUrl(this.state.url);
+        }
+       else
+        {  
+            var ran = parsedDate % 9;
+            this.renderCityByUrl(this.state.dummyDATAURL[ran],currentCity);
+        } 
+    },
     
     render()
     {
@@ -880,7 +1129,18 @@
         <div className="myFavouritesWrapper"><button onClick={this.toggleMenu} className="btn btn-default btn-sm">My Favourites <span className="favouritesCounter">{this.state.myFavourites.length}</span></button><ul className="myFavouritesUL list-group">{myFavourites}</ul></div>
               
               <div className="animated fadeIn" id="CityChartWrapper">
-                <div className="cityInfoWrapper">               
+              <div id="hiddenField3"></div>
+              <div id="hiddenField4"></div>
+
+
+                <div className="cityInfoWrapper">  
+
+                <button type="button" onClick={this.showPrevCalendar} className="btn btn-default favouriteLeftButton" aria-label="Left Align">
+                  <span className="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+               </button>
+               <button type="button" onClick={this.showNextCalendar} className="btn btn-default favouriteRightButton" aria-label="Left Align">
+                  <span className="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+               </button>
                  <p className="city">{this.state.city}</p><span className='closeButton'><button className='btn btn-default btn-sm'>Close</button></span>
                  <p className="date">{this.state.date} <span className="time">{this.state.time}</span></p> 
                  <p className="cloudy">{ this.state.cloudy=="-"?"": this.state.cloudy }</p> 
