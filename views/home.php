@@ -178,9 +178,7 @@
 				        <br/>
 				  {this.state.city}
 				  
-                 </p>
-
-               
+                 </p>    
 
                  <p className="date">{this.state.date} <span className="time">{this.state.time}</span></p> 
                  <p className="cloudy">{ this.state.cloudy=="-"?"": this.state.cloudy }</p> 
