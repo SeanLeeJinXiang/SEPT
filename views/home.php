@@ -10,6 +10,7 @@
 <link href="/public/css/style.css" rel="stylesheet" type="text/css" /> 
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet" type="text/css" />
+
 <script src="https://code.jquery.com/jquery-2.2.2.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <script src="https://fb.me/react-0.14.2.js"></script>
@@ -19,6 +20,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js" type="text/javascript"></script>
 <script src="/public/js/lib/lib.js" type="text/javascript"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js" type="text/javascript"></script>
+
 
 <!--
 
@@ -61,8 +63,6 @@
             url:"",
             min_temp:0,
             max_temp:0
-
-
           }
       },
 
@@ -93,7 +93,6 @@
 
                     city:self.state.city,
                     url:self.state.url
-
                    });
                   
                 }
@@ -106,7 +105,6 @@
                    toastr.error("Log in required");
                } 
             }
-
           });
       },
 
@@ -129,7 +127,6 @@
               module().getSimpleGragh(data,self,self.refs["loadingBar"],7,"myChart"); 
               self.refs["loadingBar"].hide();               
             }
-
           });
       },
 
@@ -157,36 +154,34 @@
               *  Make a graph and render it
               */
 
-              module().getSimpleGragh(data,self,self.refs["loadingBar"],7,"myChart");
- 
+              module().getSimpleGragh(data,self,self.refs["loadingBar"],7,"myChart"); 
               self.refs["loadingBar"].hide();                 
             }   
           });
-      },
+      }, 
 
-     
-     
- 
+   
+
 	      render()
+      
       {
-        return (
-                
+        return (                
           <div className='animated fadeIn'>
-              <RenderLoading ref='loadingBar'/>
-
-            
-          
+              <RenderLoading ref='loadingBar'/>           
                <div className="cityInfoWrapper">
-                 <p className="city">{this.state.city}<button onClick={this.addToFavourite} className='add_to_favourite btn btn-default btn-sm'>Add to Favourite</button>
+                 <p className="city">                 		
+                		 <button onClick={this.addToFavourite} className='add_to_favourite btn btn-default btn-sm'>Add to Favourite</button>
         				 &nbsp;
 				        <button onClick={this.refresh} className='add_to_favourite btn btn-default btn-sm'>Refresh</button>
+				        <button id="prevv" onClick={this.refresh} className='add_to_favourite btn btn-default btn-sm'>Previous days</button>&nbsp;
+                		<button id="nextt" onClick={this.refresh} className='add_to_favourite btn btn-default btn-sm'>Upcoming days</button>
+				        <br/>
+				  {this.state.city}
+				  
+                 </p>
 
+               
 
-               </p>
-               <p className = "next">
-                 <button onClick={this.refresh} className='add_to_favourite btn btn-default btn-sm'>Previous days</button>&nbsp;
-                 <button onClick={this.refresh} className='add_to_favourite btn btn-default btn-sm'>Upcoming days </button>
-               </p>
                  <p className="date">{this.state.date} <span className="time">{this.state.time}</span></p> 
                  <p className="cloudy">{ this.state.cloudy=="-"?"": this.state.cloudy }</p> 
                  <p className="humidity">{this.state.humidity==null?"":"Humidity " + this.state.humidity +"%"}</p> 
@@ -194,12 +189,9 @@
                  <p className="wind">{this.state.wind==0?"":"Wind " + this.state.wind}</p> 
               </div>
               <canvas id="myChart" width="570" height="330"></canvas>
-          </div>
-
+          </div> 
           );
       },
-
-
   });
 
   var MainWrapper = React.createClass({
@@ -207,10 +199,8 @@
     getInitialState()
       {
           return {
-
-            buttonClicked:"",
-            is_logged_in:false
-
+	            buttonClicked:"",
+	            is_logged_in:false
           }
       },
 
@@ -269,8 +259,7 @@
      
 
     getStateInfo(state)
-    {
- 
+    { 
        if(state!=undefined)
        {
         state = StateArray[state];
@@ -384,7 +373,7 @@
 
                         var url = this.id;
 
-                        var win = makeNewWindow(600,600);
+                        var win = makeNewWindow(600,680);
 
                         $("#stateModal").append(win.fadeIn());
 
@@ -428,8 +417,6 @@
                    return win;
                }    
 
-
-
                /*  attch click events for each page numbers
                *   this has to be done after rendering initial links on DOM
                *   immediate invoke function used inside a loop to use closure
@@ -441,13 +428,13 @@
                   {
                     (function(i){
  
-                       pageLinks[i].addEventListener('click',function(e){
+                        pageLinks[i].addEventListener('click',function(e){
 
-                          e.preventDefault();
+                        e.preventDefault();
 
-                          var pageNumber = $(this).html();
+                        var pageNumber = $(this).html();
 
-                    var buttons = document.getElementsByClassName('each_city');
+                        var buttons = document.getElementsByClassName('each_city');
 
                       /*
                       *  Due to duplicated event listeners to buttons
@@ -464,15 +451,11 @@
                           })(j)
                       }
 
-
                           reRenderTable(pageNumber);
 
                        });
-
                     })(i);
-
                   }
-
             }
 
           });
@@ -483,9 +466,7 @@
     CallFavouriteComponent(dataObj)
     {
         this.refs["FavouriteComponent"].addToFavourite(dataObj);
-    },
-
-   
+    },   
 
     register_clicked(e)
     {
@@ -564,7 +545,7 @@
 
 							is_logged_in:true
 
-						});
+				  });
 				     
                    $(".common_submit_button").html("Select");
                    $(".register_input").hide();
@@ -574,12 +555,12 @@
 					         $('#loginUser').html(data);
 					
 				  }
+
 				  if(buttonStatus=="login" && data!=value)
                   {
-				  
+
 				  toastr.error("Login Unsuccessful. Please Register First.");
-				  }
-				  
+				  } 
 				  			  
 
                   if(buttonStatus=="register")
@@ -593,9 +574,7 @@
                       self.refs["FavouriteComponent"].resetFavourites();
 
                   self.setState({
-
                     is_logged_in:false
-
                   });
                    
                    $(".common_submit_button").html("Select");
@@ -632,9 +611,6 @@
     <li><a onClick={this.logout_clicked} href="#">Log out</a></li>
       </ul>
    } 
- 
-
-
   		return(
 
   			<div>
@@ -683,11 +659,8 @@
                   </div>
                 </ul>
              </div>
-          </div>
-                  
+          </div>                  
         </div>
- 
-
 
           <div id="stateModal" className="modal fade" role="dialog">
             <div className="modal-dialog">
@@ -711,8 +684,6 @@
             </div>
           </div>
         </div>
- 
-
   			);
   	}
 
@@ -727,10 +698,9 @@
         var myFavourites = this.state.myFavourites;
 
         myFavourites.push(dataObj);
+
         this.setState({
-
           myFavourites:myFavourites
-
         });
     },
 
@@ -761,9 +731,7 @@
              }
 
              self.setState({
-
                 myFavourites:data
-
              })
           }
 
@@ -778,7 +746,6 @@
     getInitialState()
     {
         return {
-
             myFavourites:[],
             city:"",
             state:"",
@@ -791,7 +758,6 @@
             url:"",
             min_temp:0,
             max_temp:0
-
         }
     },
 
@@ -839,14 +805,10 @@
               function closeBackGround(e)
               {
                   e.preventDefault();
-
                   $("#CityChartWrapper").hide();
                   $("#cityDetailsWrapper").remove();  
-
               }
-
             }
-
           });
     },
 
@@ -893,36 +855,27 @@
                 })
              }
           }
-
         });
     },
 
     toggleMenu(e)
     {
         e.preventDefault();
-
         $(".myFavouritesUL").slideToggle();
     },
     
     render()
     {
        var myFavourites;
-       var self = this;
- 
+       var self = this; 
+
        if(typeof this.state.myFavourites == "object" && this.state.myFavourites.length>0)
        {
               myFavourites = this.state.myFavourites.map(function(data,index){
-
               return <li className="list-group-item" key={index}><a onClick={self.renderCityDetail} className='favouriteLinks' id={data.url} href="#">{data.city}</a><button id={data.city} onClick={self.removeFavor} className='favouritebuttons btn btn-default btn-sm'>Delete</button></li>
-
           })
-
        }
-
-
-
         return (
-
         <div>  
         <div className="myFavouritesWrapper"><button onClick={this.toggleMenu} className="btn btn-default btn-sm">My Favourites <span className="favouritesCounter">{this.state.myFavourites.length}</span></button><ul className="myFavouritesUL list-group">{myFavourites}</ul></div>
               
@@ -941,12 +894,8 @@
               </div>
               </div>
         </div>
-
         );
-
     }
-
-
   });
  
 
@@ -965,41 +914,33 @@
     render()
     {
       return (
-
          <div className="loadingbarWrapper col-md-4 center-block">
          <img src={'/public/images/loading.gif'} className="loading_bar img-responsive"/></div>
-
         );
     }
-
-
   });
 
 ReactDOM.render(<MainWrapper/>,document.getElementById('App'));
  
 $(document).ready(function(){
-$.ajax({ url: "/LoginController/getLogin",
-        context: document.body,
-        success: function(data){
-             $('#loginUser').html(data);
-        }});
+	$.ajax({ url: "/LoginController/getLogin",
+	        context: document.body,
+	        success: function(data){
+	             $('#loginUser').html(data);	             
+	        }});		  
 });
 
 </script>
-<body>
- 
-   <div class="container-fluid">
- 
-    <div id="App"></div>
-
-<footer class="footer">
-   <div class="container">
-       <p>Copyright</p>
-   </div> 
-</footer>
-  </div>
-
-
+</head>
+<body>  	  
+    
+  	<div class="container-fluid"> 
+	   	<div id="App"></div>	   	
+		   	<footer class="footer">
+		  	  <div class="container">              
+		      <p>Copyright</p>
+		   	  </div> 
+			</footer>
+  	</div>
 </body>
-
- </html>
+</html>

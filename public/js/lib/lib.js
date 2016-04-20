@@ -110,16 +110,11 @@
                     weatherData.labels = dataLabels;
                     weatherData.datasets[0].data = airTemp;
                     weatherData.datasets[1].data = apparentTemp;
-   
-
-               
-           
-
 
                 var canvas = document.getElementById(chartHolerName);
                 var context = canvas.getContext("2d");
                 window.myLineChart; 
- 				        window.myLineChart && window.myLineChart.destroy();
+ 				window.myLineChart && window.myLineChart.destroy();
                 window.myLineChart = new Chart(context).Line(weatherData, null);
 
                if(loadingBar!=null)
