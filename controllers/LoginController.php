@@ -10,12 +10,10 @@
         $stmt = $this->db->prepare("INSERT INTO users (user_id) 
         VALUES (:user_id)");
         $stmt->bindParam(':user_id', $user_id);
-        $stmt->execute();
-        $total = $stmt->rowCount();        
+        $stmt->execute();             
         
-        echo "Registration Successful";    
-
-
+        echo "Registration Successful";   
+        
       }
 
  
