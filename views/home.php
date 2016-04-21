@@ -211,7 +211,7 @@
             success:function(data)
             {
               self.refs['loadingBar'].show();
-              module().getSimpleGragh(data,self,null,50,"myChart",currentCity);               
+              module().getSimpleGragh(data,self,null,7,"myChart",currentCity);               
               self.refs["loadingBar"].hide();             
             }
           });
@@ -655,16 +655,18 @@
        var buttonStatus = this.state.buttonClicked;
        var url;
        var self = this;
-       var value = $(".register_input").val();
+       var value = $(".register_input").val();      
 
        if(value=="")
        {
-          $(".register_input_div").addClass("has-error");          
+          $(".register_input_div").addClass("has-error");  
+                 
        }
 	     
 
        if(buttonStatus != "")
        {
+
             if(buttonStatus=="register" && value!="")
             { 
               url = "/LoginController/register_account"
@@ -701,23 +703,25 @@
                    $(".register_input").hide();
 				           $('#loginUser').html('Successfully Logged in as ' + data);
                   }
-			         	  else{
-					         $('#loginUser').html(data);
-					
-				           }
+			         	 
 
 				           if(buttonStatus=="login" && data!=value)
                   {
 
           				  toastr.error("Login Unsuccessful. Please Register First.");
-          				  } 
-				  			  
+                    $('#loginUser').html("Login Unsuccessful.");
+          				} 				  			  
 
-                  if(buttonStatus=="register")
+                  if(buttonStatus=="register"&& data == "Registration Successful")
                   {
                      toastr.success("Your account has been created. You can log in now.");
-					            $('#loginUser').html(data);
+              			  $('#loginUser').html(data);
                   }
+
+                  if(buttonStatus=="register"&& data != "Registration Successful"){
+                  toastr.error("Registration Unsuccessful. Please Enter valid User Id");
+                  $('#loginUser').html("Registration Unsuccessful. Please Enter a valid User Id");
+                  }                 
 
                   if(buttonStatus=="logout")
                   {
@@ -734,14 +738,6 @@
               }
             })
        }
-
-
-
-
-
-
-
-
        
     },
  
@@ -770,7 +766,7 @@
   			<div>
 <nav className="navbar navbar-default navbar-static-top">
   <div className="container">
-  <div id="loginUser"></div> 
+  <div id="loginUser"></div>   
   <FavouriteComponent ref="FavouriteComponent"/>    
   <div id="inputStyle">
     <form className="navbar-form navbar-right" role="search">
@@ -1459,15 +1455,7 @@ $(document).ready(function(){
           $("#detailsWrap").click(function(){
               $("#hiddenField").css("display","none");
               $("#hiddenField2").css("display","none");
-          });  
-
-           $('.common_submit_button').click(function()
-            {
-            if ($.trim($('.register_input').val()) == ''){
-
-                alert("Please Enter User Id. Refresh Page and try again.");
-            }
-           });
+          });            
 
 });
 

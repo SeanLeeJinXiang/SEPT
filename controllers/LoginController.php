@@ -11,8 +11,10 @@
         VALUES (:user_id)");
         $stmt->bindParam(':user_id', $user_id);
         $stmt->execute();
+        $total = $stmt->rowCount();        
         
-        echo "Successfully Registered";
+        echo "Registration Successful";    
+
 
       }
 
@@ -57,11 +59,11 @@
       }      
 		public function getLogin()
 		{
-	   	 $user_id = Session::get("user_id");
+	   	  $user_id = Session::get("user_id");
          $stmt = $this->db->prepare("SELECT user_id FROM users WHERE user_id = :user_id"); 
          $stmt->bindParam(':user_id', $user_id);
          $stmt->execute();	  	
-		 $total = $stmt->rowCount();		 
+		     $total = $stmt->rowCount();		 
 			if($total>0)
 			{
 				echo "Still Logged in as ${user_id}";	 
