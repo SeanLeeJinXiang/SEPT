@@ -772,14 +772,14 @@
   <div className="container">
   <div id="loginUser"></div> 
   <FavouriteComponent ref="FavouriteComponent"/>    
-  <div >
+  <div id="inputStyle">
     <form className="navbar-form navbar-right" role="search">
       <div className="register_inputWrapper">
         <div className="input-group register_input_div">
            <input type="text" className="form-control register_input" placeholder="Register or Login"/>
         </div>
       </div>
-  <div  className="btn-group">
+  <div className="btn-group">
   <button type="button" onClick={this.common_submit_clicked} className="btn btn-info common_submit_button">Select</button>
   <button type="button" className="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <span className="caret"></span>
