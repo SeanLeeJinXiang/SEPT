@@ -659,9 +659,9 @@
 
        if(value=="")
        {
-          $(".register_input_div").addClass("has-error");
+          $(".register_input_div").addClass("has-error");          
        }
-	 
+	     
 
        if(buttonStatus != "")
        {
@@ -692,27 +692,25 @@
                   if(buttonStatus=="login" && data==value)
                   {
                       self.refs["FavouriteComponent"].updateFavourites();
-						toastr.success("Login Successful");
-						self.setState({
-
-							is_logged_in:true
-
-				  });
+						          toastr.success("Login Successful");
+          						self.setState({
+          							is_logged_in:true
+          				     });
 				     
                    $(".common_submit_button").html("Select");
                    $(".register_input").hide();
 				           $('#loginUser').html('Successfully Logged in as ' + data);
                   }
-				  else{
+			         	  else{
 					         $('#loginUser').html(data);
 					
-				  }
+				           }
 
-				  if(buttonStatus=="login" && data!=value)
+				           if(buttonStatus=="login" && data!=value)
                   {
 
-				  toastr.error("Login Unsuccessful. Please Register First.");
-				  } 
+          				  toastr.error("Login Unsuccessful. Please Register First.");
+          				  } 
 				  			  
 
                   if(buttonStatus=="register")
@@ -723,7 +721,7 @@
 
                   if(buttonStatus=="logout")
                   {
-                      self.refs["FavouriteComponent"].resetFavourites();
+                  self.refs["FavouriteComponent"].resetFavourites();
 
                   self.setState({
                     is_logged_in:false
@@ -736,6 +734,15 @@
               }
             })
        }
+
+
+
+
+
+
+
+
+       
     },
  
   	render()
@@ -752,34 +759,40 @@
    }
   else
    {
-      $(".register_input").hide();
+      $(".register_input").hide();    
       dropMenu = <ul className="dropdown-menu">
     <li><a onClick={this.logout_clicked} href="#">Log out</a></li>
       </ul>
+
    } 
   		return(
 
   			<div>
 <nav className="navbar navbar-default navbar-static-top">
   <div className="container">
-  <div id="loginUser"></div>
-  <FavouriteComponent ref="FavouriteComponent"/>
+  <div id="loginUser"></div> 
+  <FavouriteComponent ref="FavouriteComponent"/>    
+  <div >
     <form className="navbar-form navbar-right" role="search">
-       <div className="register_inputWrapper">
+      <div className="register_inputWrapper">
         <div className="input-group register_input_div">
            <input type="text" className="form-control register_input" placeholder="Register or Login"/>
         </div>
       </div>
-
-<div className="btn-group">
+  <div  className="btn-group">
   <button type="button" onClick={this.common_submit_clicked} className="btn btn-info common_submit_button">Select</button>
   <button type="button" className="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <span className="caret"></span>
     <span className="sr-only">Toggle Dropdown</span>
   </button>
+
   {dropMenu}
+
 </div>
+ 
+
     </form>
+    </div>
   </div>
 </nav>
        <div className="container">   
@@ -801,7 +814,10 @@
                 <li className="small"><a className="stateLink NT" href="NT">NT</a></li> 
                   </div>
                   <div className="stateBottom clearfix col-md-4"> 
-                <li className="ex_large"><a className="stateLink Antarctica" href="Antarctica">Antarctica</a></li>
+                <li className="large"><a className="stateLink Antarctica" href="Antarctica">Antarctica</a></li>
+                <div id="myStation">
+                     <NearStationComponent/>
+                </div>
                   </div>
                 </ul>
              </div>
@@ -1291,6 +1307,134 @@
     }
   });
 
+/*
+*   Find nearest station from a user's location
+*   get a user's latitude and longitude 
+*   then calculate the closest two points
+*/
+
+  var NearStationComponent = React.createClass({
+
+    getInitialState()
+    { 
+       return {
+          currentState:"loading"
+       }  
+    },
+
+    componentWillMount()
+    {
+        var self = this;
+
+        $.getJSON("http://ip-api.com/json/", function(data) {
+ 
+              var state = data.regionName;
+              var lat = data.lat.toFixed(2);
+              var lon = data.lon.toFixed(2);
+
+              $.ajax({
+
+                url:"/WeatherController/getCities",
+                type:"POST",
+                dataType:"JSON",
+                data:{state:state},
+                success:function(data2)
+                {
+                     var stations = data2.stations;
+                     var target = { 
+
+                        "city":"Target",
+                        "lat": lat,
+                        "lon": lon
+                      };
+
+                       var resultArray = [];
+ 
+                       for(var i=0;i<stations.length;i++)
+                       {
+                           var obj = {};
+                           var tmp = Math.sqrt(Math.pow(stations[i].lat-target.lat,2) + Math.pow(stations[i].lon-target.lon,2));
+ 
+                           obj.city = stations[i].city;
+                           obj.distance = tmp.toFixed(2);
+                           obj.url = stations[i].url;
+
+                           resultArray.push(obj);
+                       }
+
+                      var nearestStation = resultArray.sort(sortByKey("distance"))[0];
+
+                        $.ajax({
+
+                           url:"/WeatherController/getEachStationJSON",
+                           type:"POST",
+                           dataType:"JSON",
+                           data:{url:nearestStation.url},
+                           success:function(data3)
+                           {
+                              var header = data3.observations.header[0];
+                              var time = header.refresh_message.substr(header.refresh_message.indexOf("Issued at")+10,9).trim();
+                              var date = header.refresh_message.substr(header.refresh_message.indexOf("m")+6).trim();
+                              var city = header.name;
+                              var state = header.state;
+                              var cloudy = data3.observations.data[0].cloud==undefined?"":data3.observations.data[0].cloud;
+                              var humidity = data3.observations.data[0].rel_hum;
+                              var temp = data3.observations.data[0].air_temp;
+                              var wind = data3.observations.data[0].wind_spd_kmh;
+                              var min_temp = data3.observations.data[0].air_temp || 0;
+                              var max_temp = data3.observations.data[0].air_temp || 0;
+
+                               var render = <div id = "myCityDiv">
+                                 <p id="myCity">{city}</p>
+                                 <p className="date">{date} <span className="time">{time}</span></p> 
+                                 <p className="cloudy">{cloudy=="-"?"": cloudy}</p> 
+                                 <p className="humidity">{humidity==null?"":"Humidity " + humidity +"%"}</p> 
+                                 <p className="temp">{temp==null?"":"Temp " + temp +" C"}</p> 
+                                 <p className="wind">{wind==0?"":"Wind " + wind}</p> 
+                                </div>
+
+                                self.setState({
+
+                                  currentState:render
+
+                                });
+                           }
+                        })
+                }
+              });   
+              });
+                    function sortByKey(key) {  
+                        return function(a, b) {  
+                            if (a[key] > b[key]) {  
+                                return 1;  
+                            } else if (a[key] < b[key]) {  
+                                return -1;  
+                            }  
+                            return 0;  
+                        }  
+                    }  
+    },
+
+    render()
+    {
+        if(this.state.currentState == "loading")
+        {
+            var render = <img id="loadingGif" src="/public/images/loading.gif"/>
+        }
+      else
+        {
+            var render = this.state.currentState;
+        }  
+
+        return (
+ 
+            <li className="ex_large">
+                <div className="nearStationWrapper">{render}</div> 
+            </li>
+          );
+    }
+  }); 
+
 ReactDOM.render(<MainWrapper/>,document.getElementById('App'));
  
 $(document).ready(function(){
@@ -1315,13 +1459,21 @@ $(document).ready(function(){
           $("#detailsWrap").click(function(){
               $("#hiddenField").css("display","none");
               $("#hiddenField2").css("display","none");
-          });          
+          });  
+
+           $('.common_submit_button').click(function()
+            {
+            if ($.trim($('.register_input').val()) == ''){
+
+                alert("Please Enter User Id. Refresh Page and try again.");
+            }
+           });
+
 });
 
 </script>
 </head>
-<body>  	  
-    
+<body>   
   	<div class="container-fluid"> 
 	   	<div id="App"></div>	   	
 		   	<footer class="footer">

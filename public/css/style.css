@@ -26,12 +26,44 @@ font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif !impo
 }
 
 #loginUser{
-color:white;
-font-weight : bold;
+	color:white;
+	font-weight : bold;
 }
 
 #container {
-margin:100px auto;
+	margin:100px auto;
+}
+
+#myCity{
+	font-size: 35px;
+	color:black;
+	font-weight:bold;
+	}
+
+#myCityDiv{
+	text-align:center;
+	background-color:white;
+	border-color:black;
+	border-style:solid;
+	height:100%;
+	width:100%;	
+	padding-top:34px;
+	padding-bottom:34px;
+}
+
+#myStation{
+	text-align:center;
+}
+
+#loadingGif
+{  
+  width:200px;
+  height:150px;
+  margin-top:50px;
+}
+
+#inputStyle{
+	float:right;	
 }
 
 a img {
@@ -177,7 +209,6 @@ h1, h2, h3, h4, h5, h6{ margin-bottom:10px; font-weight:normal; }
     border: 1px solid #66d9ff;
     color:white;
     text-align: center;
-
     font: 12px Arial, sans-serif;
 }
 
@@ -378,22 +409,22 @@ border-color:#060d13 !important;
 
 .statesWrapper ul li .WA
 {
-	background:#A2DCEA;
+	background:#FCC120;
 }
 
 .statesWrapper ul li .Antarctica
 {
-	background:#A2DCEA;
+	background:#87AFC7;
 }
 
 .statesWrapper ul li .VIC
 {
-	background:#F2977E;
+	background:#0041C2;
 }
 
 .statesWrapper ul li .SA
 {
-	background:#FCC120;
+	background:#F0514A;
 }
 
 .statesWrapper ul li .NT
@@ -403,26 +434,23 @@ border-color:#060d13 !important;
 
 .statesWrapper ul li .QLD
 {
-	background:#FCC120;
+	background:#6B2242;
 }
 
 .statesWrapper ul li .NSW
 {
-	background:#F0514A;
+	background:#A2DCEA;
 }
 
 .statesWrapper ul li .TM
 {
-	background:#455962;
+	background:#3EA055;
 }
 
 .statesWrapper ul li .ACT
 {
-	background:#6B2242;
+	background:#3090C7;
 }
- 
-
-
 
 .col-md-4
 {
@@ -430,10 +458,8 @@ border-color:#060d13 !important;
 	padding-right:5px !important;
 }
 
- 
-
 .footer{
-    background-color:#392224;
+    background:#060d13;
  	position: absolute;
     left: 0;
     bottom: 0;

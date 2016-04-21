@@ -52,6 +52,7 @@
           {			
               echo "Log In Failed. Please Register First.";
           } 
+        
 
       }      
 		public function getLogin()
@@ -80,7 +81,7 @@
       public function logout()
       {
          Session::destroy();
-		 echo "Log Out Successful!";
+		      echo "Log Out Successful!";
       }
 
   }
