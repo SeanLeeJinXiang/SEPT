@@ -171,7 +171,7 @@
           });
       },
 
-      renderCityByUrl(url,currentCity)
+      renderCityByUrl(url,currentCity,date)
     {
 
         var self = this;
@@ -184,27 +184,54 @@
             dataType:"json",
             success:function(data)
             {
-              module().getSimpleGragh(data,self,null,50,"myChart",currentCity);
+              self.refs['loadingBar'].show();
+              module().getSimpleGragh(data,self,null,50,"myChart",currentCity);               
+              self.refs["loadingBar"].hide();             
 
+              self.setState({
+                    date:date
+                })
             }
 
           });
 
     },
 
-      showPrevCalendar(e)
+      renderCityByTheUrl(url,currentCity)
     {
 
         var self = this;
+
+            $.ajax({
+
+            url:"/WeatherController/getEachStationJSON",
+            type:"POST",
+            data:{url:url},
+            dataType:"json",
+            success:function(data)
+            {
+              self.refs['loadingBar'].show();
+              module().getSimpleGragh(data,self,null,50,"myChart",currentCity);               
+              self.refs["loadingBar"].hide();             
+            }
+          });
+    },
+
+      showPrevCalendar(e)
+    {        
+        var self = this;
         var todayDate = new Date().getDate();
 
+                
+
         if($("#hiddenField").css("display")=="none")
-        {
+        {     
+
             $("#hiddenField").css("display","block");
             $( "#hiddenField" ).datepicker({
                 changeMonth: false,
                 changeYear: false,
-                  dateFormat: 'dd/mm/yy',
+                  dateFormat: 'DD d MM yy',
                   duration: 'fast',
                   stepMonths: 0,
                   showOn: "button",
@@ -212,32 +239,33 @@
                   minDate : "-9",
                   maxDate:"0",
                   onSelect:function(date)
-                  {
-                      self.refreshChart(date,todayDate);
+                  {                       
+                
+                    self.refreshChart(date,todayDate);                      
                   }
             });
          }
        else
-         {
+         {       
             $("#hiddenField").css("display","none");
             $('#hiddenField').datepicker('setDate', null);
          }  
-
-
     },
 
     showNextCalendar(e)
     {
+
+        
         var self = this;
         var todayDate = new Date().getDate();
-
+         
         if($("#hiddenField2").css("display")=="none")
         {
             $("#hiddenField2").css("display","block");
             $( "#hiddenField2" ).datepicker({
                 changeMonth: false,
                 changeYear: false,
-                  dateFormat: 'dd/mm/yy',
+                  dateFormat: 'DD d MM yy',
                   duration: 'fast',
                   stepMonths: 0,
                   showOn: "button",
@@ -246,7 +274,8 @@
                   maxDate:"9",
                   onSelect:function(date)
                   {
-                      self.refreshChart(date,todayDate);
+                      self.refreshChart(date,todayDate);                  
+                     
                   }
             });
          }
@@ -258,35 +287,37 @@
     },
 
     refreshChart(date,todayDate)
-    {
-         var parsedDate = parseInt(date.substring(0,date.indexOf("/")));
+    {   
+        
+         var s1 = date.split(' ');  
+         var parsedDate = parseInt(s1[1]);       
+       
          var currentCity = {
-
+         
              city:this.state.city,
              state:this.state.state,
              date:this.state.date
 
-          };
+          };          
 
         if(todayDate==parsedDate)
-        {
-            this.renderCityByUrl(this.state.url);
+        {           
+            this.renderCityByTheUrl(this.state.url);
         }
        else
-        {  
+        {              
             var ran = parsedDate % 9;
-            this.renderCityByUrl(this.state.dummyDATAURL[ran],currentCity);
+            this.renderCityByUrl(this.state.dummyDATAURL[ran],currentCity,date);
+
         } 
     },
-
+ 
     
-   
-
 	      render()
       
       {
         return (                
-          <div className='animated fadeIn'>
+          <div id = "detailsWrap"className='animated fadeIn'>
               <RenderLoading ref='loadingBar'/>           
                <div className="cityInfoWrapper">
                  <p className="city">                 		
@@ -294,19 +325,15 @@
         				 &nbsp;
 				        <button onClick={this.refresh} className='add_to_favourite btn btn-default btn-sm'>Refresh</button>				        
 				        <br/>
-				        {this.state.city}				  
+				        {this.state.city}	
                  </p>
                     <div id="hiddenField"></div>
-                  <div id="hiddenField2"></div>
-
+                    <div id="hiddenField2"></div>
                 <button type="button" onClick={this.showPrevCalendar} className="btn btn-default favouriteLeftButton" aria-label="Left Align">
-                  <span className="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-               </button>
-               <button type="button" onClick={this.showNextCalendar} className="btn btn-default favouriteRightButton" aria-label="Left Align">
-                  <span className="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-               </button>
-               
-
+                <span className="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous Days</button>
+                <button type="button" onClick={this.showNextCalendar} className="btn btn-default favouriteRightButton" aria-label="Left Align">Forecasts
+                <span className="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                </button>
                  <p className="date">{this.state.date} <span className="time">{this.state.time}</span></p> 
                  <p className="cloudy">{ this.state.cloudy=="-"?"": this.state.cloudy }</p> 
                  <p className="humidity">{this.state.humidity==null?"":"Humidity " + this.state.humidity +"%"}</p> 
@@ -706,15 +733,9 @@
                    $(".register_input").show();
 				           $('#loginUser').html(data);
                   }
-
-
               }
             })
-
-
-
        }
-
     },
  
   	render()
@@ -933,29 +954,35 @@
             {
               if($("#cityDetailsWrapper").css("opacity")!="0.3")
               {    
-                var wrapper = $("<div id='cityDetailsWrapper'></div>");
-                wrapper.css({
+                    var wrapper = $("<div id='cityDetailsWrapper'></div>");
+                    wrapper.css({
 
-                   width:$(window).width(),
-                   height:$(window).height(),
-                   position:"absolute",
-                   background:"#9C9C9C",
-                   top:0,
-                   left:0,
-                   opacity:"0.3",
+                       width:$(window).width(),
+                       height:$(window).height(),
+                       position:"absolute",
+                       background:"#9C9C9C",
+                       top:0,
+                       left:0,
+                       opacity:"0.3",
 
-                });
+                    });
 
-                wrapper.css("z-index",10);
+                     wrapper.css("z-index",10);
 
-              $(document.body).append(wrapper.fadeIn());
+                     $(document.body).append(wrapper.fadeIn());
 
-               }
-              $("#CityChartWrapper").show();
+              }
+
+              $("#CityChartWrapper").show();      
+
+              self.refs['loadingBar'].show();        
 
               module().getSimpleGragh(data,self,null,50,"CityDetailChart",currentCity);
+              self.refs['loadingBar'].hide();
  
               $(".cityInfoWrapper .closeButton").on("click",closeBackGround);
+
+              $(".cityInfoWrapper .refreshButton").on("click",refresh);
 
               $('#cityDetailsWrapper').on("click",closeBackGround);
 
@@ -965,13 +992,89 @@
 
                   $("#CityChartWrapper").hide();
                   $("#cityDetailsWrapper").remove();  
+              }
+
+              function refresh(e)
+              {
+                  e.preventDefault();
+
+                  self.refs['loadingBar'].show();
+                  module().getSimpleGragh(data,self,null,50,"CityDetailChart",currentCity);
+                  self.refs['loadingBar'].hide();
+              }
+            }
+          });
+    },
+
+     renderCityByTheUrl(url,currentCity,date)
+    {
+
+        var self = this;
+
+            $.ajax({
+
+            url:"/WeatherController/getEachStationJSON",
+            type:"POST",
+            data:{url:url},
+            dataType:"json",
+            success:function(data)
+            {
+              if($("#cityDetailsWrapper").css("opacity")!="0.3")
+              {    
+                    var wrapper = $("<div id='cityDetailsWrapper'></div>");
+                    wrapper.css({
+
+                       width:$(window).width(),
+                       height:$(window).height(),
+                       position:"absolute",
+                       background:"#9C9C9C",
+                       top:0,
+                       left:0,
+                       opacity:"0.3",
+
+                    });
+
+                     wrapper.css("z-index",10);
+
+                     $(document.body).append(wrapper.fadeIn());
 
               }
 
+              $("#CityChartWrapper").show();      
+
+              self.refs['loadingBar'].show();        
+
+              module().getSimpleGragh(data,self,null,50,"CityDetailChart",currentCity);
+              self.refs['loadingBar'].hide(); 
+
+              self.setState({
+                    date:date
+              })            
+ 
+              $(".cityInfoWrapper .closeButton").on("click",closeBackGround);
+
+              $(".cityInfoWrapper .refreshButton").on("click",refresh);
+
+              $('#cityDetailsWrapper').on("click",closeBackGround);
+
+              function closeBackGround(e)
+              {
+                  e.preventDefault();
+
+                  $("#CityChartWrapper").hide();
+                  $("#cityDetailsWrapper").remove();  
+              }
+
+              function refresh(e)
+              {
+                  e.preventDefault();
+
+                  self.refs['loadingBar'].show();
+                  module().getSimpleGragh(data,self,null,50,"CityDetailChart",currentCity);
+                  self.refs['loadingBar'].hide();
+              }
             }
-
           });
-
     },
 
     removeFavor(e)
@@ -1028,7 +1131,7 @@
 
     showPrevCalendar(e)
     {
-
+        
         var self = this;
         var todayDate = new Date().getDate();
 
@@ -1038,7 +1141,7 @@
             $( "#hiddenField3" ).datepicker({
                 changeMonth: false,
                 changeYear: false,
-                  dateFormat: 'dd/mm/yy',
+                  dateFormat: 'DD d MM yy',
                   duration: 'fast',
                   stepMonths: 0,
                   showOn: "button",
@@ -1046,8 +1149,10 @@
                   minDate : "-9",
                   maxDate:"0",
                   onSelect:function(date)
-                  {
+                  { 
+                      self.refs['loadingBar'].show();
                       self.refreshChart(date,todayDate);
+                      self.refs['loadingBar'].hide();   
                   }
             });
          }
@@ -1062,6 +1167,7 @@
 
     showNextCalendar(e)
     {
+         
         var self = this;
         var todayDate = new Date().getDate();
 
@@ -1071,7 +1177,7 @@
             $( "#hiddenField4" ).datepicker({
                 changeMonth: false,
                 changeYear: false,
-                  dateFormat: 'dd/mm/yy',
+                  dateFormat: 'DD d MM yy',
                   duration: 'fast',
                   stepMonths: 0,
                   showOn: "button",
@@ -1080,7 +1186,9 @@
                   maxDate:"9",
                   onSelect:function(date)
                   {
+                      self.refs['loadingBar'].show();
                       self.refreshChart(date,todayDate);
+                      self.refs['loadingBar'].hide();                     
                   }
             });
          }
@@ -1093,7 +1201,8 @@
 
     refreshChart(date,todayDate)
     {
-         var parsedDate = parseInt(date.substring(0,date.indexOf("/")));
+         var s1 = date.split(' ');  
+         var parsedDate = parseInt(s1[1]); 
          var currentCity = {
 
              city:this.state.city,
@@ -1109,7 +1218,7 @@
        else
         {  
             var ran = parsedDate % 9;
-            this.renderCityByUrl(this.state.dummyDATAURL[ran],currentCity);
+            this.renderCityByTheUrl(this.state.dummyDATAURL[ran],currentCity,date);
         } 
     },
     
@@ -1124,24 +1233,26 @@
               return <li className="list-group-item" key={index}><a onClick={self.renderCityDetail} className='favouriteLinks' id={data.url} href="#">{data.city}</a><button id={data.city} onClick={self.removeFavor} className='favouritebuttons btn btn-default btn-sm'>Delete</button></li>
           })
        }
-        return (
-        <div>  
+        return ( 
+
+        <div>     
         <div className="myFavouritesWrapper"><button onClick={this.toggleMenu} className="btn btn-default btn-sm">My Favourites <span className="favouritesCounter">{this.state.myFavourites.length}</span></button><ul className="myFavouritesUL list-group">{myFavourites}</ul></div>
               
               <div className="animated fadeIn" id="CityChartWrapper">
+              <RenderLoading ref='loadingBar'/>
               <div id="hiddenField3"></div>
-              <div id="hiddenField4"></div>
-
-
+              <div id="hiddenField4"></div>     
                 <div className="cityInfoWrapper">  
-
-                <button type="button" onClick={this.showPrevCalendar} className="btn btn-default favouriteLeftButton" aria-label="Left Align">
-                  <span className="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-               </button>
-               <button type="button" onClick={this.showNextCalendar} className="btn btn-default favouriteRightButton" aria-label="Left Align">
+                  <span className='closeButton'><button className='btn btn-default btn-sm'>Close</button></span>               
+                 <p className="city">{this.state.city}
+                  <span className='refreshButton'><button className='btn btn-default btn-sm'>Refresh</button></span>
+                 </p>
+                   <button type="button" onClick={this.showPrevCalendar} className="btn btn-default favouriteLeftButton" aria-label="Left Align">
+                  <span className="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous Days
+                  </button>
+                 <button type="button" onClick={this.showNextCalendar} className="btn btn-default favouriteRightButton" aria-label="Left Align">Forecasts
                   <span className="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-               </button>
-                 <p className="city">{this.state.city}</p><span className='closeButton'><button className='btn btn-default btn-sm'>Close</button></span>
+                 </button>                 
                  <p className="date">{this.state.date} <span className="time">{this.state.time}</span></p> 
                  <p className="cloudy">{ this.state.cloudy=="-"?"": this.state.cloudy }</p> 
                  <p className="humidity">{this.state.humidity==null?"":"Humidity " + this.state.humidity +"%"}</p> 
@@ -1153,6 +1264,7 @@
               </div>
               </div>
         </div>
+
         );
     }
   });
@@ -1187,6 +1299,23 @@ $(document).ready(function(){
 	        success: function(data){
 	             $('#loginUser').html(data);	             
 	        }});		  
+
+          $(".container").click(function(){
+             $("#hiddenField").css("display","none");
+             $("#hiddenField2").css("display","none");
+             $("#hiddenField3").css("display","none");
+             $("#hiddenField4").css("display","none");
+          });
+
+          $(".modal-content").click(function(){
+              $("#hiddenField").css("display","none");
+              $("#hiddenField2").css("display","none");
+          });
+
+          $("#detailsWrap").click(function(){
+              $("#hiddenField").css("display","none");
+              $("#hiddenField2").css("display","none");
+          });          
 });
 
 </script>

@@ -280,6 +280,11 @@ border-color:#060d13 !important;
 	float:right;
 }
 
+.cityInfoWrapper .refreshButton
+{
+	padding-left:25px;
+}
+
 .favouritebuttons
 {
 	float:right;
