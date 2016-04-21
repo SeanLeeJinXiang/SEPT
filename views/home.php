@@ -1466,7 +1466,8 @@ $(document).ready(function(){
 	   	<div id="App"></div>	   	
 		   	<footer class="footer">
 		  	  <div class="container">              
-		      <p>Copyright</p>
+		      <p id="footerFloat2">Copyright &copy; 2016 </p>
+          <p id ="footerFloat">Australian Weather App</p>
 		   	  </div> 
 			</footer>
   	</div>

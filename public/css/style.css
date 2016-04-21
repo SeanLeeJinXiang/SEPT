@@ -70,6 +70,17 @@ font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif !impo
 	float:right;	
 }
 
+#footerFloat{
+	float:right;
+	color:white;
+	
+}
+
+#footerFloat2{
+	float:left;
+	color:white;	
+}
+
 a img {
 border:none;
 }
