@@ -1,0 +1,75 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>Documentation for Australian Weather App</title>
+
+<link href="styles/styles.css" rel="stylesheet" type="text/css" />
+
+
+</head>
+
+<body>
+<div id="container">
+  <div id="header"><a name="top" id="top"></a>
+   <div id="logocontainer">
+   <h1> Weather App Documentation</h1>
+  </div>
+
+  </div>
+  
+  <div id="headerbackground"></div>
+  <div id="content">
+    
+	<!-- Content -->
+   
+ 
+    
+   
+  <!-- END FEATURED PRODUCTS -->
+  </div>
+		<br class="clear" />
+		<div id="centercontent">
+			<div id="rightcontent">
+		
+		</div>
+		<div id="leftcontent">
+			<h1> Navigation</h1>
+				
+		</div>
+      <div id="midcontent">
+        <h1>Documentation</h1>
+        <!-- "content" -->
+        <p class="contentpara"><strong>Header</strong></p>
+        
+        <p class="contentpara"><strong>Header</strong><br/>
+        </p>
+       
+       </div>
+    
+    </div>
+	<!-- END CONTENT -->
+  
+   
+  </div>
+ 
+  <div id="footer"> <div id="footerbackground"></div>
+
+  <div id="links">
+  <table width="100%" id="footertable"><tr><td class="showside style1 width16"><a href="home.shtml">HomePage</a></td>
+  <td class="showside style1 width47"><a href="copyright.shtml">Copyright &copy; 2008 eM&amp;M</a> </td>
+  
+  </tr>
+  </table>
+  </div>
+    
+  </div>
+  
+  
+  
+ 
+
+</body>
+</html>
