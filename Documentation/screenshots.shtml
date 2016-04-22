@@ -1,0 +1,174 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>Documentation for Australian Weather App</title>
+
+<link href="styles/styles.css" rel="stylesheet" type="text/css" />
+
+
+</head>
+
+<body>
+<div id="container">
+  <div id="header"><a name="top" id="top"></a>
+   <div id="logocontainer">
+   <h1> Weather App Documentation</h1>
+  </div>
+
+  </div>
+  
+  <div id="headerbackground"></div>
+  <div id="content">
+    
+	<!-- Content -->
+   
+ 
+    
+   
+  <!-- END FEATURED PRODUCTS -->
+  </div>
+		<br class="clear" />
+		<div id="centercontent">
+			<div id="rightcontent">
+		
+		</div>
+		<div id="leftcontent">
+			<h1> Navigation</h1>
+			<p>
+				<ul id="sddm">
+							<li><a href="home.shtml" class="nav">Home Page</a></li>
+							<li><a href="classdiagram.shtml" class="nav">Class Diagram</a></li>
+							<li><a href="screenshots.shtml" class="nav">Installation</a></li>
+			      </ul>
+			</p>
+
+				
+		</div>
+      <div id="midcontent">
+        <h1>Installation</h1>
+        <!-- "content" -->
+        <p class="contentpara"><strong>How to Install</strong></p>
+
+        <table class="middlecontenttable" border="0" cellpadding="0" cellspacing="5">
+          <tr>
+            <td class="tdborder2">
+            <table width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td class="tdwidth135">
+                    Australian Weather App is a web based application. 
+                    Installation on your local Pc requires a local web hosting software due to the Php coding used for this Assignment.
+                    The software our group used is WampServer which can be downloaded at <a href="http://www.wampserver.com/en/"> http://www.wampserver.com/en/</a>. 
+                  </td>
+                   <tr>
+                    <td>
+                    <h3>Wamp Server Installation</h3>
+                    <p class="alignCenter">
+                      <img src="Images/wamp.jpg" alt="wamp" height="200" class ="imageS"/>                      
+                    </p>
+                    <p>
+                    Download and install the appropriate WampServer onto your local PC and run it.
+                    You should be able to access the Apache and MySql services on your local pc now. If you are having trouble accessing localhost on your local pc. You can edit the settings of your localhost port.           
+                   </p>
+                    
+                    The normal port for localhost is port 80. You can use Apache services to check if your port is being used by another program on your local PC by clicking on the Wamp Manager which should be located on the Status Area or Notifications Area on your PC (Bottom Right of your screen) and click on:
+                    <ul>
+                      <li>&#8680;Wamp Manager</li>
+                      <li>&#8680;Apache</li>
+                      <li>&#8680;Services</li>
+                      <li>&#8680;Test Port 80</li>
+                    </ul>
+                    <p class="alignCenter">
+                      <img src="Images/testport.jpg" alt="testport" class ="imageS" height="350"/>
+                    </p>
+                    If local host is used by another program you can change the settings on your Apache Server to use another Port such as 8080. Then on your browser u can access it by typing localhost:8080. To run the files which are located in the www subfolder in your wamp folder. Your settings can be changed by accessing the httpd.config file in Apache. 
+                    <ul>
+                      <li>&#8680;Wamp Manager</li>
+                      <li>&#8680;Apache</li>
+                      <li>&#8680;httpd.config</li>                     
+                    </ul>
+                    <p class="alignCenter">
+                      <img src="Images/httpd.jpg" alt="httpd" class ="imageS" height="350"/>
+                    </p>
+                    Access this file and switch all the 80's with the desired port number.
+                    <p>
+                    Another common error is when your browser doesn't allow access to files in the www folder. You can rectify this by opening httpd.config again and removing the &#35; before the &#35;soLoadModule rewrite_module modules/mod_rewrite text.
+                    </p>
+                    <p>
+                      
+                    </p>
+                    </td>
+                  </tr>
+                </tr>
+              <tr>
+                <td>
+                  
+                </td>
+              </tr>
+            </table>
+            </tr>
+            </table>
+            <table class="middlecontenttable" border="0" cellpadding="0" cellspacing="5">
+          <tr>
+            <td class="tdborder2">
+            <table width="100%" cellpadding="0" cellspacing="0">             
+                   <tr>
+                    <td>
+                    <h3>Pull files from GitHub</h3>
+                    
+                    <p>
+                    The next step is to download the files onto your local machine. You can either pull a request from GitHub or download the ZIP files directly.           
+                   </p>
+                   <p class="alignCenter">
+                      <img src="Images/files.jpg" alt="files" height="400" class ="imageS"/>                 
+                    </p>
+                    
+                    Once you have it on your local machine, extract the files into your wamp&#47;www&#47; folder. Next go to your selected browser &#40;Chome&#47;Mozilla&#47;Explorer&#41; and in your Address Bar type in localhost or localhost/index.php
+                    <p class="alignCenter">
+                      <img src="Images/australianapp.jpg" alt="Australian Weather App" class ="imageS" height="410"/>
+                    </p>
+                    This is what it should look like.                    
+                    
+                    </td>
+                  </tr>
+                </tr>
+              <tr>
+                <td>
+                  
+                </td>
+              </tr>
+            </table>
+            </tr>
+            </table>
+      
+        
+        
+       
+       </div>
+    
+    </div>
+	<!-- END CONTENT -->
+  
+   
+  </div>
+ 
+  <div id="footer"> <div id="footerbackground"></div>
+
+  <div id="links">
+  <table width="100%" id="footertable"><tr><td class="showside style1 width16"><a href="home.shtml">HomePage</a></td>
+  <td class="showside style1 width47"><a href="copyright.shtml">Copyright &copy; 2008 eM&amp;M</a> </td>
+  
+  </tr>
+  </table>
+  </div>
+    
+  </div>
+  
+  
+  
+ 
+
+</body>
+</html>

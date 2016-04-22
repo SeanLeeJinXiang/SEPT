@@ -7,6 +7,14 @@ div#leftcontent {
 	border: thin solid #000000;
 	background-image: url(../Images/backgroundmid.png);
 }
+
+.imageS{
+	width:80%;	
+	padding:10px;
+	}
+.alignCenter{
+	text-align:center;
+}
 .tdwidth40{
 	width: 40px;
 	height: auto;
@@ -81,6 +89,7 @@ width:548px;
 	padding-top: 2px;
 	padding-right: 4px;
 	width:50%;
+	padding-left:10px;
 }
 .paddingleft10px {
 	padding-left: 10px;
@@ -123,7 +132,7 @@ h1 {
 }
 
 div#midcontent {
-	margin-right: 19%;
+	margin-right: 5%;
 	margin-left: 19%;
 	width: auto;
 	background-image: url(../Images/backgroundmid.png);
