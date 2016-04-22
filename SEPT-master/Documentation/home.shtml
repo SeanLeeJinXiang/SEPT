@@ -1,0 +1,185 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>Documentation for Australian Weather App</title>
+
+<link href="styles/styles.css" rel="stylesheet" type="text/css" />
+
+
+</head>
+
+<body>
+<div id="container">
+  <div id="header"><a name="top" id="top"></a>
+   <div id="logocontainer">
+   <h1> Weather App Documentation</h1>
+  </div>
+
+  </div>
+  
+  <div id="headerbackground"></div>
+  <div id="content">
+    
+	<!-- Content -->
+   
+ 
+    
+   
+  <!-- END FEATURED PRODUCTS -->
+  </div>
+		<br class="clear" />
+		<div id="centercontent">
+			<div id="rightcontent">
+		
+		</div>
+		<div id="leftcontent">
+			<h1> Navigation</h1>
+			<p>
+				<ul id="sddm">
+							<li><a href="home.shtml" class="nav">Home Page</a></li>
+							<li><a href="classdiagram.shtml" class="nav">Class Diagram</a></li>
+							<li><a href="Tools.html" class="nav">Tools</a></li>
+							<li><a href="screenshots.shtml" class="nav">Installation</a></li>
+			      </ul>
+			</p>
+
+				
+		</div>
+      <div id="midcontent">
+        <h1>User Stories</h1>
+        <!-- "content" -->
+        <p class="contentpara"><strong>Task Plan</strong></p>
+
+        <table class="middlecontenttable" border="0" cellpadding="0" cellspacing="5">
+          <tr>
+            <td class="tdborder2">
+            <table width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td class="tdwidth135">
+                  	This is the task plan for the Australian Weather App 
+                  	<br/>
+                  	<br/>
+                  </td>
+                </tr>
+              <tr>
+                <td>
+
+                	<table border="1" width ="100%">
+                		<tr>
+	                		<td>
+	                		Task
+	                		</td>
+	                		<td>
+	                		Due Date
+	                		</td>
+	                		<td>
+	                		Participants
+	                		</td>
+                		</tr>
+                		<tr>
+                			<td>
+                				Choosing platform for Development
+                			</td>
+                			<td>
+                				22 March 2016
+                			</td>
+                			<td>	
+                			Jihun<br/>
+                			Sean Lee<br/>
+                			Labib Syed<br/>
+                			Victor Soliman<br/>
+                			</td>
+                			</tr>
+                			<tr>
+                			<td>
+                				Create Class Diagram
+                			</td>
+                			<td>
+                				25 March 2016
+                			</td>
+                			<td>	                			
+                			Labib Syed<br/>
+                			Victor Soliman<br/>
+                			</td>
+                			</tr>
+                			<tr>
+                			<td>
+                				Design and Development frame work
+                			</td>
+                			<td>
+                				28 March 2016
+                			</td>
+                			<td>	
+                			Jihun<br/>
+                			Sean Lee<br/>
+                			Labib Syed<br/>
+                			Victor Soliman<br/>
+                			</td>
+                		</tr>
+                		</tr>
+                			<tr>
+                			<td>
+                				 Code testing
+                			</td>
+                			<td>
+                				14 April 2016
+                			</td>
+                			<td>	
+                			Jihun<br/>
+                			Sean Lee<br/>
+                			Labib Syed<br/>
+                			Victor Soliman<br/>
+                			</td>
+                		</tr>
+                		</tr>
+                			<tr>
+                			<td>
+                				Documentation
+                			</td>
+                			<td>
+                				19 April 2016
+                			</td>
+                			<td>	
+                			Jihun<br/>
+                			Sean Lee<br/>
+                			Labib Syed<br/>
+                			Victor Soliman<br/>
+                			</td>
+                		</tr>
+
+                		</table>
+                
+                </td>
+              </tr>
+            </table>
+            </tr>
+            </table>         
+       </div>
+    
+    </div>
+	<!-- END CONTENT -->
+  
+   
+  </div>
+ 
+  <div id="footer"> <div id="footerbackground"></div>
+
+  <div id="links">
+  <table width="100%" id="footertable"><tr><td class="showside style1 width16"><a href="home.shtml">HomePage</a></td>
+  <td class="showside style1 width47">Copyright &copy; 2016</a> </td>
+  
+  </tr>
+  </table>
+  </div>
+    
+  </div>
+  
+  
+  
+ 
+
+</body>
+</html>

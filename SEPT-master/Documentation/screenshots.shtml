@@ -1,0 +1,279 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>Documentation for Australian Weather App</title>
+
+<link href="styles/styles.css" rel="stylesheet" type="text/css" />
+
+
+</head>
+
+<body>
+<div id="container">
+  <div id="header"><a name="top" id="top"></a>
+   <div id="logocontainer">
+   <h1> Weather App Documentation</h1>
+  </div>
+
+  </div>
+  
+  <div id="headerbackground"></div>
+  <div id="content">
+    
+	<!-- Content -->
+   
+ 
+    
+   
+  <!-- END FEATURED PRODUCTS -->
+  </div>
+		<br class="clear" />
+		<div id="centercontent">
+			<div id="rightcontent">
+		
+		</div>
+		<div id="leftcontent">
+			<h1> Navigation</h1>
+			<p>
+				<ul id="sddm">
+							<li><a href="home.shtml" class="nav">Home Page</a></li>
+							<li><a href="classdiagram.shtml" class="nav">Class Diagram</a></li>
+							<li><a href="Tools.html" class="nav">Tools</a></li>
+							<li><a href="screenshots.shtml" class="nav">Installation</a></li>
+			      </ul>
+			</p>
+
+				
+		</div>
+      <div id="midcontent">
+        <h1>Installation</h1>
+        <!-- "content" -->
+        <p class="contentpara"><strong>How to Install</strong></p>
+
+        <table class="middlecontenttable" border="0" cellpadding="0" cellspacing="5">
+          <tr>
+            <td class="tdborder2">
+            <table width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td class="tdwidth135">
+                    Australian Weather App is a web based application. 
+                    Installation on your local Pc requires a local web hosting software due to the Php coding used for this Assignment.
+                    The software our group used is WampServer which can be downloaded at <a href="http://www.wampserver.com/en/"> http://www.wampserver.com/en/</a>. 
+                  </td>
+                   <tr>
+                    <td>
+                    <h3>Wamp Server Installation</h3>
+                    <p class="alignCenter">
+                      <img src="Images/wamp.jpg" alt="wamp" height="200" class ="imageS"/>                      
+                    </p>
+                    <p>
+                    Download and install the appropriate WampServer onto your local PC and run it.
+                    You should be able to access the Apache and MySql services on your local pc now. If you are having trouble accessing localhost on your local pc. You can edit the settings of your localhost port.           
+                   </p>
+                    
+                    The normal port for localhost is port 80. You can use Apache services to check if your port is being used by another program on your local PC by clicking on the Wamp Manager which should be located on the Status Area or Notifications Area on your PC (Bottom Right of your screen) and click on:
+                    <ul>
+                      <li>&#8680;Wamp Manager</li>
+                      <li>&#8680;Apache</li>
+                      <li>&#8680;Services</li>
+                      <li>&#8680;Test Port 80</li>
+                    </ul>
+                    <p class="alignCenter">
+                      <img src="Images/testport.jpg" alt="testport" class ="imageS" height="350"/>
+                    </p>
+                    If local host is used by another program you can change the settings on your Apache Server to use another Port such as 8080. Then on your browser u can access it by typing localhost:8080. To run the files which are located in the www subfolder in your wamp folder. Your settings can be changed by accessing the httpd.config file in Apache. 
+                    <ul>
+                      <li>&#8680;Wamp Manager</li>
+                      <li>&#8680;Apache</li>
+                      <li>&#8680;httpd.config</li>                     
+                    </ul>
+                    <p class="alignCenter">
+                      <img src="Images/httpd.jpg" alt="httpd" class ="imageS" height="350"/>
+                    </p>
+                    Access this file and switch all the 80's with the desired port number.
+                    <p>
+                    Another common error is when your browser doesn't allow access to files in the www folder. You can rectify this by opening httpd.config again and removing the &#35; before the &#35;soLoadModule rewrite_module modules/mod_rewrite text.
+                    </p>
+                    <p>
+                      
+                    </p>
+                    </td>
+                  </tr>
+                </tr>
+              <tr>
+                <td>
+                  
+                </td>
+              </tr>
+            </table>
+            </tr>
+            </table>
+            <table class="middlecontenttable" border="0" cellpadding="0" cellspacing="5">
+            <tr>
+            <td class="tdborder2">
+            <table width="100%" cellpadding="0" cellspacing="0">             
+                   <tr>
+                    <td>
+                    <h3>Pull files from GitHub</h3>
+                    
+                    <p>
+                    The next step is to download the files onto your local machine. You can either pull a request from GitHub or download the ZIP files directly.           
+                   </p>
+                   <p class="alignCenter">
+                      <img src="Images/files.jpg" alt="files" height="400" class ="imageS"/>                 
+                    </p>
+                    
+                    Once you have it on your local machine, extract the files into your wamp&#47;www&#47; folder. Next go to your selected browser &#40;Chome&#47;Mozilla&#47;Explorer&#41; and in your Address Bar type in localhost or localhost/index.php
+                    <p class="alignCenter">
+                      <img src="Images/australianapp.jpg" alt="Australian Weather App" class ="imageS" height="410"/>
+                    </p>
+                    This is what it should look like.                    
+                    
+                    </td>
+                  </tr>
+                </tr>             
+            </table>
+            </tr>
+            </table>      
+             <table class="middlecontenttable" border="0" cellpadding="0" cellspacing="5">
+            <tr>
+            <td class="tdborder2">
+            <table width="100%" cellpadding="0" cellspacing="0">             
+                   <tr>
+                    <td>
+                    <h3>App Usage</h3>
+                    
+                    <p>
+                    Usage of this App is fairly Simple and Straight forward. Firstly, the main HTML page has a feature which shows the weather of the closes weather station to the users current location which is very convenient for users of this app.        
+                   </p>
+                   <p>
+                   <ul>
+                       <li>
+                       Simply select the desired State from the Main Html page and a window will appear. 
+                       </li>
+                       <li>
+                       Select the suburb which weather you want to view. You view the weather details by clicking the View Details button located on the right of the suburb. The weather chart then appears.
+                       </li>
+                       <li>
+                       There is a Refresh button on the weather chart that refreshes the details of the selected suburb page when clicked.
+                       </li>
+                       <li>
+                       There is Add To Favourite button on the weather chart as well that allows you to save the selected suburb into your favourites list but this feature is only allowed if you are Registered and Logged in.
+                       </li>
+                      
+                   </ul>
+                   </p>
+                   <p class="alignCenter">
+                      <img src="Images/details.jpg" alt="files" height="420" class ="imageS"/>
+                   </p>
+                   <p>
+                  <ul>
+                    <li>
+                       There is also a feature that allows you to view the previous days weather and forecasts of the selected suburb. You can access this by clicking the Previous Days and Forecast buttons then after the calendar pops up, simply select the date you wish to view and the details will get automatically refreshed on the window.
+                       </li>
+                    </ul>
+                    </p>
+                   <p class="alignCenter">
+                      <img src="Images/calendar.jpg" alt="files" height="420" class ="imageS"/>
+                   </p>                                              
+                </td>
+                </tr>
+                <tr>
+                      <td>
+                        <h4>Logging In</h4>
+                      </td>
+                  </tr>
+                </tr>
+                <tr>
+                <td>
+                <ul>
+                  <li>
+                  Firstly you will have to register your account. You do this simply by entering your desired User Id into the input box at the top right of the main html page and select the Register option from the dropdown box beside it.
+                  </li>
+                  <li>
+                  After registering, Enter your User Id and select the Log In option from the dropdown menu
+                  </li>
+                </ul>
+                <p class="alignCenter">
+                      <img src="Images/login.jpg" alt="files" height="420" class ="imageS"/>
+                </p> 
+                <ul>
+                  <li>
+                    After Logging in. You can now add selected suburbs to your favourites list and after it is added, it will be displayed on the top left of the main HTML page.
+                  </li>                
+                  <li>
+                      You can remove a suburb from your favourite list by selecting the Delete option located beside the name of the suburb.
+                  </li>
+                </ul>
+                <p class="alignCenter">
+                      <img src="Images/favourites.jpg" alt="files" height="420" class ="imageS"/>
+                </p> 
+                <ul>
+                  <li>
+                    After you have added suburbs to your favourites list. It can be accessed by clicking on it, after it is clicked a drop down menu of your favourite list will be displayed. Simply click on the suburb in which you would like to view the weather and a chart of the weather will pop up.
+                  </li>
+                  <li>
+                  This page has the same functions as the details page. It has a refresh button, which refreshes the details of the weather internally, a previous days and forecast button which displays the weather of previous and forecast weather for the selected suburb after selecting the date from the pop up calendar and also a close button which closes the window.
+                  </li>
+                </ul>
+                <p class="alignCenter">
+                      <img src="Images/fav.jpg" alt="files" height="420" class ="imageS"/>
+                </p> 
+                </td>
+              </tr>
+              <tr>
+                <td>
+                <ul>
+                  <li>
+                  This page has the same functions as the details page. It has a refresh button, which refreshes the details of the weather internally, a previous days and forecast button which displays the weather of previous and forecast weather for the selected suburb after selecting the date from the pop up calendar and also a close button which closes the window.
+                  </li>
+                </ul>
+                <p class="alignCenter">
+                      <img src="Images/fav2.jpg" alt="files" height="420" class ="imageS"/>
+                </p>
+                </td>                
+              </tr>
+                  <tr>
+                <td>
+                <ul>
+                  <li>
+                  You log out by selecting the log out option in the drop down menu located at the top right corner of the main html page.
+                  </li>
+                </ul>     
+                <p class="alignCenter">
+                      <img src="Images/logout.jpg" alt="files" height="420" class ="imageS"/>
+                </p>          
+                </td>                
+              </tr>
+             </table>
+            </tr>
+          </table>      
+       </div>
+    
+    </div>
+	<!-- END CONTENT -->
+  
+   
+  </div>
+ 
+  <div id="footer"> <div id="footerbackground"></div>
+
+  <div id="links">
+  <table width="100%" id="footertable"><tr><td class="showside style1 width16"><a href="home.shtml">HomePage</a></td>
+  <td class="showside style1 width47">Copyright &copy; 2016 </td>
+  
+  </tr>
+  </table>
+  </div>
+    
+  </div>
+  
+  
+  
+ 
+
+</body>
+</html>
