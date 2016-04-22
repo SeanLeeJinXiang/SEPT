@@ -50,7 +50,7 @@
       <div id="midcontent">
         <h1>User Stories</h1>
         <!-- "content" -->
-        <p class="contentpara"><strong>How to Install</strong></p>
+        <p class="contentpara"><strong>Task Plan</strong></p>
 
         <table class="middlecontenttable" border="0" cellpadding="0" cellspacing="5">
           <tr>
@@ -58,15 +58,99 @@
             <table width="100%" cellpadding="0" cellspacing="0">
                 <tr>
                   <td class="tdwidth135">
-                  	Australian Weather App is a web based application. 
-                  	Installation on your local Pc requires a local web hosting software.
-                  	The software our group used is wamp. 
-
+                  	This is the task plan for the Australian Weather App 
+                  	<br/>
+                  	<br/>
                   </td>
                 </tr>
               <tr>
                 <td>
-                	 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis an
+
+                	<table border="1" width ="100%">
+                		<tr>
+	                		<td>
+	                		Task
+	                		</td>
+	                		<td>
+	                		Due Date
+	                		</td>
+	                		<td>
+	                		Participants
+	                		</td>
+                		</tr>
+                		<tr>
+                			<td>
+                				Choosing platform for Development
+                			</td>
+                			<td>
+                				22 March 2016
+                			</td>
+                			<td>	
+                			Jihun<br/>
+                			Sean Lee<br/>
+                			Labib Syed<br/>
+                			Victor Soliman<br/>
+                			</td>
+                			</tr>
+                			<tr>
+                			<td>
+                				Create Class Diagram
+                			</td>
+                			<td>
+                				25 March 2016
+                			</td>
+                			<td>	                			
+                			Labib Syed<br/>
+                			Victor Soliman<br/>
+                			</td>
+                			</tr>
+                			<tr>
+                			<td>
+                				Start on design and development frame work
+                			</td>
+                			<td>
+                				28 March 2016
+                			</td>
+                			<td>	
+                			Jihun<br/>
+                			Sean Lee<br/>
+                			Labib Syed<br/>
+                			Victor Soliman<br/>
+                			</td>
+                		</tr>
+                		</tr>
+                			<tr>
+                			<td>
+                				Start on code and functionality testing
+                			</td>
+                			<td>
+                				14 April 2016
+                			</td>
+                			<td>	
+                			Jihun<br/>
+                			Sean Lee<br/>
+                			Labib Syed<br/>
+                			Victor Soliman<br/>
+                			</td>
+                		</tr>
+                		</tr>
+                			<tr>
+                			<td>
+                				Documentation
+                			</td>
+                			<td>
+                				19 April 2016
+                			</td>
+                			<td>	
+                			Jihun<br/>
+                			Sean Lee<br/>
+                			Labib Syed<br/>
+                			Victor Soliman<br/>
+                			</td>
+                		</tr>
+
+                		</table>
+                
                 </td>
               </tr>
             </table>
