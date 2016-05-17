@@ -220,9 +220,7 @@
       showPrevCalendar(e)
     {        
         var self = this;
-        var todayDate = new Date().getDate();
-
-                
+        var todayDate = new Date().getDate();                
 
         if($("#hiddenField").css("display")=="none")
         {     
@@ -253,9 +251,7 @@
     },
 
     showNextCalendar(e)
-    {
-
-        
+    {        
         var self = this;
         var todayDate = new Date().getDate();
          
@@ -287,8 +283,7 @@
     },
 
     refreshChart(date,todayDate)
-    {   
-        
+    {           
          var s1 = date.split(' ');  
          var parsedDate = parseInt(s1[1]);       
        
@@ -310,9 +305,7 @@
             this.renderCityByUrl(this.state.dummyDATAURL[ran],currentCity,date);
 
         } 
-    },
- 
-    
+    },     
 	      render()
       
       {
