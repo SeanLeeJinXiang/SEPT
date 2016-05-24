@@ -39,10 +39,11 @@
 			<h1> Navigation</h1>
 			<p>
 				<ul id="sddm">
-							<li><a href="home.shtml" class="nav">Home Page</a></li>
-							<li><a href="classdiagram.shtml" class="nav">Class Diagram</a></li>
-							<li><a href="Tools.html" class="nav">Tools</a></li>
-							<li><a href="screenshots.shtml" class="nav">Installation</a></li>
+              <li><a href="home.shtml" class="nav">Home Page</a></li>
+              <li><a href="classdiagram.shtml" class="nav">Class Diagram</a></li>
+              <li><a href="screenshots.shtml" class="nav">Installation</a></li>
+              <li><a href="Tools.html" class="nav">Tools</a></li>
+              <li><a href="features.shtml" class="nav">Additional Features and Demo link</a></li>
 			      </ul>
 			</p>
 
@@ -107,7 +108,7 @@
                 			</tr>
                 			<tr>
                 			<td>
-                				Design and Development frame work
+                				Start on design and development frame work
                 			</td>
                 			<td>
                 				28 March 2016
@@ -122,7 +123,7 @@
                 		</tr>
                 			<tr>
                 			<td>
-                				 Code testing
+                				Start on code and functionality testing
                 			</td>
                 			<td>
                 				14 April 2016

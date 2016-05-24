@@ -39,10 +39,11 @@
 			<h1> Navigation</h1>
 			<p>
 				<ul id="sddm">
-							<li><a href="home.shtml" class="nav">Home Page</a></li>
-							<li><a href="classdiagram.shtml" class="nav">Class Diagram</a></li>
-							<li><a href="Tools.html" class="nav">Tools</a></li>
-							<li><a href="screenshots.shtml" class="nav">Installation</a></li>
+              <li><a href="home.shtml" class="nav">Home Page</a></li>
+              <li><a href="classdiagram.shtml" class="nav">Class Diagram</a></li>
+              <li><a href="screenshots.shtml" class="nav">Installation</a></li>
+              <li><a href="Tools.html" class="nav">Tools</a></li>
+              <li><a href="features.shtml" class="nav">Additional Features and Demo link</a></li>
 			      </ul>
 			</p>
 

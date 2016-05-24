@@ -51,7 +51,7 @@
       getInitialState()
       {
           return {
-
+            info:"",
             city:"",
             state:"",
             date:"",
@@ -121,10 +121,12 @@
 
       getCityData(url)
       {	
-          var self = this;
+          var self = this;  
+          var info = "BOM";   
           this.setState({
+            info:info,
             url:url
-          })
+          })    
          
           $.ajax({
 
@@ -133,7 +135,7 @@
             data:{url:url},
             dataType:"json",
             success:function(data)
-            {
+            {                  
 
               /*
               *  @param self is referencing current react component
@@ -147,7 +149,48 @@
               self.refs["loadingBar"].hide();                 
             }   
           });
-      }, 
+      },     
+
+      getForecastioData(url){
+
+       var self = this;   
+       self.refs['loadingBar'].show();
+       var info = "Forecast.io";   
+          this.setState({
+            info:info,
+            url:url
+          })   
+     
+          $.ajax({
+
+            url:"/WeatherController/getEachStationJSON",
+            type:"POST",
+            data:{url:url},
+            dataType:"json",
+            success:function(data)
+            {              
+
+              /*
+              *  @param self is referencing current react component
+              *  Using chart.js , use received data from BOM site make
+              *  an interval if the data objects are more than 10
+              *  last digit is for how many data objects to be shown
+              *  Make a graph and render it
+              */
+              
+              self.setState({   
+
+              cloudy:data.currently.summary,
+              humidity:data.currently.humidity,
+              temp:data.currently.temperature,
+              wind:data.currently.windSpeed,
+              time:data.timezone
+              })
+             // module().getSimpleGragh(data,self,self.refs["loadingBar"],7,"myChart"); 
+              self.refs["loadingBar"].hide();                 
+            }   
+          });
+      },
 
       refresh(e)
       {
@@ -220,7 +263,9 @@
       showPrevCalendar(e)
     {        
         var self = this;
-        var todayDate = new Date().getDate();                
+        var todayDate = new Date().getDate();
+
+                
 
         if($("#hiddenField").css("display")=="none")
         {     
@@ -251,7 +296,9 @@
     },
 
     showNextCalendar(e)
-    {        
+    {
+
+        
         var self = this;
         var todayDate = new Date().getDate();
          
@@ -283,7 +330,8 @@
     },
 
     refreshChart(date,todayDate)
-    {           
+    {   
+        
          var s1 = date.split(' ');  
          var parsedDate = parseInt(s1[1]);       
        
@@ -305,36 +353,77 @@
             this.renderCityByUrl(this.state.dummyDATAURL[ran],currentCity,date);
 
         } 
-    },     
+    },
+ 
+    
 	      render()
       
       {
-        return (                
+        return (    
+             
           <div id = "detailsWrap"className='animated fadeIn'>
               <RenderLoading ref='loadingBar'/>           
                <div className="cityInfoWrapper">
                  <p className="city">                 		
                 		 <button onClick={this.addToFavourite} className='add_to_favourite btn btn-default btn-sm'>Add to Favourite</button>
         				 &nbsp;
-				        <button onClick={this.refresh} className='add_to_favourite btn btn-default btn-sm'>Refresh</button>				        
+				        <button onClick={this.refresh} className='add_to_favourite btn btn-default btn-sm'>Refresh</button>&nbsp;&nbsp;&nbsp;&nbsp;<span id="infoID">
+                {(() => {
+                    switch (this.state.info){
+                    case "BOM" : return "Information from BOM";
+                    case "Forecast.io" : return "Information from Forecast.io";            
+                  }
+                  })()} </span>
 				        <br/>
-				        {this.state.city}	
+				        <p className="stateID">{this.state.city}</p>
                  </p>
                     <div id="hiddenField"></div>
                     <div id="hiddenField2"></div>
+
                 <button type="button" onClick={this.showPrevCalendar} className="btn btn-default favouriteLeftButton" aria-label="Left Align">
                 <span className="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Previous Days</button>
                 <button type="button" onClick={this.showNextCalendar} className="btn btn-default favouriteRightButton" aria-label="Left Align">Forecasts
                 <span className="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                 </button>
+
                  <p className="date">{this.state.date} <span className="time">{this.state.time}</span></p> 
-                 <p className="cloudy">{ this.state.cloudy=="-"?"": this.state.cloudy }</p> 
-                 <p className="humidity">{this.state.humidity==null?"":"Humidity " + this.state.humidity +"%"}</p> 
-                 <p className="temp">{this.state.temp==null?"":"Temp " + this.state.temp +" C"}</p> 
-                 <p className="wind">{this.state.wind==0?"":"Wind " + this.state.wind}</p> 
+                 <p className="cloudy">
+                 {(() => {
+                    switch (this.state.info){
+                    case "BOM" : return   this.state.cloudy=="-"?"": this.state.cloudy;
+                    case "Forecast.io" : return this.state.cloudy=="-"?"":"Currently : " + this.state.cloudy;            
+                  }
+                  })()} 
+
+                 </p> 
+                 <p className="humidity">
+                   {(() => {
+                    switch (this.state.info){
+                    case "BOM" : return   this.state.humidity==null?"":"Humidity : " + this.state.humidity +"%";
+                    case "Forecast.io" : return this.state.humidity==null?"":"Humidity : " + this.state.humidity +"%";            
+                  }
+                  })()} 
+                 </p> 
+                 <p className="temp">
+                   {(() => {
+                    switch (this.state.info){
+                    case "BOM" : return   this.state.temp==null?"":"Temp : " + this.state.temp +" C";
+                    case "Forecast.io" : return this.state.temp==null?"":"Current Temp : " + this.state.temp +" Fahrenheit";            
+                  }
+                  })()} 
+                 </p> 
+                 <p className="wind">
+                    {(() => {
+                    switch (this.state.info){
+                    case "BOM" : return   this.state.wind==0?"":"Wind : " + this.state.wind + " KM per hour";
+                    case "Forecast.io" : return this.state.wind==0?"":"Current Wind : " + this.state.wind + " Miles per hour";            
+                  }
+                  })()} 
+                 </p> 
               </div>
               <canvas id="myChart" width="570" height="330"></canvas>
-          </div> 
+          </div>
+          
           );
       },
   });
@@ -440,8 +529,15 @@
                     var tr_array = [];
  
                     for(var j=0;j<pageSeparateNum;j++)
-                    {
-                        var tr = $("<tr><td class='col-md-9'>"+data.stations[i+j].city+"</td><td class='col-md-3'><button id="+data.stations[i+j].url+" class='each_city btn btn-info btn-sm'>View Detail</button></td></tr>");
+                    {                        
+
+                        var lat = (data.stations[i+j].lat).trim();
+                        var lon = (data.stations[i+j].lon).trim();
+
+                        var forecast_io = "https://api.forecast.io/forecast/ce608d65c49616e17f2994b31a5f5c18/"+lat+","+lon;
+                        var openweathermap = "http://api.openweathermap.org/data/2.5/forecast?lat=" + lat +"&lon=" + lon +"&APPID=475769fb9b0f81f6d88460f19de4c169"; 
+
+                        var tr = $("<tr><td class='col-md-9'>"+data.stations[i+j].city+"<div class='viewOptionDIV'><h4>Get weather information from</h4><button class='btn btn-default forecastButton' id="+forecast_io+">Forecast.io</button><button class='btn btn-default openweathermapButtons' id="+openweathermap+">Openweathermap</button></div></td><td class='col-md-3'><button id="+data.stations[i+j].url+" class='each_city btn btn-info btn-sm'>View Detail</button><div class='viewOptionDIV'><button class='btn btn-default Close' >Close</button></div></td></tr>");
 						
                         tr_array.push(tr);
 
@@ -501,9 +597,41 @@
 
                       for(var i=0;i<buttons.length;i++)
                       {
+                          (function(i){                            
+                            buttons[i].addEventListener('click',viewDetailFunc);
+                            buttons[i].addEventListener('click',viewToggle);
+
+                          })(i)
+                      }
+
+                     var buttons = document.getElementsByClassName('Close');
+
+                      for(var i=0;i<buttons.length;i++)
+                      {
+                          (function(i){                            
+                            
+                            buttons[i].addEventListener('click',closeDiv);
+
+                          })(i)
+                      }
+                    var forecastbuttons = document.getElementsByClassName('forecastButton');
+
+                      for(var i=0;i<forecastbuttons.length;i++)
+                      {
                           (function(i){
 
-                            buttons[i].addEventListener('click',viewDetailFunc);
+                            forecastbuttons[i].addEventListener('click',viewDetailFunc2);
+
+                          })(i)
+                      }
+
+                   var openMapbuttons = document.getElementsByClassName('openweathermapButtons');
+
+                      for(var i=0;i<openMapbuttons.length;i++)
+                      {
+                          (function(i){
+
+                            openMapbuttons[i].addEventListener('click',viewDetailFunc2);
 
                           })(i)
                       }
@@ -512,20 +640,58 @@
 
                } 
 
+               function viewToggle(e)
+               {    
+                   $(".viewOptionDIV").css("display","none");
+                  $(e.target).parent().parent().find("div").show();
+               
+
+               }
+
+                function closeDiv(e)
+               {    
+                   $(".viewOptionDIV").css("display","none");   
+               
+               }
+
                    function viewDetailFunc(e)
                    {
+                        
                         e.preventDefault();
 
                         var url = this.id;
 
-                        var win = makeNewWindow(600,680);
+                        console.log(url);
+
+                         var win = makeNewWindow(600,680);
 
                         $("#stateModal").append(win.fadeIn());
 
                         self.refs["CityComponent"].showLoading();
  
-                        self.refs["CityComponent"].getCityData(url);				            
+                       self.refs["CityComponent"].getCityData(url);				            
                         		 
+                   }  
+
+                   function viewDetailFunc2(e)
+                   {
+                          
+                        e.preventDefault();
+
+                        var url = this.id;
+
+                        console.log(url);
+
+                       // $("#loginUser").html("asd");
+
+                        var win = makeNewWindow(600,680);
+
+                    //    $("#stateModal").append(win.fadeIn());
+
+                      //  self.refs["CityComponent"].showLoading();
+ 
+                       self.refs["CityComponent"].getForecastioData(url);                   
+                             
                    }  
 
                    function getUrl(e){

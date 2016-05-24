@@ -1,0 +1,99 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>Documentation for Australian Weather App</title>
+
+<link href="styles/styles.css" rel="stylesheet" type="text/css" />
+
+
+</head>
+
+<body>
+<div id="container">
+  <div id="header"><a name="top" id="top"></a>
+   <div id="logocontainer">
+   <h1> Weather App Documentation</h1>
+  </div>
+
+  </div>
+  
+  <div id="headerbackground"></div>
+  <div id="content">
+    
+	<!-- Content -->
+   
+ 
+    
+   
+  <!-- END FEATURED PRODUCTS -->
+  </div>
+		<br class="clear" />
+		<div id="centercontent">
+			<div id="rightcontent">
+		
+		</div>
+		<div id="leftcontent">
+			<h1> Navigation</h1>
+			<p>
+				<ul id="sddm">
+              <li><a href="home.shtml" class="nav">Home Page</a></li>
+              <li><a href="classdiagram.shtml" class="nav">Class Diagram</a></li>
+              <li><a href="screenshots.shtml" class="nav">Installation</a></li>
+              <li><a href="Tools.html" class="nav">Tools</a></li>
+              <li><a href="features.shtml" class="nav">Additional Features and Demo link</a></li>
+			      </ul>
+			</p>
+
+				
+		</div>
+      <div id="midcontent">
+        <h1>Asddional features</h1>
+
+        <div>
+           <h1>1. Node.js based web spider</h1> 
+
+           <p>Please find a node js file /nodeJS_webspider/server.js</p>
+           <p>Our team has created a simple web spider using node js which generates a json file
+              that every city names are mapped to their json urls for getting data from BOM site.
+              The json file help other teams as well.
+           </p>
+
+           <h1>2. Find a nearest station from a user's location(This is based on an IP service company)</h1>
+
+           <p>Our app shows the nearest station's weather info on the landing page. Our system gets a user's latitude and longitude and calculates the nearest station.</p>
+
+           <h1>3. Demo Link</h1>
+           <p>We uploaded the app on a free hosting for demonstration purpose</p>
+           <p>WARNING - The app is not optimized for production as React JSX is not pre compiled
+            to javascript. It does on runtime which is only for development due to performance reason.
+           </p>
+           <a target="_blank" href="http://septassignment.altervista.org/">Go To Weather App</a>
+        </div>
+ 
+
+      </div>
+
+ 
+
+
+  <div id="footer"> <div id="footerbackground"></div>
+
+  <div id="links">
+  <table width="100%" id="footertable"><tr><td class="showside style1 width16"><a href="home.shtml">HomePage</a></td>
+  <td class="showside style1 width47">Copyright &copy; 2016</a> </td>
+  
+  </tr>
+  </table>
+  </div>
+    
+  </div>
+  
+  
+  
+ 
+
+</body>
+</html>

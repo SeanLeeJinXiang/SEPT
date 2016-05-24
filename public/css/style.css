@@ -17,8 +17,14 @@ height:100%;
 font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif !important;
 
 }
-
-
+.viewOptionDIV .Close
+{
+	margin-top:28px;
+}
+.Close{
+	padding-top:40px;
+	display:none;
+}
 
 .container-fluid
 {
@@ -79,6 +85,10 @@ font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif !impo
 #footerFloat2{
 	float:left;
 	color:white;	
+}
+
+#close{
+	float:right;
 }
 
 a img {
@@ -173,7 +183,14 @@ h1, h2, h3, h4, h5, h6{ margin-bottom:10px; font-weight:normal; }
 
 }
 
+
 .cityInfoWrapper .city
+{
+	font-size: 20px;
+	color:#878787;
+	margin-bottom:0px !important;
+}
+.cityInfoWrapper .stateID
 {
 	font-size: 40px;
 	color:#878787;
@@ -540,3 +557,15 @@ border-color:#060d13 !important;
 	right:-220px;
 	display: none;
 }
+
+.viewOptionDIV
+{
+	display: none;
+}
+
+.forecastButton
+{
+	margin-right:10px;
+}
+
+
