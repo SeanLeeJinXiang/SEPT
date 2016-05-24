@@ -20,6 +20,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js" type="text/javascript"></script>
 <script src="/public/js/lib/lib.js" type="text/javascript"></script>
+<script src="/public/js/lib/forecastlib.js" type="text/javascript"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js" type="text/javascript"></script>
 
 <!--
@@ -143,7 +144,7 @@
               *  an interval if the data objects are more than 10
               *  last digit is for how many data objects to be shown
               *  Make a graph and render it
-              */
+              */             
 
               module().getSimpleGragh(data,self,self.refs["loadingBar"],7,"myChart"); 
               self.refs["loadingBar"].hide();                 
@@ -151,7 +152,7 @@
           });
       },     
 
-      getForecastioData(url){
+      getForecastioData(url,cityname){
 
        var self = this;   
        self.refs['loadingBar'].show();
@@ -160,7 +161,8 @@
             info:info,
             url:url
           })   
-     
+    
+         
           $.ajax({
 
             url:"/WeatherController/getEachStationJSON",
@@ -168,8 +170,11 @@
             data:{url:url},
             dataType:"json",
             success:function(data)
-            {              
+            {
+              var newObject;
 
+              newObject = module2().parseData(data);
+ 
               /*
               *  @param self is referencing current react component
               *  Using chart.js , use received data from BOM site make
@@ -177,17 +182,9 @@
               *  last digit is for how many data objects to be shown
               *  Make a graph and render it
               */
-              
-              self.setState({   
 
-              cloudy:data.currently.summary,
-              humidity:data.currently.humidity,
-              temp:data.currently.temperature,
-              wind:data.currently.windSpeed,
-              time:data.timezone
-              })
-             // module().getSimpleGragh(data,self,self.refs["loadingBar"],7,"myChart"); 
-              self.refs["loadingBar"].hide();                 
+              module2().getSimpleGragh(cityname,newObject,self,self.refs["loadingBar"],7,"myChart"); 
+              self.refs["loadingBar"].hide();               
             }   
           });
       },
