@@ -177,19 +177,18 @@ h1, h2, h3, h4, h5, h6{ margin-bottom:10px; font-weight:normal; }
 	display: none;
 }
 
-.cityInfoWrapper{
-
+.cityInfoWrapper
+{
 	padding:20px;	
-
 }
-
 
 .cityInfoWrapper .city
 {
-	font-size: 20px;
+	font-size: 18px;
 	color:#878787;
 	margin-bottom:0px !important;
 }
+
 .cityInfoWrapper .stateID
 {
 	font-size: 40px;
@@ -215,6 +214,7 @@ h1, h2, h3, h4, h5, h6{ margin-bottom:10px; font-weight:normal; }
 .cityInfoWrapper .add_to_favourite
 {
 	margin-left:20px;
+	float:right;
 }
 
 .MapContainer
