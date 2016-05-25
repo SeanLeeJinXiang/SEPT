@@ -184,6 +184,7 @@
               object.observations.header.push({
                 "refresh_message":localTime,
                 "cloud":data.currently.cloudCover,
+				"summary":data.currently.summary,
                 "rel_hum":  data.currently.humidity,
                 "air_temp": Number((5/9) * (data.currently.temperature-32)).toFixed(2),
                 "wind_spd_kmh": data.currently.windSpeed
@@ -212,6 +213,7 @@
               object.observations.header.push({
                 "refresh_message":localTime,
                 "cloud":data.list[0].clouds.all,
+				"summary":data.list[0].weather[0].description,
                 "rel_hum":  data.list[0].main.humidity,
                 "air_temp": Number((5/9) * (data.list[0].main.temp-32)).toFixed(2),
                 "wind_spd_kmh": data.list[0].wind.speed
@@ -245,6 +247,7 @@
                 var city = cityname;
                 var state = header.state;
                 var cloudy = header.cloud==undefined?"":header.cloud;
+				var summary = header.summary==undefined?"":header.summary;
                 var humidity = header.rel_hum;
                 var temp = header.air_temp;
                 var wind = header.wind_spd_kmh;
@@ -317,6 +320,7 @@
                   city:city,
                   date:date,
                   cloudy:cloudy,
+				  summary:summary,
                   humidity:humidity,
                   temp:temp,
                   wind:wind,

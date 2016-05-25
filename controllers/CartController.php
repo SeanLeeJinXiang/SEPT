@@ -8,7 +8,8 @@
  
         $user_id = Session::get("user_id");
         $city = $_POST["city"];
-        $url = $_POST["url"];  
+        $url = $_POST["url"];
+         
 
           if(isset($_POST["city"]) && isset($_POST["url"]) && isset($user_id))
           {
@@ -39,6 +40,7 @@
                 $stmt->bindParam(':user_id', $user_id);
                 $stmt->bindParam(':city', $city);
                 $stmt->bindParam(':url', $url);
+                
                 $stmt->execute();        
 
                  array_push($my_favourite,$new_favourite);   
