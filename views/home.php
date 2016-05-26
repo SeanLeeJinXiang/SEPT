@@ -1152,6 +1152,18 @@
             wind:"",
             time:"",
             url:"",
+            _temp:true,
+            _hum:false,
+            _wind:false,
+            _cloud:false,
+            _pressure:false,
+            _value:"",
+            _temp_arr:[],
+            _hum_arr:[],
+            _wind_arr:[],
+            _cloud_arr:[],
+            _pressure_arr:[],
+            _label_arr:[],
             min_temp:0,
             max_temp:0,   
             dummyDATAURL:[
@@ -1179,7 +1191,7 @@
           var bom = url.indexOf("bom.gov.au");
           var forecast = url.indexOf("api.forecast.io");
           var openweather = url.indexOf("openweathermap.org");
-          var info;
+          var info;          
        
           if(bom != -1){
             info = "BOM";
@@ -1196,7 +1208,12 @@
           this.setState({
             url:url,
             info:info,
-            city:city                 
+            city:city,
+            _temp:true,
+            _hum:false,
+            _wind:false,
+            _cloud:false,
+            _pressure:false 
           });     
 
 
@@ -1216,8 +1233,10 @@
           var self = this; 
           var url = self.state.url;  
           var info = self.state.info;
-          var cityname = self.state.city;                   
-
+          var cityname = self.state.city;
+          var value = self.state._value;   
+          var data = [];            
+        
           if(info =="BOM"){  
           $.ajax({
             
@@ -1233,36 +1252,75 @@
               module().getSimpleGragh(data,self,self.refs["loadingBar"],50,"CityDetailChart"); 
               self.refs["loadingBar"].hide();               
             }
-          });
-          }
-          else
-          {         
 
-           $.ajax({
+          });   
 
-            url:"/WeatherController/getEachStationJSON",
-            type:"POST",
-            data:{url:url},
-            dataType:"json",
-            success:function(data)
-            {            
-              self.refs['loadingBar'].show();
-              var newObject;
-              newObject = module2().parseData(data);               
-              module2().getSimpleGragh(cityname,newObject,self,self.refs["loadingBar"],50,"CityDetailChart"); 
-              self.refs["loadingBar"].hide();                    
-            }   
-          });
-          }
-      },
+            this.setState({
+               _temp:true,
+               _hum:false,
+               _wind:false,
+               _pressure:false,
+               _cloud:false,
+               _value:"_temp"
+            })
+            
+          }else{    
+         
+          self.refs['loadingBar'].show();        
+           if(value=="_temp")
+              {
+                 data = this.state._temp_arr;   
+                 module2().getSimpleGragh(null,value,"CityDetailChart",data,this.state._label_arr);              
+              }else if(value=="_hum")
+              {
+                 data = this.state._hum_arr; 
+                 module2().getSimpleGragh(null,value,"CityDetailChart",data,this.state._label_arr);                 
+              }else if(value=="_wind")
+              {
+                 data = this.state._wind_arr; 
+                 module2().getSimpleGragh(null,value,"CityDetailChart",data,this.state._label_arr);               
+              }else if(value=="_pressure")
+              {
+                 data = this.state._pressure_arr; 
+                 module2().getSimpleGragh(null,value,"CityDetailChart",data,this.state._label_arr);                 
+              }else if(value=="_cloud")
+              {
+                 data = this.state._cloud_arr; 
+                 module2().getSimpleGragh(null,value,"CityDetailChart",data,this.state._label_arr);                                      
+              }else{
+
+               $.ajax({
+
+              url:"/WeatherController/getEachStationJSON",
+              type:"POST",
+              data:{url:url},
+              dataType:"json",
+              success:function(data)
+              {            
+                self.refs['loadingBar'].show();
+                var newObject;
+                newObject = module2().parseData(data);               
+                 module2().getSimpleGragh(cityname,newObject,self,self.refs["loadingBar"],50,"CityDetailChart");               
+                self.refs["loadingBar"].hide();                    
+              }   
+
+            });
+
+
+              }
+              
+            self.refs["loadingBar"].hide();
+          
+         }
+      },   
 
     renderCityByUrl(url,info,city,currentCity)
     {
 
-        var self = this;    
-        
-        if(info == "BOM"){   
+        var self = this;
 
+        if(info == "BOM")
+        {   
             $.ajax({
             url:"/WeatherController/getEachStationJSON",
             type:"POST",
@@ -1286,12 +1344,10 @@
                     });
 
                      wrapper.css("z-index",10);
-
                      $(document.body).append(wrapper.fadeIn());
               }
 
-              $("#CityChartWrapper").show();      
-
+              $("#CityChartWrapper").show();
               self.refs['loadingBar'].show();               
             
               module().getSimpleGragh(data,self,null,50,"CityDetailChart",currentCity);
@@ -1306,17 +1362,14 @@
                   e.preventDefault();
                   $("#CityChartWrapper").hide();
                   $("#cityDetailsWrapper").remove();  
-              }
-
-         
+              }         
             }
           });
           }
 
-          if(info == "Forecast.io"){
-
+          if(info == "Forecast.io")
+          {
             $.ajax({
-
             url:"/WeatherController/getEachStationJSON",
             type:"POST",
             data:{url:url},
@@ -1341,10 +1394,9 @@
                      wrapper.css("z-index",10);
 
                      $(document.body).append(wrapper.fadeIn());
-
               }
 
-              $("#CityChartWrapper").show();      
+              $("#CityChartWrapper").show(); 
 
               self.refs['loadingBar'].show();  
 
@@ -1365,17 +1417,14 @@
 
                   $("#CityChartWrapper").hide();
                   $("#cityDetailsWrapper").remove();  
-              }
-
-          
+              }          
             }
           });
           }
 
-          if(info == "OpenWeather"){
-
+          if(info == "OpenWeather")
+          {
             $.ajax({
-
             url:"/WeatherController/getEachStationJSON",
             type:"POST",
             data:{url:url},
@@ -1427,9 +1476,7 @@
               }             
             }
           });
-
-
-          }
+        }
     },
 
      renderCityByTheUrl(url,currentCity,date)
@@ -1486,7 +1533,6 @@
               function closeBackGround(e)
               {
                   e.preventDefault();
-
                   $("#CityChartWrapper").hide();
                   $("#cityDetailsWrapper").remove();  
               }
@@ -1494,7 +1540,6 @@
               function refresh(e)
               {
                   e.preventDefault();
-
                   self.refs['loadingBar'].show();
                   module().getSimpleGragh(data,self,null,50,"CityDetailChart",currentCity);
                   self.refs['loadingBar'].hide();
@@ -1648,6 +1693,102 @@
         } 
     },
     
+     handleChange(e)
+    {
+        var value = e.target.value;        
+
+        this.updateRadio(value);
+
+        var data = [];
+
+        if(value=="_temp")
+        {
+           data = this.state._temp_arr;
+        }
+
+        if(value=="_hum")
+        {
+           data = this.state._hum_arr;
+        }
+
+        if(value=="_wind")
+        {
+           data = this.state._wind_arr;
+        }
+
+        if(value=="_pressure")
+        {
+           data = this.state._pressure_arr;
+        }
+
+        if(value=="_cloud")
+        {
+           data = this.state._cloud_arr;                   
+        }
+
+        module2().getSimpleGragh(null,value,"CityDetailChart",data,this.state._label_arr);
+    },  
+
+     updateRadio(value)
+    {
+        if(value=="_temp")
+        {
+            this.setState({
+               _temp:true,
+               _hum:false,
+               _wind:false,
+               _pressure:false,
+               _cloud:false,
+               _value:"_temp"
+            })            
+        }
+      else if(value=="_cloud")
+      {
+            this.setState({
+               _temp:false,
+               _hum:false,
+               _wind:false,
+               _pressure:false,
+               _cloud:true,
+               _value:"_cloud"
+            })
+      }   
+      else if(value=="_hum")
+      {
+            this.setState({
+               _temp:false,
+               _hum:true,
+               _wind:false,
+               _pressure:false,
+               _cloud:false,
+               _value:"_hum"
+            })
+      }   
+      else if(value=="_pressure")
+      {
+            this.setState({
+               _temp:false,
+               _hum:false,
+               _wind:false,
+               _pressure:true,
+               _cloud:false,
+               _value:"_pressure"
+            })
+      }   
+      else if(value=="_wind")
+      {
+            this.setState({
+               _temp:false,
+               _hum:false,
+               _wind:true,
+               _pressure:false,
+               _cloud:false,
+               _value:"_wind"
+            })
+      }   
+
+    },
+
     render()
     {
        var myFavourites;
@@ -1661,7 +1802,7 @@
        }
         return ( 
 
-        <div>     
+           <div>     
         <div className="myFavouritesWrapper"><button onClick={this.toggleMenu} className="btn btn-default btn-sm">My Favourites <span className="favouritesCounter">{this.state.myFavourites.length}</span></button><ul className="myFavouritesUL list-group">{myFavourites}</ul></div>
               
               <div className="animated fadeIn" id="CityChartWrapper">
@@ -1686,14 +1827,95 @@
                   </button>
                  <button type="button" onClick={this.showNextCalendar} className="btn btn-default favouriteRightButton" aria-label="Left Align">Forecasts
                   <span className="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                 </button>                 
-                 <p className="date">{this.state.date} <span className="time">{this.state.time}</span></p> 
-                 <p className="cloudy">{ this.state.cloudy=="-"?"": this.state.cloudy }</p> 
-                 <p className="humidity">{this.state.humidity==null?"":"Humidity " + this.state.humidity +"%"}</p> 
-                 <p className="temp">{this.state.temp==null?"":"Temp " + this.state.temp +" C"}</p> 
-                 <p className="wind">{this.state.wind==0?"":"Wind " + this.state.wind}</p> 
-                 <p className="min_temp">{this.state.min_temp!=0?"Min Temp " + this.state.min_temp : "Min Temp Unknown"}</p> 
-                 <p className="max_temp">{this.state.max_temp!=0?"Max Temp " + this.state.max_temp : "Max Temp Unknown"}</p> 
+                 </button>      
+               <div className="detailsWrapper">  
+                <div className="FavouriteDetails">            
+                 <p className="date">{this.state.date} <span className="time">{this.state.time}</span></p>
+                 <p className="summary">
+                 {(() => {
+                    switch (this.state.info){                  
+                    case "Forecast.io" : return this.state.summary==""?"":"Summary : " + this.state.summary; 
+                    case "OpenWeather" : return this.state.summary==""?"":"Summary : " + this.state.summary;           
+                  }
+                  })()} 
+
+                 </p> 
+                 <p className="cloudy">
+                 {(() => {
+                    switch (this.state.info){
+                    case "BOM" : return   this.state.cloudy=="-"?"": "Summary :" + this.state.cloudy;
+                    case "Forecast.io" : return this.state.cloudy=="-"?"":"Cloud Cover : " + this.state.cloudy; 
+                    case "OpenWeather" : return this.state.cloudy=="-"?"":"Cloud Cover : " + this.state.cloudy;           
+                  }
+                  })()} 
+
+                 </p>  
+                 <p className="humidity">
+                   {(() => {
+                    switch (this.state.info){
+                    case "BOM" : return   this.state.humidity==null?"":"Humidity : " + this.state.humidity +"%";
+                    case "Forecast.io" : return this.state.humidity==null?"":"Humidity : " + this.state.humidity +"%";   
+                    case "OpenWeather" : return this.state.humidity==null?"":"Humidity : " + this.state.humidity +"%";         
+                  }
+                  })()} 
+                 </p> 
+                 <p className="temp">
+                   {(() => {
+                    switch (this.state.info){
+                    case "BOM" : return   this.state.temp==null?"":"Temp : " + this.state.temp +" C";
+                    case "Forecast.io" : return this.state.temp==null?"":"Current Temp : " + this.state.temp +" C"; 
+                    case "OpenWeather" : return this.state.temp==null?"":"Current Temp : " + this.state.temp +" Fahrenheit";  
+                  }
+                  })()} 
+                 </p>  
+                 <p className="wind">
+                    {(() => {
+                    switch (this.state.info){
+                    case "BOM" : return   this.state.wind==0?"":"Wind : " + this.state.wind + " KM per hour";
+                    case "Forecast.io" : return this.state.wind==0?"":"Current Wind : " + this.state.wind + " KM per hour"; 
+                    case "OpenWeather" : return this.state.wind==0?"":"Current Wind : " + this.state.wind + " Miles per hour";                               
+                  }
+                  })()} 
+                 </p> 
+                 <p className="min_temp">
+                 {(() => {
+                    switch (this.state.info){
+                    case "BOM" : return   this.state.min_temp==0?"":"Min Temp : " + this.state.min_temp +" C";
+                    case "Forecast.io" : return this.state.min_temp==0?"":"Min Temp : " + this.state.min_temp +" C"; 
+                    case "OpenWeather" : return this.state.min_temp==0?"":"Min Temp : " + this.state.min_temp +" Fahrenheit";  
+                  }
+                  })()}                   
+                  </p> 
+                 <p className="max_temp">{(() => {
+                    switch (this.state.info){
+                    case "BOM" : return   this.state.max_temp==0?"":"Max Temp : " + this.state.max_temp +" C";
+                    case "Forecast.io" : return this.state.max_temp==0?"":"Max Temp : " + this.state.max_temp +" C"; 
+                    case "OpenWeather" : return this.state.max_temp==0?"":"Max Temp : " + this.state.max_temp +" Fahrenheit";  
+                  }
+                  })()}
+                  </p> 
+                 </div>
+
+                 <div className="viewPanel">
+                     <div>
+                        <div className="radio">
+                          <label><input className="radioView" type="radio" checked={this.state._temp} onChange={this.handleChange} value="_temp" name="viewPanel"/>Apprent Temperature</label>
+                        </div>
+                        <div className="radio">
+                          <label><input className="radioView" type="radio" checked={this.state._hum} onChange={this.handleChange} value="_hum" name="viewPanel"/>Humidity</label>
+                        </div>
+                        <div className="radio">
+                          <label><input className="radioView" type="radio" checked={this.state._wind} onChange={this.handleChange} value="_wind" name="viewPanel"/>Wind</label>
+                        </div>
+                         <div className="radio">
+                          <label><input className="radioView" type="radio" checked={this.state._cloud} onChange={this.handleChange} value="_cloud" name="viewPanel"/>Cloud</label>
+                        </div>
+                        <div className="radio">
+                          <label><input className="radioView" type="radio" checked={this.state._pressure} onChange={this.handleChange} value="_pressure" name="viewPanel"/>Pressure</label>
+                        </div>                       
+                     </div>
+                 </div>
+                </div>
                  <canvas id="CityDetailChart" width="1000" height="450"></canvas>
               </div>
               </div>

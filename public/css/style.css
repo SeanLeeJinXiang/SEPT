@@ -26,6 +26,19 @@ font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif !impo
 	display:none;
 }
 
+.detailsWrapper .FavouriteDetails
+{
+	width:30%;
+	float:left;
+}
+
+.detailsWrapper .viewPanel
+{
+	width:70%;
+	float:left;
+	margin-top:50px;
+}
+
 .container-fluid
 {
 	padding:0 !important;
