@@ -37,6 +37,20 @@ font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif !impo
 	width:70%;
 	float:left;
 	margin-top:50px;
+	display:none;
+}
+
+.detailsWrapper .ChartDetails
+{
+	width:50%;
+	float:left;
+}
+
+.detailsWrapper .viewPanel2
+{
+	width:50%;
+	float:left;	
+	display:none;
 }
 
 .container-fluid
