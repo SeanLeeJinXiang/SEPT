@@ -86,6 +86,17 @@
                  "http://www.bom.gov.au/fwo/IDN60903/IDN60903.95909.json",
                  "http://www.bom.gov.au/fwo/IDN60903/IDN60903.94925.json",
                  "http://www.bom.gov.au/fwo/IDN60903/IDN60903.94938.json"
+            ],
+            dummyFORECASTDATAURL:[
+                 "https://api.forecast.io/forecast/ce608d65c49616e17f2994b31a5f5c18/-15.51,123.16",
+                 "https://api.forecast.io/forecast/ce608d65c49616e17f2994b31a5f5c18/-34.94,117.82",
+                 "https://api.forecast.io/forecast/ce608d65c49616e17f2994b31a5f5c18/-35.03,117.88",
+                 "https://api.forecast.io/forecast/ce608d65c49616e17f2994b31a5f5c18/-16.64,128.45",
+                 "https://api.forecast.io/forecast/ce608d65c49616e17f2994b31a5f5c18/-30.34,115.54",
+                 "https://api.forecast.io/forecast/ce608d65c49616e17f2994b31a5f5c18/-32.46,123.87",
+                 "https://api.forecast.io/forecast/ce608d65c49616e17f2994b31a5f5c18/-22.67,119.16",
+                 "https://api.forecast.io/forecast/ce608d65c49616e17f2994b31a5f5c18/-20.88,115.41",
+                 "https://api.forecast.io/forecast/ce608d65c49616e17f2994b31a5f5c18/-19.59,119.10"
             ]
           }
       },
@@ -299,10 +310,10 @@
           
       },   
 
-      renderCityByUrl(url,currentCity)
+      renderCityByUrl(url,info,city,currentCity)
     {
-
-        var self = this;
+       var self = this;
+        if(info =="BOM"){    
 
             $.ajax({
 
@@ -313,17 +324,49 @@
             success:function(data)
             {
               self.refs['loadingBar'].show();
-              module().getSimpleGragh(data,self,null,7,"myChart",currentCity);               
+              module().getSimpleGragh(data,self,null,7,"myChart",currentCity);  
+                           
               self.refs["loadingBar"].hide();             
             }
           });
+
+          }
+          else
+          {
+          self.refs["loadingBar"].show();
+           $.ajax({
+
+            url:"/WeatherController/getEachStationJSON",
+            type:"POST",
+            data:{url:url},
+            dataType:"json",
+            success:function(data)
+            {            
+              var newObject;
+              newObject = module2().parseData(data);
+                            
+              module2().getSimpleGragh(city,newObject,self,self.refs["loadingBar"],7,"myChart");         
+                            
+              self.refs["loadingBar"].hide();  
+            }   
+          }); 
+          this.setState({
+                  _temp:true,
+                  _hum:false,
+                  _wind:false,
+                  _cloud:false,
+                  _pressure:false
+          })
+           self.refs["loadingBar"].hide();
+          }
+          
     },
 
-       renderCityByTheUrl(url,currentCity,date)
+       renderCityByTheUrl(url,info,city,currentCity,date)
     {
 
         var self = this;
-
+        if(info=="BOM"){
             $.ajax({
 
             url:"/WeatherController/getEachStationJSON",
@@ -342,7 +385,39 @@
             }
 
           });
+          }
+          else
+          {
+           self.refs["loadingBar"].show();
+           $.ajax({
 
+            url:"/WeatherController/getEachStationJSON",
+            type:"POST",
+            data:{url:url},
+            dataType:"json",
+            success:function(data)
+            {            
+              var newObject;
+              newObject = module2().parseData(data);
+                            
+              module2().getSimpleGragh(city,newObject,self,self.refs["loadingBar"],7,"myChart");      
+              self.setState({
+                    date:date
+              })                    
+              self.refs["loadingBar"].hide();
+            }   
+          }); 
+          this.setState({
+                  _temp:true,
+                  _hum:false,
+                  _wind:false,
+                  _cloud:false,
+                  _pressure:false
+          })
+          
+           self.refs["loadingBar"].hide();
+
+          }
     },
 
       showPrevCalendar(e)
@@ -412,7 +487,8 @@
 
     refreshChart(date,todayDate)
     {   
-        
+          var info = this.state.info;
+        if(info == "BOM"){
          var s1 = date.split(' ');  
          var parsedDate = parseInt(s1[1]);       
        
@@ -422,17 +498,58 @@
              state:this.state.state,
              date:this.state.date
 
-          };          
+          };
+
+          this.setState({
+                  _temp:true,
+                  _hum:false,
+                  _wind:false,
+                  _cloud:false,
+                  _pressure:false
+              })          
 
         if(todayDate==parsedDate)
         {           
-            this.renderCityByUrl(this.state.url);
+            this.renderCityByUrl(this.state.url,this.state.info,this.state.city);
+            
         }
        else
         {              
             var ran = parsedDate % 9;
-            this.renderCityByTheUrl(this.state.dummyDATAURL[ran],currentCity,date);
+            this.renderCityByTheUrl(this.state.dummyDATAURL[ran],this.state.info,this.state.city,currentCity,date);
         } 
+        }else{
+         var s1 = date.split(' ');  
+         var parsedDate = parseInt(s1[1]);       
+       
+         var currentCity = {
+         
+             city:this.state.city,
+             state:this.state.state,
+             date:this.state.date
+
+          };
+
+          this.setState({
+                  _temp:true,
+                  _hum:false,
+                  _wind:false,
+                  _cloud:false,
+                  _pressure:false
+              })          
+
+        if(todayDate==parsedDate)
+        {           
+            this.renderCityByUrl(this.state.url,this.state.info,this.state.city);
+            
+        }
+       else
+        {              
+            var ran = parsedDate % 9;
+            this.renderCityByTheUrl(this.state.dummyFORECASTDATAURL[ran],this.state.info,this.state.city,currentCity,date);
+        } 
+
+        }
     },     
 
      handleChange(e)
@@ -1318,7 +1435,19 @@
                  "http://www.bom.gov.au/fwo/IDN60903/IDN60903.95909.json",
                  "http://www.bom.gov.au/fwo/IDN60903/IDN60903.94925.json",
                  "http://www.bom.gov.au/fwo/IDN60903/IDN60903.94938.json"
+            ],
+              dummyFORECASTDATAURL:[
+                 "https://api.forecast.io/forecast/ce608d65c49616e17f2994b31a5f5c18/-15.51,123.16",
+                 "https://api.forecast.io/forecast/ce608d65c49616e17f2994b31a5f5c18/-34.94,117.82",
+                 "https://api.forecast.io/forecast/ce608d65c49616e17f2994b31a5f5c18/-35.03,117.88",
+                 "https://api.forecast.io/forecast/ce608d65c49616e17f2994b31a5f5c18/-16.64,128.45",
+                 "https://api.forecast.io/forecast/ce608d65c49616e17f2994b31a5f5c18/-30.34,115.54",
+                 "https://api.forecast.io/forecast/ce608d65c49616e17f2994b31a5f5c18/-32.46,123.87",
+                 "https://api.forecast.io/forecast/ce608d65c49616e17f2994b31a5f5c18/-22.67,119.16",
+                 "https://api.forecast.io/forecast/ce608d65c49616e17f2994b31a5f5c18/-20.88,115.41",
+                 "https://api.forecast.io/forecast/ce608d65c49616e17f2994b31a5f5c18/-19.59,119.10"
             ]
+
         }
     },
 
@@ -1807,7 +1936,8 @@
                   {
                       self.refs['loadingBar'].show();
                       self.refreshChart(date,todayDate);
-                      self.refs['loadingBar'].hide();                     
+                      self.refs['loadingBar'].hide();  
+                                        
                   }
             });
          }
@@ -1819,14 +1949,24 @@
     },
 
     refreshChart(date,todayDate)
-    {
+    {     
+        var info = this.state.info;
+        if(info =="BOM"){
          var s1 = date.split(' ');  
          var parsedDate = parseInt(s1[1]); 
          var currentCity = {
              city:this.state.city,
              state:this.state.state,
              date:this.state.date
-          };
+          };         
+
+          this.setState({
+                  _temp:true,
+                  _hum:false,
+                  _wind:false,
+                  _cloud:false,
+                  _pressure:false
+              })
 
         if(todayDate==parsedDate)
         {
@@ -1837,6 +1977,35 @@
             var ran = parsedDate % 9;
             this.renderCityByTheUrl(this.state.dummyDATAURL[ran],this.state.info,this.state.city,currentCity,date);
         } 
+        }else{
+            var s1 = date.split(' ');  
+         var parsedDate = parseInt(s1[1]); 
+         var currentCity = {
+             city:this.state.city,
+             state:this.state.state,
+             date:this.state.date
+          };         
+
+          this.setState({
+                  _temp:true,
+                  _hum:false,
+                  _wind:false,
+                  _cloud:false,
+                  _pressure:false
+              })
+
+        if(todayDate==parsedDate)
+        {
+            this.renderCityByUrl(this.state.url,this.state.info,this.state.city);          
+        }
+       else
+        {  
+            var ran = parsedDate % 9;
+            this.renderCityByTheUrl(this.state.dummyFORECASTDATAURL[ran],this.state.info,this.state.city,currentCity,date);
+        }
+
+
+        }
     },
     
      handleChange(e)
