@@ -16,7 +16,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <script src="https://fb.me/react-0.14.2.js"></script>
 <script src="https://fb.me/react-dom-0.14.2.js"></script>
-<script src="https://npmcdn.com/react-router/umd/ReactRouter.min.js"></script>
+<script src="https://unpkg.com/react-router/umd/ReactRouter.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js" type="text/javascript"></script>
 <script src="/public/js/lib/lib.js" type="text/javascript"></script>
